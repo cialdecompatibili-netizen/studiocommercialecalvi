@@ -88,3 +88,4 @@ Lezioni dalla migrazione "pelletteria" -> "pelletteria2" (24/10/2026)
 - Nomi EN delle categorie: _data/i18n/en/categorie.json (stesso ordine di _data/categorie.json).
 - Liste: _includes/lista-categoria.html (blog e categorie), link categoria: _includes/page__taxonomy.html, barra laterale: post-sidebar.html.
 - Gli articoli `2026-10-26-*-prova` / `*-test` sono di prova: cancellali (e i loro redirect/ e le categorie Guide/Novità se non servono).
+- Card servizi in home: si stilizzano solo con CSS in fondo a assets/css/gaming.css (selettori '.gc .ent-pl', griglia '.gc .gc-plat.ent-4' con !important); i blocchi html di _data/blocks_home.json non si toccano. Numeri 01-12 nascosti, intera card cliccabile con link stirato (b a::after).

@@ -97,3 +97,24 @@
 @media(max-width:900px){.ent-hero::before{background:linear-gradient(180deg,rgba(9,24,46,.86),rgba(15,37,64,.72))}}
 .gc .ent-hero .gc-btn.gc-btn-o{background:transparent!important;color:#fff!important;border:1px solid rgba(255,255,255,.75)!important;box-shadow:none!important}
 .gc .ent-hero .gc-btn.gc-btn-o:hover{background:rgba(255,255,255,.14)!important}
+
+
+/* --- Servizi in home: card corporate (3 colonne, altezza uguale, intera card cliccabile, hover con barra laterale). Solo CSS: i blocchi html non si toccano. Numeri 01-12 nascosti: i servizi non sono una sequenza. --- */
+.gc .gc-plat.ent-4{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:1.25rem;align-items:stretch}
+.gc .ent-pl{position:relative;display:flex;flex-direction:column;padding:1.5rem 1.5rem 1.4rem 1.75rem;background:#fff;border:1px solid var(--gc-line);border-radius:10px;overflow:hidden;transition:border-color .2s,box-shadow .25s,transform .25s}
+.gc .ent-pl::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gc-acc);transform:scaleY(0);transform-origin:top;transition:transform .25s}
+.gc .ent-pl:hover,.gc .ent-pl:focus-within{border-color:var(--gc-acc);box-shadow:0 14px 32px rgba(30,58,95,.14);transform:translateY(-4px)}
+.gc .ent-pl:hover::before,.gc .ent-pl:focus-within::before{transform:scaleY(1)}
+.gc .ent-pl .n{display:none}
+.gc .ent-pl b{font-size:1.15rem;line-height:1.25;margin:0 0 .9rem}
+.gc .ent-pl b a{color:var(--gc-ink);text-decoration:none;transition:color .2s}
+.gc .ent-pl b a::after{content:"";position:absolute;inset:0;z-index:1}
+.gc .ent-pl:hover b a{color:var(--gc-acc)}
+.gc .ent-pl:focus-within{outline:2px solid var(--gc-acc);outline-offset:2px}
+.gc .ent-pl b a:focus-visible{outline:none}
+.gc .ent-pl ul{list-style:none;margin:0;padding:.9rem 0 0;border-top:1px solid var(--gc-line);font-size:.92rem;line-height:1.5}
+.gc .ent-pl li{position:relative;padding-left:1rem;margin:.32rem 0}
+.gc .ent-pl li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;background:var(--gc-acc);opacity:.55}
+@media(max-width:900px){.gc .gc-plat.ent-4{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:560px){.gc .gc-plat.ent-4{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){.gc .ent-pl,.gc .ent-pl::before,.gc .ent-pl b a{transition:none}.gc .ent-pl:hover,.gc .ent-pl:focus-within{transform:none}}
