@@ -68,6 +68,8 @@ PER CAMBIARE COSA COMPARE usa il front matter della pagina (header, share, relat
             <figure class="post-cover"><img src="{{ cover_src }}" alt="{{ page.header.teaser_alt | default: page.title | escape }}" decoding="async" fetchpriority="high"></figure>
           {% endunless %}
         {% endif %}
+        {%- comment -%} Box contatto WhatsApp IN ALTO (prima del testo): e' il punto che porta contatti {%- endcomment -%}
+        {% include invito-whatsapp.html pos="alto" %}
         {{ content }}
         {%- comment -%} Pagine servizio: FAQ + dati strutturati, poi blocco CTA finale (WhatsApp, telefono, modulo) {%- endcomment -%}
         {% if page.collection == "servizi" %}

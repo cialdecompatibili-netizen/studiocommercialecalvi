@@ -6,12 +6,13 @@
 # = bottone visibile ma con link "#", da attivare mettendo il numero in _config.yml).
 #
 # attivo      : true/false. false = il box sparisce da tutto il sito.
+# posizioni   : il box compare IN ALTO (prima del testo) e in fondo. Per toglierne uno: _layouts/single.html, riga con include invito-whatsapp
 # mostra_su   : dove compare. Valori: servizi (pagine dei servizi), posts (articoli del blog).
 # messaggio   : testo precompilato in WhatsApp. {titolo} diventa il titolo della pagina.
 #
 # Perche' e' scritto cosi' (guide di copywriting/UX: HubSpot-style, MarketingSherpa, CopyHackers):
-#  1. titolo = domanda sul problema del visitatore, non "Contattaci" (valore prima del brand)
-#  2. testo = un solo passo, piccolo: "raccontaci in due righe" (meno sforzo percepito)
+#  1. titolo = il RISULTATO che il visitatore vuole ("scopri cosa conviene fare"), non "Contattaci" (valore prima del brand)
+#  2. testo = un solo passo, piccolo ("due righe") + tolgo l'attrito ("niente moduli")
 #  3. bottone = verbo + canale concreto ("Scrivici su WhatsApp"), non "Invia"
 #  4. nota sotto il bottone = riduce il rischio percepito ("gratuito, senza impegno")
 #  5. UNA azione grande (WhatsApp = la piu' veloce) + due vie classiche piccole (email, modulo): piu' scelte uguali = meno clic
@@ -21,8 +22,8 @@ attivo: true
 mostra_su: [servizi, posts]
 
 it:
-  titolo: "Hai un dubbio sul tuo caso? Scrivici su WhatsApp"
-  testo: "Raccontaci la tua situazione in due righe: ti diciamo se possiamo aiutarti e da dove partire."
+  titolo: "Scopri cosa conviene fare nel tuo caso"
+  testo: "Scrivici su WhatsApp due righe sulla tua situazione: ti diciamo se possiamo aiutarti e da dove partire. Niente moduli da compilare."
   bottone: "Scrivici su WhatsApp"
   nota: "Primo contatto gratuito e senza impegno."
   alternativa: "Preferisci un altro modo?"
@@ -32,8 +33,8 @@ it:
   messaggio: "Buongiorno, vorrei un primo contatto gratuito e senza impegno su: {titolo}."
 
 en:
-  titolo: "Not sure about your situation? Message us on WhatsApp"
-  testo: "Tell us about your case in a couple of lines: we will tell you if we can help and where to start."
+  titolo: "Find out what makes sense in your case"
+  testo: "Message us on WhatsApp with two lines about your situation: we will tell you if we can help and where to start. No forms to fill in."
   bottone: "Message us on WhatsApp"
   nota: "Free first contact, no obligation."
   alternativa: "Prefer another way?"

@@ -3,6 +3,7 @@ INVITO WHATSAPP - box di contatto in fondo a servizi e articoli (UNA sola fonte 
 - Testi e attivazione: _data/invito_whatsapp.yml (cambi li', cambia ovunque; EN nella chiave `en`).
 - Dove compare: lo richiama _layouts/single.html in fondo al contenuto; qui si decide se mostrarlo in base a
   `mostra_su` (collezioni: servizi, posts). Pagine normali (home, contatti...) = non compare.
+- Parametro pos="alto": versione in cima alla pagina (margini piu' stretti). Senza pos = in fondo.
 - Gerarchia (di proposito): 1 sola azione grande = WhatsApp (la piu' veloce); sotto, due vie classiche piu' piccole:
   email (mailto con oggetto gia' scritto) e modulo contatti.
 - Numero: `whatsapp` in _config.yml. Vuoto + `whatsapp_demo: true` = bottone visibile con link "#" (segnaposto).
@@ -20,6 +21,7 @@ INVITO WHATSAPP - box di contatto in fondo a servizi e articoli (UNA sola fonte 
 {%- else -%}
   {%- assign inv_href = "#" -%}
 {%- endif -%}
+{%- unless inv_css_done -%}{%- assign inv_css_done = true -%}
 <style>
 .inv-wa{--inv-bg:#0f2540;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1.5rem 2.5rem;align-items:center;margin:3rem 0 1.5rem;padding:2rem 2.2rem;border-radius:14px;background:var(--inv-bg);color:#e8eef6}
 .inv-wa__title{margin:0 0 .6rem;font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.35rem,2.4vw,1.75rem);font-weight:600;line-height:1.25;color:#fff}
@@ -33,10 +35,12 @@ INVITO WHATSAPP - box di contatto in fondo a servizi e articoli (UNA sola fonte 
 .inv-wa__alt a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 .inv-wa__alt a:hover{color:#9fe3c4}
 .inv-wa a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.inv-wa--alto{margin:0 0 2rem;padding:1.5rem 2rem}
 @media(max-width:760px){.inv-wa{grid-template-columns:1fr;padding:1.6rem 1.3rem}}
 @media(prefers-reduced-motion:reduce){.inv-wa__btn{transition:none}.inv-wa__btn:hover{transform:none}}
 </style>
-<aside class="inv-wa" aria-label="{{ t.titolo | escape }}">
+{%- endunless -%}
+<aside class="inv-wa{% if include.pos == 'alto' %} inv-wa--alto{% endif %}" aria-label="{{ t.titolo | escape }}">
 <div>
 <p class="inv-wa__title">{{ t.titolo }}</p>
 <p class="inv-wa__text">{{ t.testo }}</p>
