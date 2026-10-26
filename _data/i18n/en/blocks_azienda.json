@@ -1,14 +1,14 @@
 [
   {
     "id": "chi",
-    "nome": "About us",
+    "nome": "Chi siamo",
     "enabled": true,
-    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap\"><p class=\"gc-eyebrow\">About us</p><h2 class=\"gc-h2\">Title of the introduction</h2><p class=\"gc-lead\">Who you are, what you do and for whom.</p><p>One more paragraph about how you work.</p></div></section></div>"
+    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap gc-2c\"><div><p class=\"gc-eyebrow\">About us</p><h2 class=\"gc-h2\">Over 15 years alongside businesses.</h2><p class=\"gc-lead\">Our firm was founded to simplify tax and corporate management. We combine the experience of traditional consulting with the skills needed to operate in the modern market.</p><p>With over 15 years of experience in the field, we offer outstanding tax, accounting and corporate advice. We support businesses and professionals with tailored, innovative solutions that are always up to date with current regulations.</p></div><img src=\"__BASEURL__/assets/images/studio-team.jpg\" alt=\"Firm team working on financial statements and documents\" loading=\"lazy\" style=\"width:100%;border-radius:12px;object-fit:cover;max-height:340px;display:block\"></div></section></div>"
   },
   {
     "id": "principi",
-    "nome": "Principles",
+    "nome": "Come lavoriamo",
     "enabled": true,
-    "html": "<div class=\"gc\"><section class=\"gc-sec gc-soft\" id=\"principi\"><div class=\"gc-wrap\"><h2 class=\"gc-h2\">How we behave</h2><div class=\"gc-plat\"><div class=\"gc-pl\"><span class=\"n\">1</span><b>First principle</b><p>Short description.</p></div><div class=\"gc-pl\"><span class=\"n\">2</span><b>Second principle</b><p>Short description.</p></div><div class=\"gc-pl\"><span class=\"n\">3</span><b>Third principle</b><p>Short description.</p></div></div></div></section></div>"
+    "html": "<div class=\"gc\"><section class=\"gc-sec gc-soft\" id=\"principi\"><div class=\"gc-wrap\"><h2 class=\"gc-h2\">How we work</h2><div class=\"gc-plat\"><div class=\"gc-pl\"><span class=\"n\">1</span><b>Digital innovation</b><p>We digitalise every process in the firm, from accounting to invoicing, to give you access to your data at any time and keep paper bureaucracy to a minimum.</p></div><div class=\"gc-pl\"><span class=\"n\">2</span><b>Proactive, tailored advice</b><p>We don&#39;t wait for the tax deadline to talk to you. We constantly analyse how your business is performing so we can propose strategic tax planning solutions and optimise your tax burden.</p></div><div class=\"gc-pl\"><span class=\"n\">3</span><b>Zero bureaucracy, maximum efficiency</b><p>Thanks to advanced digital tools and the use of artificial intelligence for data analysis, we automate accounting workflows and give you real-time reports to monitor your cash.</p></div></div></div></section></div>"
   }
 ]

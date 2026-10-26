@@ -1,8 +1,9 @@
 it:
   name: Italiano
+  description: "Studio commerciale con oltre 15 anni di esperienza: consulenza fiscale, contabile e societaria per imprese e professionisti, startup e P.IVA."
 en:
   name: English
-  description: "Short description of the site (shown in search engines)."
+  description: "Accounting firm with over 15 years of experience: tax, accounting and corporate advice for businesses and professionals, startups and VAT numbers."
 de:
   name: Deutsch
 fr:

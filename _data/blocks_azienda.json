@@ -3,12 +3,12 @@
     "id": "chi",
     "nome": "Chi siamo",
     "enabled": true,
-    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap\"><p class=\"gc-eyebrow\">Chi siamo</p><h2 class=\"gc-h2\">Titolo della presentazione</h2><p class=\"gc-lead\">Chi siete, cosa fate e per chi.</p><p>Un paragrafo in più su come lavorate.</p></div></section></div>"
+    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap gc-2c\"><div><p class=\"gc-eyebrow\">Chi siamo</p><h2 class=\"gc-h2\">Oltre 15 anni al fianco delle imprese.</h2><p class=\"gc-lead\">Il nostro studio nasce con l&#39;obiettivo di semplificare la gestione fiscale e societaria. Uniamo l&#39;esperienza della consulenza tradizionale alle competenze necessarie per muoversi nel mercato moderno.</p><p>Con oltre 15 anni di esperienza nel settore, offriamo consulenza fiscale, contabile e societaria di eccellenza. Supportiamo imprese e professionisti con soluzioni personalizzate, innovative e sempre aggiornate alle normative vigenti.</p></div><img src=\"__BASEURL__/assets/images/studio-team.jpg\" alt=\"Team dello studio al lavoro su bilanci e documenti\" loading=\"lazy\" style=\"width:100%;border-radius:12px;object-fit:cover;max-height:340px;display:block\"></div></section></div>"
   },
   {
     "id": "principi",
-    "nome": "Principi",
+    "nome": "Come lavoriamo",
     "enabled": true,
-    "html": "<div class=\"gc\"><section class=\"gc-sec gc-soft\" id=\"principi\"><div class=\"gc-wrap\"><h2 class=\"gc-h2\">Come ci comportiamo</h2><div class=\"gc-plat\"><div class=\"gc-pl\"><span class=\"n\">1</span><b>Primo principio</b><p>Descrizione breve.</p></div><div class=\"gc-pl\"><span class=\"n\">2</span><b>Secondo principio</b><p>Descrizione breve.</p></div><div class=\"gc-pl\"><span class=\"n\">3</span><b>Terzo principio</b><p>Descrizione breve.</p></div></div></div></section></div>"
+    "html": "<div class=\"gc\"><section class=\"gc-sec gc-soft\" id=\"principi\"><div class=\"gc-wrap\"><h2 class=\"gc-h2\">Come lavoriamo</h2><div class=\"gc-plat\"><div class=\"gc-pl\"><span class=\"n\">1</span><b>Innovazione digitale</b><p>Digitalizziamo ogni processo dello studio, dalla contabilit&#224; alla fatturazione, per darti accesso ai tuoi dati in ogni momento e ridurre al minimo la burocrazia cartacea.</p></div><div class=\"gc-pl\"><span class=\"n\">2</span><b>Consulenza proattiva e su misura</b><p>Non aspettiamo la scadenza delle tasse per parlarti. Analizziamo costantemente l&#39;andamento della tua attivit&#224; per proporti soluzioni di pianificazione fiscale strategica e ottimizzare il tuo carico fiscale.</p></div><div class=\"gc-pl\"><span class=\"n\">3</span><b>Zero burocrazia, massima efficienza</b><p>Grazie all&#39;integrazione di strumenti digitali avanzati e all&#39;uso dell&#39;intelligenza artificiale per l&#39;analisi dei dati, automatizziamo i flussi contabili e ti offriamo report in tempo reale per monitorare la tua cassa.</p></div></div></div></section></div>"
   }
 ]

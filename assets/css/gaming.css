@@ -1,7 +1,7 @@
 /* GUIDA-SVILUPPO: classi .gc-* = kit dei blocchi della home (_data/blocks_home.json e en). Per cambiare l'accento: SOLO --gc-acc (e --gc-acc-s) qui sotto; i colori del sito intero stanno in _data/tema.json. Nome file storico: non rinominare. Stili nuovi dei blocchi vanno qui, non dentro il campo html dei blocchi (altrimenti cambia il corpo della pagina e le traduzioni diventano da_aggiornare). */
 /* KIT BLOCCHI HOME (prefisso .gc-). Nome file storico (nome ereditato dal template di origine): NON rinominare, e' caricato da _includes/head/custom.html.
    Usato dai blocchi di _data/blocks_home.json. Colori nelle variabili --gc-* qui sotto: per cambiare accento basta --gc-acc. */
-:root{--gc-ink:#0e1116;--gc-mut:#56606b;--gc-acc:#0e7490;--gc-acc-s:#e6f6f9;--gc-soft:#f5f6fa;--gc-line:#e6e8ee;--gc-head:'Space Grotesk','Inter',system-ui,sans-serif;--gc-sans:'Inter',system-ui,sans-serif}
+:root{--gc-ink:#0e1116;--gc-mut:#56606b;--gc-acc:#1e3a5f;--gc-acc-s:#edeff2;--gc-soft:#f5f6fa;--gc-line:#e6e8ee;--gc-head:'Space Grotesk','Inter',system-ui,sans-serif;--gc-sans:'Inter',system-ui,sans-serif}
 .gc{font-family:var(--gc-sans);color:var(--gc-ink)}
 .gc *{box-sizing:border-box}
 .gc-wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}
@@ -23,7 +23,7 @@
 .gc-hero-art{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .gc-hero-art .gc-art{border-radius:18px;aspect-ratio:1/1;font-size:clamp(2.4rem,6vw,4.2rem)}
 .gc-hero-art .gc-art:first-child{grid-row:span 2;aspect-ratio:auto}
-.gc-art{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--c1,#0e7490),var(--c2,#22d3ee));color:#fff;font-family:var(--gc-head);font-weight:700;text-shadow:0 2px 14px rgba(0,0,0,.25);overflow:hidden}
+.gc-art{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--c1,#1e3a5f),var(--c2,#6d7f97));color:#fff;font-family:var(--gc-head);font-weight:700;text-shadow:0 2px 14px rgba(0,0,0,.25);overflow:hidden}
 .gc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
 .gc-link{font:600 .9rem var(--gc-sans);color:var(--gc-ink);border-bottom:2px solid var(--gc-ink);padding-bottom:2px;text-decoration:none}
 .gc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.2rem}
@@ -56,22 +56,22 @@
 .gc-buy{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:.9rem 1.1rem;border:1px solid var(--gc-line);border-radius:12px;margin:.6rem 0;background:#fff}
 .gc-buy a{font-weight:600}
 /* --- Home "corporate" (hero CHIARO, ciclo in 4 passi, fascia dati, colonne a 4). Colori: --gc-acc/--gc-acc-s/--gc-soft. Niente sfondi scuri: se ne serve uno, usare .gc-dark (che e' chiaro) --- */
-.ent-hero{position:relative;background:#eaf3fb url(../images/artico-hero.jpg) center 60%/cover no-repeat;color:var(--gc-ink);padding:clamp(1.5rem,4vh,3.5rem) 0;min-height:calc(100vh - 80px);min-height:calc(100svh - 80px);display:flex;align-items:center}
+.ent-hero{position:relative;background:#e8ebef url(../images/hero.jpg) center 60%/cover no-repeat;color:var(--gc-ink);padding:clamp(1.5rem,4vh,3.5rem) 0;min-height:calc(100vh - 80px);min-height:calc(100svh - 80px);display:flex;align-items:center}
 .ent-hero .gc-h1{color:var(--gc-ink);font-size:clamp(2rem,3.2vw + 1.2vh,3.6rem)}.ent-hero .gc-h1 em{color:var(--gc-acc)}.ent-hero .gc-lead{color:var(--gc-mut)}.ent-hero .gc-eyebrow{color:var(--gc-acc)}
-/* HERO ARTICO. Foto: NASA, Larsen Ice Shelf, pubblico dominio (assets/images/artico-hero.jpg). Per cambiare sfondo basta sostituire quel file.
+/* HERO ARTICO. Foto: NASA, Larsen Ice Shelf, pubblico dominio (assets/images/hero.jpg). Per cambiare sfondo basta sostituire quel file.
    ::before = velo chiaro a sinistra (testo leggibile) che svanisce a destra (foto in vista). Contenuto sopra con z-index:1. */
-.ent-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.82) 0%,rgba(236,245,255,.55) 52%,rgba(255,255,255,.10) 100%);pointer-events:none}
+.ent-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.82) 0%,rgba(239,241,244,.55) 52%,rgba(255,255,255,.10) 100%);pointer-events:none}
 .ent-hero>.gc-wrap{position:relative;z-index:1}
 .ent-hero .gc-h1,.ent-hero .gc-lead,.ent-hero .gc-eyebrow{text-shadow:0 1px 0 rgba(255,255,255,.7)}
 /* VETRO stile Aero 2013: sfondo traslucido + blur + bordo bianco + riflesso in alto. Riusabile con la classe .gc-glass. */
-.ent-cycle div,.gc-glass{background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.28) 50%,rgba(255,255,255,.18) 100%);-webkit-backdrop-filter:blur(12px) saturate(140%);backdrop-filter:blur(12px) saturate(140%);border:1px solid rgba(255,255,255,.75);border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.25),0 8px 24px rgba(30,70,110,.18)}
+.ent-cycle div,.gc-glass{background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.28) 50%,rgba(255,255,255,.18) 100%);-webkit-backdrop-filter:blur(12px) saturate(140%);backdrop-filter:blur(12px) saturate(140%);border:1px solid rgba(255,255,255,.75);border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.25),0 8px 24px rgba(15,37,64,.18)}
 .ent-cycle{display:grid;gap:.8rem}.ent-cycle div{padding:1rem 1.2rem}
 .ent-cycle b{display:block;color:var(--gc-ink);font-size:1.05rem}.ent-cycle span{color:#3b4752;font-size:.93rem}
 /* Bottoni in vetro dentro l'hero (lucido, bordo bianco). Testo scuro: leggibile sul velo chiaro. */
-.ent-hero .gc-btn{border:1px solid rgba(255,255,255,.85);color:var(--gc-ink);background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.3) 50%,rgba(255,255,255,.2));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 #fff,0 4px 14px rgba(30,70,110,.2);text-shadow:0 1px 0 rgba(255,255,255,.7)}
+.ent-hero .gc-btn{border:1px solid rgba(255,255,255,.85);color:var(--gc-ink);background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.3) 50%,rgba(255,255,255,.2));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 #fff,0 4px 14px rgba(15,37,64,.2);text-shadow:0 1px 0 rgba(255,255,255,.7)}
 .ent-hero .gc-btn-a{background:linear-gradient(180deg,color-mix(in srgb,var(--gc-acc) 70%,#fff),var(--gc-acc) 52%,color-mix(in srgb,var(--gc-acc) 85%,#000));color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25)}
 .ent-hero .gc-btn:hover{filter:brightness(1.06);background:linear-gradient(180deg,#fff,rgba(255,255,255,.5))}.ent-hero .gc-btn-a:hover{color:#fff;background:linear-gradient(180deg,color-mix(in srgb,var(--gc-acc) 60%,#fff),var(--gc-acc))}
-@media(max-width:900px){.ent-hero::before{background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(236,245,255,.6))}}
+@media(max-width:900px){.ent-hero::before{background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(239,241,244,.6))}}
 @supports not (backdrop-filter:blur(1px)){.ent-cycle div,.gc-glass{background:rgba(255,255,255,.75)}}
 .ent-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;text-align:center;margin-top:1.6rem}
 .ent-stats b{display:block;font:700 clamp(2.2rem,4vw,3.2rem) var(--gc-head);color:var(--gc-acc)}.ent-stats span{color:var(--gc-mut);font-size:.95rem}

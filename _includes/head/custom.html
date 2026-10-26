@@ -21,16 +21,16 @@ REGOLE: dentro le doppie graffe di output di Liquid non scrivere MAI una graffa 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600;700&display=swap');
 :root {
-  --t-accent:      {{ t.accent      | default: '#0e7490' }};
+  --t-accent:      {{ t.accent      | default: '#1e3a5f' }};
   --t-accent-dark: {{ t.accent_dark | default: '#0b3b46' }};
-  --gc-acc:      {{ t.accent      | default: '#0e7490' }};
+  --gc-acc:      {{ t.accent      | default: '#1e3a5f' }};
   --gc-ink:      {{ t.accent_dark | default: '#0e1116' }};
   --t-nav-bg:      {{ t.nav_bg      | default: '#ffffff' }};
   --t-nav-text:    {{ t.nav_text    | default: '#111111' }};
   --t-nav-hover:   {{ t.nav_hover   | default: '#555555' }};
   --t-body-bg:     {{ t.body_bg     | default: '#ffffff' }};
   --t-text:        {{ t.text        | default: '#3a3a3a' }};
-  --t-link:        {{ t.link        | default: '#0e7490' }};
+  --t-link:        {{ t.link        | default: '#1e3a5f' }};
   --t-font:        {{ t.font        | default: "'Inter', -apple-system, sans-serif" }};
   --t-radius:      {{ t.radius      | default: '10px' }};
   --t-font-scale:  {{ t.font_scale  | default: '1' }};
@@ -104,8 +104,8 @@ body { font-size: calc(1rem * var(--t-font-scale)); }
   text-decoration: none;
   white-space: nowrap;
 }
-.dropdown-menu a:hover { background: #eef8fa; color: #0e7490 !important; }
-/* Sfondo sottomenu: bianco (hover azzurro ghiaccio chiarissimo), niente colore scuro del tema */
+.dropdown-menu a:hover { background: #edeff2; color: #1e3a5f !important; }
+/* Sfondo sottomenu: bianco (hover tinta chiara chiarissimo), niente colore scuro del tema */
 .greedy-nav .dropdown-menu,
 .greedy-nav .hidden-links,
 .greedy-nav .has-dropdown .dropdown-menu { background: #fff !important; border-color: #eee !important; }
@@ -113,7 +113,7 @@ body { font-size: calc(1rem * var(--t-font-scale)); }
 .greedy-nav .hidden-links a,
 .greedy-nav .hidden-links li { background: #fff !important; color: #333 !important; }
 .greedy-nav .dropdown-menu a:hover,
-.greedy-nav .hidden-links a:hover { background: #eef8fa !important; color: #0e7490 !important; }
+.greedy-nav .hidden-links a:hover { background: #edeff2 !important; color: #1e3a5f !important; }
 .dropdown-menu .dropdown-sep {
   border-top: 1px solid #eee;
   margin: 4px 0;
@@ -219,7 +219,7 @@ body { font-size: calc(1rem * var(--t-font-scale)); }
 .article-auto-toc__title{position:absolute;top:0;left:1.2rem;transform:translateY(-50%);margin:0;padding:.1rem .8rem;border:1px solid rgba(0,0,0,.12);border-radius:999px;background:#fff;font-size:.85rem;font-weight:700;letter-spacing:.04em;line-height:1.4}
 .article-auto-toc ol{list-style:none;margin:0;padding:0}
 .article-auto-toc li{margin:0;font-size:inherit}
-.article-auto-toc a{display:block;padding:.2rem 0;line-height:1.35;font-weight:600;color:var(--t-link,#0e7490);text-decoration:none}
+.article-auto-toc a{display:block;padding:.2rem 0;line-height:1.35;font-weight:600;color:var(--t-link,#1e3a5f);text-decoration:none}
 .article-auto-toc a:hover{text-decoration:underline}
 .article-auto-toc ol ol{margin:.05rem 0 .3rem .9rem;padding-left:.7rem}
 .article-auto-toc ol ol a{font-weight:400}

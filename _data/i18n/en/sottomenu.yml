@@ -1,1 +1,30 @@
 # English dropdown menus (empty = none). Each key must be IDENTICAL to a title in navigation.yml of this folder.
+
+Services:
+  - title: "All services"
+    url: /en/services/
+  - divider: true
+  - title: "Startups & Innovative SMEs"
+    url: /en/services/#startup-pmi-innovative
+  - title: "E-commerce & Digital Business"
+    url: /en/services/#ecommerce-business-digitali
+  - title: "Strategic Tax Advice"
+    url: /en/services/#consulenza-fiscale-strategica
+  - title: "VAT Number Opening and Management"
+    url: /en/services/#apertura-gestione-piva
+  - title: "E-invoicing"
+    url: /en/services/#fatturazione-elettronica
+  - title: "Accounting and Financial Statements"
+    url: /en/services/#contabilita-bilancio
+  - title: "Tax Returns"
+    url: /en/services/#dichiarazioni-fiscali
+  - title: "Advanced Digital Services"
+    url: /en/services/#servizi-digitali-avanzati
+  - title: "Corporate Advisory"
+    url: /en/services/#consulenza-societaria
+  - title: "Internationalisation"
+    url: /en/services/#internazionalizzazione
+  - title: "INPS/INAIL Compliance"
+    url: /en/services/#adempimenti-inps-inail
+  - title: "Employment Law"
+    url: /en/services/#diritto-del-lavoro

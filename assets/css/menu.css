@@ -24,7 +24,7 @@
 .nv__item { position: relative; flex: none; margin: 0; padding: 0; }
 .nv__link { display: block; white-space: nowrap; padding: .5rem clamp(.4rem, .8vw, .55rem); margin: 0; background: none; border: 0; border-radius: 0; font: inherit; font-size: .95rem; color: var(--t-nav-text, #111); text-decoration: none; cursor: pointer; line-height: 1.4; }
 .nv__link:hover, .nv__link:focus-visible { color: var(--t-nav-hover, #555); text-decoration: none; }
-.nv__item.active > .nv__link { font-weight: 700; color: var(--t-accent, #0e7490); }
+.nv__item.active > .nv__link { font-weight: 700; color: var(--t-accent, #1e3a5f); }
 
 /* freccetta accanto al padre della tendina (solo CSS, non va scritta nell'HTML) */
 .nv__link--dd::after { content: ""; display: inline-block; margin-left: .4em; vertical-align: .18em; border: .3em solid transparent; border-top-color: currentColor; border-bottom: 0; }
@@ -36,7 +36,7 @@
 .nv__item:nth-last-child(-n+3) > .nv__dd { left: auto; right: 0; }
 .nv__dd-item { display: block; padding: .45rem 1rem; white-space: nowrap; font-size: .92rem; color: var(--t-nav-text, #111); text-decoration: none; }
 .nv__dd-item:hover { color: var(--t-nav-hover, #555); background: rgba(0,0,0,.04); text-decoration: none; }
-.nv__dd-item.active { background: var(--t-accent, #0e7490); color: #fff; }
+.nv__dd-item.active { background: var(--t-accent, #1e3a5f); color: #fff; }
 .nv__divider { height: 1px; margin: .35rem 0; background: #e8e8e8; }
 /* sicurezza: una tendina non e' mai piu' alta dello schermo, se serve scorre */
 .nv__dd { max-height: calc(100vh - 5rem); overflow-y: auto; }
@@ -53,7 +53,7 @@
 /* strumenti (lente + carrello) */
 .nv__tools { display: flex; align-items: center; gap: .35rem; padding-left: .35rem; }
 .nv__tools .search__toggle { background: none; border: 0; padding: .5rem; margin: 0; height: auto; cursor: pointer; color: var(--t-nav-text, #111); font-size: 1rem; }
-.nv__tools .search__toggle:hover { color: var(--t-accent, #0e7490); }
+.nv__tools .search__toggle:hover { color: var(--t-accent, #1e3a5f); }
 
 /* ---- hamburger a 3 lineette (diventa una X quando e' aperto) ---- */
 .nv__toggle { padding: .6rem .5rem; margin-left: auto; background: none; border: 0; cursor: pointer; }
@@ -84,22 +84,22 @@
 @media (prefers-reduced-motion: reduce) { .nv__bar { transition: none; } }
 
 /* =====================================================================
-   COLORI MENU - palette acqua: teal + azzurro ghiaccio
+   COLORI MENU - palette del tema
    PERCHE': le voci-link visitate diventavano celestine (a:visited del tema Minimal Mistakes ha
    specificita' 0,1,1 e batteva .nv__link 0,1,0), mentre i <button> restavano neri.
    QUI: "a.nv__link" + :visited/:focus hanno specificita' piu' alta, quindi link e bottoni
    sono SEMPRE dello stesso colore (--t-nav-text). Hover/attivo = verde scuro (--t-accent) con
-   barretta azzurro ghiaccio #7fd8e6 sotto (il chiaro su bianco non si leggerebbe come testo).
+   barretta tinta chiara #9aa6b7 sotto (il chiaro su bianco non si leggerebbe come testo).
    I colori base si cambiano in _data/tema.json, l'acido e' scritto solo qui.
    ===================================================================== */
 a.nv__brand, a.nv__brand:visited, a.nv__link, a.nv__link:visited, a.nv__link:focus, a.nv__link:active { color: var(--t-nav-text, #15191d); }
-a.nv__brand:hover, a.nv__link:hover, a.nv__link:focus-visible, .nv__link:hover, .nv__link:focus-visible { color: var(--t-accent, #0e7490); }
+a.nv__brand:hover, a.nv__link:hover, a.nv__link:focus-visible, .nv__link:hover, .nv__link:focus-visible { color: var(--t-accent, #1e3a5f); }
 .nv__link { box-shadow: inset 0 -3px 0 transparent; transition: box-shadow .15s, color .15s; }
-.nv__link:hover, .nv__link:focus-visible, .nv__item.show > .nv__link { box-shadow: inset 0 -3px 0 #7fd8e6; }
-.nv__item.active > a.nv__link, .nv__item.active > a.nv__link:visited, .nv__item.active > .nv__link { color: var(--t-accent, #0e7490); font-weight: 700; box-shadow: inset 0 -3px 0 #7fd8e6; }
+.nv__link:hover, .nv__link:focus-visible, .nv__item.show > .nv__link { box-shadow: inset 0 -3px 0 #9aa6b7; }
+.nv__item.active > a.nv__link, .nv__item.active > a.nv__link:visited, .nv__item.active > .nv__link { color: var(--t-accent, #1e3a5f); font-weight: 700; box-shadow: inset 0 -3px 0 #9aa6b7; }
 a.nv__dd-item, a.nv__dd-item:visited, a.nv__dd-item:focus { color: var(--t-nav-text, #15191d); }
-a.nv__dd-item:hover, a.nv__dd-item:focus-visible { color: var(--t-accent, #0e7490); background: #eef8fa; box-shadow: none; }
-a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover { background: #7fd8e6; color: #15191d; box-shadow: none; }
+a.nv__dd-item:hover, a.nv__dd-item:focus-visible { color: var(--t-accent, #1e3a5f); background: #edeff2; box-shadow: none; }
+a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover { background: #9aa6b7; color: #15191d; box-shadow: none; }
 @media (max-width: 899.98px) { .nv__link, .nv__item.active > .nv__link { box-shadow: none; } .nv__item.active > .nv__link { border-left: 0; padding-left: .6rem; } }
 /* logo EX accanto al titolo */
 .nv__brand{display:inline-flex;align-items:center;gap:.6rem}
@@ -107,7 +107,7 @@ a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover {
 
 /* Brand luxury */
 .nv__brand{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-weight:600;font-size:1.15rem;letter-spacing:.12em;text-transform:uppercase}
-.nv__logo{border-radius:7px;box-shadow:0 0 0 1px rgba(14,116,144,.35)}
+.nv__logo{border-radius:7px;box-shadow:0 0 0 1px rgba(30,58,95,.35)}
 /* Selettore lingua */
 .lang-switch{display:flex;gap:1rem;justify-content:center;padding:1rem 0;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
 .lang-switch a{text-decoration:none;opacity:.7}.lang-switch a:hover{opacity:1}.lang-switch__cur{font-weight:700}
@@ -120,7 +120,7 @@ a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover {
 .nv__dd--lang > .nv__dd-item:first-child { text-align: left; font-weight: inherit; }
 .nv__lang-item { display: flex; align-items: center; gap: .65rem; }
 .nv__lang-item.active { background: transparent; color: var(--t-nav-text, #111); }
-.nv__lang-item.is-current { font-weight: 700; box-shadow: inset 3px 0 0 var(--t-accent, #0e7490); }
+.nv__lang-item.is-current { font-weight: 700; box-shadow: inset 3px 0 0 var(--t-accent, #1e3a5f); }
 .nv__lang-item--home { opacity: .6; }
 .nv__lang-item--home:hover { opacity: 1; }
 @media (max-width: 899.98px) { .nv__lang-btn { width: 100%; } }
@@ -147,7 +147,7 @@ a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover {
 .nv__ico { display: block; }
 .nv__tools .search__toggle { padding: .5rem .55rem; line-height: 0; }
 .nv__cart { display: inline-flex; align-items: center; justify-content: center; padding: .5rem .55rem; color: var(--t-nav-text, #111); line-height: 0; text-decoration: none; transition: color .2s, transform .2s; }
-.nv__cart:hover, .nv__cart:focus-visible { color: var(--t-accent, #0e7490); transform: translateY(-1px); }
+.nv__cart:hover, .nv__cart:focus-visible { color: var(--t-accent, #1e3a5f); transform: translateY(-1px); }
 .nv__bar { height: 1.5px; margin-bottom: 5px; }
 .nv__bar--mid { width: 14px; margin-left: auto; }
 .nv__toggle.collapsed .nv__bar--mid { opacity: 1; }

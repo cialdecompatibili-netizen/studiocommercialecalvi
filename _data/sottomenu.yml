@@ -31,3 +31,32 @@
 # Per levare una tendina: cancella il blocco, la voce torna un link normale.
 # Documentazione del funzionamento: commento in testa a _includes/masthead.html.
 # =====================================================================================
+
+Servizi:
+  - title: "Tutti i servizi"
+    url: /servizi/
+  - divider: true
+  - title: "Startup & PMI Innovative"
+    url: /servizi/#startup-pmi-innovative
+  - title: "E-commerce & Business Digitali"
+    url: /servizi/#ecommerce-business-digitali
+  - title: "Consulenza Fiscale Strategica"
+    url: /servizi/#consulenza-fiscale-strategica
+  - title: "Apertura e Gestione P.IVA"
+    url: /servizi/#apertura-gestione-piva
+  - title: "Fatturazione Elettronica"
+    url: /servizi/#fatturazione-elettronica
+  - title: "Contabilità e Bilancio"
+    url: /servizi/#contabilita-bilancio
+  - title: "Dichiarazioni Fiscali"
+    url: /servizi/#dichiarazioni-fiscali
+  - title: "Servizi Digitali Avanzati"
+    url: /servizi/#servizi-digitali-avanzati
+  - title: "Consulenza Societaria"
+    url: /servizi/#consulenza-societaria
+  - title: "Internazionalizzazione"
+    url: /servizi/#internazionalizzazione
+  - title: "Adempimenti INPS/INAIL"
+    url: /servizi/#adempimenti-inps-inail
+  - title: "Diritto del Lavoro"
+    url: /servizi/#diritto-del-lavoro
