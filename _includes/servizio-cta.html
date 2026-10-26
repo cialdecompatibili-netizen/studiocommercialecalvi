@@ -1,56 +1,18 @@
 {%- comment -%}
-GUIDA-SVILUPPO: CTA delle pagine servizio (striscia mini o blocco finale). Link WhatsApp da site.whatsapp: se e' vuoto il link diventa '#' (il pulsante resta visibile: per nasconderlo avvolgi il blocco in un if su site.whatsapp).
-NOTA: i testi di questo include sono in italiano fisso e NON passano da ui-text.yml: in una lingua diversa vanno resi traducibili.
+CTA finale delle pagine servizio (inserito da _layouts/single.html per la collezione servizi). Il pulsante WhatsApp compare solo se site.whatsapp e' valorizzato in _config.yml.
 {%- endcomment -%}
-{%- comment -%}
-  CTA delle pagine servizio. Parametri:
-    tipo="mini"   -> striscia compatta da mettere a meta' pagina: include servizio-cta.html tipo="mini"
-    (senza tipo)  -> blocco finale grande (inserito in automatico da _layouts/single.html)
-    testo="..."   -> frase della striscia mini (facoltativa)
-  Il messaggio WhatsApp parte gia' compilato con il nome del servizio.
-{%- endcomment -%}
-{%- assign sv_msg = "Buongiorno, vorrei un sopralluogo gratuito e un preventivo per: " | append: page.title | append: "." -%}
-{%- assign sv_wa = "https://wa.me/" | append: site.whatsapp | append: "?text=" | append: sv_msg | url_encode -%}
-{%- if site.whatsapp == "" -%}{%- assign sv_wa = "#" -%}{%- endif -%}
-{%- unless sv_css_done -%}
 <style>
-.sv-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.35rem;border-radius:10px;font-weight:700;font-size:1rem;line-height:1.2;text-decoration:none !important;border:2px solid transparent;cursor:pointer}
-.sv-btn--wa{background:#25d366;color:#fff !important}
-.sv-btn--wa:hover{background:#1ebe5b}
-.sv-btn--tel{background:#fff;color:var(--t-accent,#1e3a5f) !important;border-color:var(--t-accent,#1e3a5f)}
-.sv-btn--tel:hover{background:#edeff2}
-.sv-btn--form{background:transparent;color:var(--t-accent,#1e3a5f) !important;text-decoration:underline !important;border-color:transparent;padding:.8rem .6rem;font-weight:600}
-.sv-mini{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem 1.2rem;margin:1.6rem 0;padding:1rem 1.2rem;background:#edeff2;border-radius:10px}
-.sv-mini p{margin:0 !important;font-weight:600;flex:1 1 260px}
-.sv-cta{margin:2.4rem 0 1rem;padding:1.8rem 1.4rem;background:#edeff2;border:1px solid rgba(138,109,59,.25);border-radius:14px;text-align:center}
-.sv-cta__title{margin:0 0 .5rem !important;font-size:1.45rem;font-weight:700;line-height:1.25}
-.sv-cta p{margin:.4rem auto !important;max-width:42rem}
-.sv-cta__row{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin:1.2rem 0 .6rem}
-.sv-cta__small{font-size:.85rem;color:#666}
-.sv-faq{margin:2.2rem 0 0}
-.sv-faq h2{margin-bottom:.8rem !important}
-.sv-faq details{border:1px solid rgba(0,0,0,.12);border-radius:10px;padding:.2rem 1rem;margin:.5rem 0;background:#fff}
-.sv-faq summary{cursor:pointer;font-weight:700;padding:.7rem 0;line-height:1.35}
-.sv-faq details[open] summary{color:var(--t-accent,#1e3a5f)}
-.sv-faq details p{margin:.2rem 0 .9rem !important}
-@media (max-width:576px){.sv-cta__row .sv-btn,.sv-mini .sv-btn{width:100%}}
+.sv-cta{margin:2.5rem 0 1rem;padding:1.6rem 1.8rem;border:1px solid #e3e6ea;border-radius:12px;background:#f6f8fb}
+.sv-cta__title{margin:0 0 .4rem;font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;line-height:1.3;color:#0f2540}
+.sv-cta__text{margin:0;color:#5d6673;line-height:1.65}
+.sv-cta__row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.1rem}
+.sv-cta__btn{display:inline-block;padding:.65rem 1.2rem;border-radius:8px;border:1px solid var(--t-accent,#1e3a5f);background:var(--t-accent,#1e3a5f);color:#fff;font-weight:600;font-size:.95rem;text-decoration:none;transition:background-color .15s ease}
+.sv-cta__btn:hover{background:#0f2540;color:#fff}
+.sv-cta__btn--o{background:#fff;color:var(--t-accent,#1e3a5f)}
+.sv-cta__btn--o:hover{background:#eaf0f8;color:#0f2540}
 </style>
-{%- assign sv_css_done = true -%}
-{%- endunless -%}
-{%- if include.tipo == "mini" -%}
-<div class="sv-mini">
-  <p>{{ include.testo | default: "Hai un dubbio o vuoi una risposta rapida? Scrivici due righe e una foto su WhatsApp." }}</p>
-  <a class="sv-btn sv-btn--wa" href="{{ sv_wa }}" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+<div class="sv-cta">
+<p class="sv-cta__title">Hai bisogno di una consulenza su questo tema?</p>
+<p class="sv-cta__text">Raccontaci la tua situazione e ti diciamo come procedere.</p>
+<div class="sv-cta__row"><a class="sv-cta__btn" href="{{ '/contatti/' | relative_url }}">Contattaci</a>{% if site.whatsapp and site.whatsapp != "" %}<a class="sv-cta__btn sv-cta__btn--o" href="https://wa.me/{{ site.whatsapp }}?text={{ 'Buongiorno, vorrei informazioni su: ' | append: page.title | url_encode }}">Scrivici su WhatsApp</a>{% endif %}</div>
 </div>
-{%- else -%}
-<aside class="sv-cta" aria-label="Richiedi un preventivo">
-  <p class="sv-cta__title">Parliamone: sopralluogo gratuito, preventivo chiaro</p>
-  <p>Il modo più veloce è WhatsApp: scrivici cosa c'è da fare e allega 2 o 3 foto del punto (anche scattate da terra). Ti diciamo subito come procedere, senza impegno.</p>
-  <div class="sv-cta__row">
-    <a class="sv-btn sv-btn--wa" href="{{ sv_wa }}" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
-    <a class="sv-btn sv-btn--tel" href="{% if site.whatsapp != '' %}tel:+{{ site.whatsapp }}{% else %}#{% endif %}">{% if site.whatsapp != '' %}Chiama +{{ site.whatsapp }}{% else %}Chiama (numero in arrivo){% endif %}</a>
-    <a class="sv-btn sv-btn--form" href="{{ '/contatti/' | relative_url }}">Preferisci il modulo?</a>
-  </div>
-  <p class="sv-cta__small">Rispondiamo entro 24 ore, festivi esclusi.</p>
-</aside>
-{%- endif -%}

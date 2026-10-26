@@ -37,26 +37,26 @@ Servizi:
     url: /servizi/
   - divider: true
   - title: "Startup & PMI Innovative"
-    url: /servizi/#startup-pmi-innovative
+    url: /servizi/startup-pmi-innovative/
   - title: "E-commerce & Business Digitali"
-    url: /servizi/#ecommerce-business-digitali
+    url: /servizi/e-commerce-business-digitali/
   - title: "Consulenza Fiscale Strategica"
-    url: /servizi/#consulenza-fiscale-strategica
+    url: /servizi/consulenza-fiscale-strategica/
   - title: "Apertura e Gestione P.IVA"
-    url: /servizi/#apertura-gestione-piva
+    url: /servizi/apertura-e-gestione-p-iva/
   - title: "Fatturazione Elettronica"
-    url: /servizi/#fatturazione-elettronica
+    url: /servizi/fatturazione-elettronica/
   - title: "Contabilità e Bilancio"
-    url: /servizi/#contabilita-bilancio
+    url: /servizi/contabilita-e-bilancio/
   - title: "Dichiarazioni Fiscali"
-    url: /servizi/#dichiarazioni-fiscali
+    url: /servizi/dichiarazioni-fiscali/
   - title: "Servizi Digitali Avanzati"
-    url: /servizi/#servizi-digitali-avanzati
+    url: /servizi/servizi-digitali-avanzati/
   - title: "Consulenza Societaria"
-    url: /servizi/#consulenza-societaria
+    url: /servizi/consulenza-societaria/
   - title: "Internazionalizzazione"
-    url: /servizi/#internazionalizzazione
+    url: /servizi/internazionalizzazione/
   - title: "Adempimenti INPS/INAIL"
-    url: /servizi/#adempimenti-inps-inail
+    url: /servizi/adempimenti-inps-inail/
   - title: "Diritto del Lavoro"
-    url: /servizi/#diritto-del-lavoro
+    url: /servizi/diritto-del-lavoro/
