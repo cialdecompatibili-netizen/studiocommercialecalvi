@@ -1,8 +1,26 @@
-# Riquadro "foto + presentazione" in cima alla barra laterale degli articoli.
-# Compare solo se "foto" e' compilata. Esempio:
-#   foto: /assets/images/chi-siamo.jpg
-#   titolo: "Nome Sito"
-#   testo: "Una frase che presenta il sito."
-foto: ""
-titolo: ""
-testo: ""
+# Riquadro "chi siamo + contatti" in cima alla barra laterale destra (articoli e servizi).
+# foto: immagine del riquadro (vuota = riquadro nascosto). I testi sono per lingua (it / en).
+# Il pulsante WhatsApp usa whatsapp di _config.yml (vuoto + whatsapp_demo:true = link "#"); l'email usa email di _config.yml.
+# social: nome + url. "#" = link ancora da mettere (cambia solo l'url, la voce compare gia').
+foto: /assets/images/studio-team.jpg
+it:
+  titolo: "Studio Commerciale"
+  testo: "Consulenza fiscale, contabile e societaria per imprese e professionisti. Hai un dubbio sul tuo caso? Scrivici due righe: ti diciamo se possiamo aiutarti e da dove partire. Primo contatto gratuito e senza impegno."
+  segui: "Contattaci"
+  whatsapp: "Scrivici su WhatsApp"
+  email: "Email"
+  messaggio: "Buongiorno, vorrei un primo contatto gratuito e senza impegno."
+en:
+  titolo: "Accounting Firm"
+  testo: "Tax, accounting and corporate advice for businesses and professionals. Not sure about your case? Send us two lines: we will tell you if we can help and where to start. Free first contact, no obligation."
+  segui: "Get in touch"
+  whatsapp: "Message us on WhatsApp"
+  email: "Email"
+  messaggio: "Hello, I would like a free, no-obligation first contact."
+social:
+  - { nome: "Sito web", url: "#" }
+  - { nome: "LinkedIn", url: "#" }
+  - { nome: "Facebook", url: "#" }
+  - { nome: "Instagram", url: "#" }
+  - { nome: "X", url: "#" }
+  - { nome: "YouTube", url: "#" }
