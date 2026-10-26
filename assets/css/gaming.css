@@ -81,3 +81,4 @@
 @media(max-width:900px){.gc-hero-in,.gc-2c,.gc-det{grid-template-columns:1fr}.gc-grid,.gc-plat{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.gc-grid,.gc-plat{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.gc *{transition:none!important}}
+.art-nota{background:var(--gc-soft);border:1px solid var(--gc-line);border-radius:10px;padding:1.1rem 1.4rem;margin:2rem 0 0}.art-nota p{margin:0}

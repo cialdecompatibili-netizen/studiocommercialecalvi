@@ -1,0 +1,15 @@
+---
+layout: single
+title: "Accesso ai bandi Smart & Start Italia: come funziona"
+date: 2026-07-18
+permalink: /blog/startup-pmi-innovative/bandi-smart-start-italia/
+excerpt: "Come accedere ai bandi Smart & Start Italia per finanziare la startup."
+seo_description: "Come accedere ai bandi Smart & Start Italia per finanziare la startup."
+categories:
+  - "Startup & PMI Innovative"
+ref: art-bandi-smart-start-italia
+---
+
+![Accesso ai bandi Smart & Start Italia: come funziona]({{ '/assets/images/blog/bandi-smart-start-italia.jpg' | relative_url }})
+
+<p>Smart&amp;Start Italia è il principale strumento di finanza agevolata gestito da Invitalia per sostenere la nascita e la crescita delle startup innovative ad alto contenuto tecnologico, su tutto il territorio nazionale. Ha già finanziato oltre 1.500 startup, per più di 618 milioni di euro erogati.</p><h2 id="quanto-finanzia">Quanto finanzia</h2><p>Copre spese ammissibili tra 100.000 e 1.500.000 euro, con finanziamento a tasso zero e senza garanzie reali:</p><ul><li><strong>80%</strong> delle spese, per tutte le startup ammesse</li><li><strong>90%</strong> se la startup è composta interamente da donne, da under 36, o da soci con dottorato di ricerca rientrati in Italia</li></ul><p>Nel Mezzogiorno le condizioni sono ulteriormente migliorative, con una quota di contributo a fondo perduto in aggiunta al finanziamento agevolato.</p><h2 id="chi-pu-accedere">Chi può accedere</h2><p>Startup innovative iscritte alla sezione speciale del Registro delle Imprese, costituite da meno di 60 mesi, con sede in Italia (ammessi anche team esteri con Startup Visa), valore della produzione sotto 5 milioni di euro. Il progetto deve avere almeno una di queste caratteristiche:</p><ul><li>valorizzazione economica di risultati di ricerca (pubblica o privata)</li><li>forte contenuto tecnologico e innovativo</li><li>focus su economia digitale, intelligenza artificiale, blockchain o IoT</li></ul><h2 id="come-si-presenta-domanda">Come si presenta domanda</h2><p>Online tramite l'area riservata Invitalia, allegando business plan, piano finanziario e curriculum dei soci. Le domande sono valutate in ordine cronologico di arrivo ("a sportello", nessuna scadenza fissa), con esito comunicato entro 60 giorni dopo verifica formale dei requisiti e valutazione di merito sul piano d'impresa. Una volta ammessi, ci sono 24 mesi di tempo dalla firma del contratto per realizzare il progetto, con erogazioni per stati di avanzamento lavori (massimo 5 SAL).</p><h2 id="l-errore-pi-comune-che-porta-al-rigetto">L'errore più comune che porta al rigetto</h2><p>Un business plan generico, con numeri vaghi o previsioni economico-finanziarie non supportate da assunzioni realistiche, è il primo motivo di bocciatura. Invitalia valuta nel merito la sostenibilità del piano, non solo la forma della domanda.</p><h2 id="come-ti-aiutiamo">Come ti aiutiamo</h2><p>Verifichiamo se la tua startup rientra nei requisiti, costruiamo un business plan solido e credibile per la valutazione di Invitalia, e ti seguiamo nella gestione degli stati di avanzamento lavori fino all'erogazione completa del finanziamento.</p>
