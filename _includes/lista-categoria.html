@@ -41,8 +41,14 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
 .cl-topics a:hover{border-color:var(--cl-acc);color:var(--cl-acc)}
 .cl-topics a.on{background:var(--cl-acc);border-color:var(--cl-acc);color:#fff}
 .cl-list{list-style:none;padding:0;margin:0}
-.cl-item{display:flex;gap:2.2rem;align-items:flex-start;padding:2rem 0;border-bottom:1px solid var(--cl-line)}
+.cl-item{position:relative;display:flex;gap:2.2rem;align-items:flex-start;padding:1.6rem 1.2rem;border-bottom:1px solid var(--cl-line);border-radius:10px;transition:background-color .2s}
 .cl-item:last-child{border-bottom:none}
+.cl-item:hover,.cl-item:focus-within{background:#eef2f7}
+.cl-title::after{content:"";position:absolute;inset:0;z-index:1}
+.cl-item:hover .cl-title,.cl-item:hover .cl-more{color:var(--cl-acc)}
+.cl-item:focus-within{outline:2px solid var(--cl-acc);outline-offset:-2px}
+.cl-title:focus-visible{outline:none}
+@media(prefers-reduced-motion:reduce){.cl-item{transition:none}}
 .cl-img{flex-shrink:0;width:260px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#ece8e1}
 .cl-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .cl-item:hover .cl-img img{transform:scale(1.04)}
