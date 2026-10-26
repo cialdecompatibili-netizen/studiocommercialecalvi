@@ -386,3 +386,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 /* WhatsApp piu' stretto, cerca in cima alla barra */
 .author__urls li:first-child a{display:inline-block !important;width:auto !important;padding:.4rem 1.1rem !important;font-size:.88rem !important}
 .sb-cerca{width:100%;margin:0 0 .8rem}
+
+/* cerca staccato dalla linea del menu */
+.sb-cerca{margin-top:1rem !important}
