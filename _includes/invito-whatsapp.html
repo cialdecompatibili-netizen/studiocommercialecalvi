@@ -1,0 +1,40 @@
+{%- comment -%}
+INVITO WHATSAPP - box "scrivici, gratis e senza impegno" (UNA sola fonte per tutto il sito).
+- Testi e attivazione: _data/invito_whatsapp.yml (cambi li', cambia ovunque; EN nella chiave `en`).
+- Dove compare: lo richiama _layouts/single.html in fondo al contenuto; qui sotto si decide se mostrarlo
+  in base a `mostra_su` (collezioni: servizi, posts). Pagine normali (home, contatti...) = non compare.
+- Numero: `whatsapp` in _config.yml. Vuoto + `whatsapp_demo: true` = bottone visibile con link "#" (segnaposto).
+  Vuoto + whatsapp_demo false = niente bottone WhatsApp, resta solo il link al modulo contatti.
+- Stile: blocco <style> qui sotto (classi .inv-wa*). Colori: --t-accent del tema; verde WhatsApp scuro per contrasto.
+{%- endcomment -%}
+{%- assign inv = site.data.invito_whatsapp -%}
+{%- if inv.attivo and inv.mostra_su contains page.collection -%}
+{%- assign L = page.lang | default: site.default_lang | default: "it" -%}
+{%- if L == "en" -%}{%- assign t = inv.en -%}{%- else -%}{%- assign t = inv.it -%}{%- endif -%}
+{%- assign inv_msg = t.messaggio | replace: "{titolo}", page.title -%}
+{%- if site.whatsapp and site.whatsapp != "" -%}
+  {%- capture inv_href -%}https://wa.me/{{ site.whatsapp }}?text={{ inv_msg | url_encode }}{%- endcapture -%}
+{%- else -%}
+  {%- assign inv_href = "#" -%}
+{%- endif -%}
+<style>
+.inv-wa{margin:2.5rem 0 1rem;padding:1.6rem 1.8rem;border:1px solid #e3e6ea;border-left:4px solid #0a7c5f;border-radius:12px;background:#f6f8fb}
+.inv-wa__title{margin:0 0 .4rem;font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;line-height:1.3;color:#0f2540}
+.inv-wa__text{margin:0;max-width:60ch;color:#4a5361;line-height:1.65}
+.inv-wa__row{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.2rem;margin-top:1.1rem}
+.inv-wa__btn{display:inline-block;padding:.75rem 1.4rem;border-radius:8px;background:#0a7c5f;color:#fff;font-weight:600;font-size:1rem;text-decoration:none;transition:background-color .15s ease}
+.inv-wa__btn:hover,.inv-wa__btn:focus-visible{background:#08634d;color:#fff}
+.inv-wa__note{font-size:.9rem;color:#4a5361}
+.inv-wa__alt{font-size:.9rem;color:var(--t-accent,#1e3a5f);text-decoration:underline}
+@media(prefers-reduced-motion:reduce){.inv-wa__btn{transition:none}}
+</style>
+<aside class="inv-wa" aria-label="{{ t.titolo | escape }}">
+<p class="inv-wa__title">{{ t.titolo }}</p>
+<p class="inv-wa__text">{{ t.testo }}</p>
+<div class="inv-wa__row">
+{%- if site.whatsapp != "" or site.whatsapp_demo %}<a class="inv-wa__btn" href="{{ inv_href }}" target="_blank" rel="noopener">{{ t.bottone }}</a>{% endif %}
+<span class="inv-wa__note">{{ t.nota }}</span>
+<a class="inv-wa__alt" href="{% include url-ref.html ref='contatti' %}">{{ t.alternativa }}</a>
+</div>
+</aside>
+{%- endif -%}

@@ -180,7 +180,7 @@ cms_homepage:
 #   Vuoto + whatsapp_demo:false = bottoni nascosti (DEFAULT del template)
 # Chi lo usa: _includes/footer/custom.html (bottone fluttuante), servizio-cta.html, _pages/contatti.md
 whatsapp: ""
-whatsapp_demo: false
+whatsapp_demo: true  # TEMPORANEO: bottoni visibili con link "#" finche non c'e il numero. Quando c'e: scrivere il numero in whatsapp (es. 393331234567) e rimettere false
 # contact_endpoint: indirizzo del servizio (worker) che inoltra il modulo contatti. Vuoto = il modulo non appare.
 contact_endpoint: ""
 
