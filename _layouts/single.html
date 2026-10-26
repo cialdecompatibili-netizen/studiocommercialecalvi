@@ -73,7 +73,6 @@ PER CAMBIARE COSA COMPARE usa il front matter della pagina (header, share, relat
         {% if page.collection == "servizi" %}
           {% include servizio-faq.html %}
         {% endif %}
-        {%- comment -%} Box invito WhatsApp: testi in _data/invito_whatsapp.yml, logica in _includes/invito-whatsapp.html (decide da solo dove mostrarsi) {%- endcomment -%}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
