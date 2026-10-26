@@ -2,9 +2,9 @@
 layout: single
 ref: cat-internazionalizzazione
 title: "Internazionalizzazione"
-permalink: /blog/internazionalizzazione/
+permalink: /servizi/internazionalizzazione/
 categoria: "Internazionalizzazione"
 author_profile: false
 classes: wide
 ---
-{% include lista-categoria.html cat=page.categoria %}
+{% include lista-categoria.html cat=page.categoria src="servizi" %}

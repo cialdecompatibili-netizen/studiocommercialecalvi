@@ -20,7 +20,7 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
   {%- assign t_empty = "Qui non ci sono ancora articoli." -%}{%- assign t_goblog = "Vai al blog" -%}
   {%- assign mesi = "gennaio,febbraio,marzo,aprile,maggio,giugno,luglio,agosto,settembre,ottobre,novembre,dicembre" | split: "," -%}
 {%- endif -%}
-{%- assign posts_l = site.posts | where: "lang", page.lang -%}
+{%- if include.src == "servizi" -%}{%- assign posts_l = site.servizi | where: "lang", page.lang | sort: "date" | reverse -%}{%- assign home_ref = "servizi" -%}{%- else -%}{%- assign posts_l = site.posts | where: "lang", page.lang -%}{%- assign home_ref = "blog" -%}{%- endif -%}
 {%- assign cdat_all = site.data.i18n[L].categorie | default: site.data.categorie -%}
 {%- assign cdata = cdat_all | where: "nome", cat_nome | first -%}
 {%- assign n = 0 -%}
@@ -59,7 +59,7 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
 <div class="cl">
   <header class="cl-head">
     {%- unless all_mode %}
-    <p class="cl-crumb"><a href="{% include url-ref.html ref="blog" %}">Blog</a> &rsaquo; {{ cat_nome }}</p>
+    <p class="cl-crumb"><a href="{% include url-ref.html ref=home_ref %}">{% if home_ref == "servizi" %}Servizi{% else %}Blog{% endif %}</a> &rsaquo; {{ cat_nome }}</p>
     {%- endunless %}
     <h1 class="cl-h1">{% if all_mode %}Blog{% else %}{{ cat_nome }}{% endif %}</h1>
     {%- if all_mode %}
@@ -69,7 +69,7 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
     {%- endif %}
     <span class="cl-count">{{ n }} {% if n == 1 %}{{ t_one }}{% else %}{{ t_many }}{% endif %}</span>
     <nav class="cl-topics" aria-label="{{ t_other }}">
-      <a href="{% include url-ref.html ref="blog" %}"{% if all_mode %} class="on" aria-current="page"{% endif %}>{{ t_all }}</a>
+      <a href="{% include url-ref.html ref=home_ref %}"{% if all_mode %} class="on" aria-current="page"{% endif %}>{{ t_all }}</a>
       {%- assign cats_all = posts_l | map: "categories" | join: "," | split: "," | uniq | sort -%}
       {%- for c in cats_all -%}
       {%- assign cp = site.pages | where: "categoria", c | first -%}
@@ -79,7 +79,7 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
   </header>
 
   {%- if n == 0 %}
-  <p class="cl-empty">{{ t_empty }} <a href="{% include url-ref.html ref="blog" %}">{{ t_goblog }}</a>.</p>
+  <p class="cl-empty">{{ t_empty }} <a href="{% include url-ref.html ref=home_ref %}">{{ t_goblog }}</a>.</p>
   {%- else %}
   <ul class="cl-list" data-pg data-pg-item="li.cl-item" data-per="{{ site.per_page | default: 20 }}">
     {%- for p in posts_l -%}
