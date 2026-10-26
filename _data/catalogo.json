@@ -2,12 +2,32 @@
   "_nota": "Catalogo dello shop (serve solo con ecommerce: true in _config.yml). Prezzi in CENTESIMI. Ogni prodotto/categoria ha anche una pagina in _negozio/ (layout negozio-prodotto con pid=<id>, negozio-categoria con cid=<id>). L'id categoria e' riservato. tipo: digitale (niente spedizione) o fisico. visibile:false nasconde senza cancellare. TRADUZIONI: ogni categoria/prodotto puo' avere \"tr\": {\"en\": {\"nome\": \"...\", \"descrizione\": \"...\", \"descrizione_completa\": \"...\"}}; campo mancante = si usa l'italiano.",
   "categorie": [
     {
-      "nome": "Esempio",
-      "id": "esempio",
-      "icona": "🛍️",
+      "nome": "Fogli Excel per partita IVA",
+      "id": "excel-partita-iva",
+      "icona": "📊",
       "tr": {
         "en": {
-          "nome": "Example"
+          "nome": "Excel spreadsheets for freelancers"
+        }
+      }
+    },
+    {
+      "nome": "Modelli e checklist",
+      "id": "modelli-checklist",
+      "icona": "✅",
+      "tr": {
+        "en": {
+          "nome": "Templates and checklists"
+        }
+      }
+    },
+    {
+      "nome": "Guide PDF",
+      "id": "guide-fiscali",
+      "icona": "📘",
+      "tr": {
+        "en": {
+          "nome": "PDF guides"
         }
       }
     }
@@ -15,20 +35,191 @@
   "prodotti": [
     {
       "tipo": "digitale",
-      "id": "prodotto-esempio",
-      "nome": "Prodotto di esempio",
-      "categoria": "esempio",
-      "prezzo_centesimi": 1000,
-      "descrizione": "Descrizione breve del prodotto di esempio.",
-      "descrizione_completa": "Descrizione completa del prodotto.\nOgni riga diventa un paragrafo.",
+      "id": "gestionale-forfettario-excel",
+      "nome": "Gestionale Excel per regime forfettario",
+      "categoria": "excel-partita-iva",
+      "prezzo_centesimi": 1790,
+      "descrizione": "Foglio Excel per tenere sotto controllo fatture, incassi, imposta sostitutiva e contributi.",
+      "descrizione_completa": "Registro delle fatture emesse e degli incassi\nProspetto per stimare imposta e contributi, con aliquote modificabili\nRiepilogo mensile e annuale\nPensato per chi apre o gestisce una partita IVA in regime forfettario. Non sostituisce la consulenza del commercialista.",
       "immagine": "",
-      "icona": "🛍️",
+      "icona": "📈",
       "visibile": true,
       "tr": {
         "en": {
-          "nome": "Example product",
-          "descrizione": "Short description of the example product.",
-          "descrizione_completa": "Full description of the product.\nEach line becomes a paragraph."
+          "nome": "Excel manager for the flat-rate tax regime",
+          "descrizione": "Excel sheet to keep invoices, receipts, flat-rate tax and contributions under control.",
+          "descrizione_completa": "Register of issued invoices and payments received\nWorksheet to estimate tax and contributions, with editable rates\nMonthly and yearly summary\nDesigned for anyone starting or running a flat-rate VAT number in Italy. It does not replace advice from your accountant."
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "scadenzario-fiscale-excel",
+      "nome": "Scadenzario fiscale annuale (Excel)",
+      "categoria": "excel-partita-iva",
+      "prezzo_centesimi": 990,
+      "descrizione": "Calendario Excel per segnare scadenze, pagamenti e adempimenti dell'anno.",
+      "descrizione_completa": "Elenco scadenze con stato (da fare, fatto, in ritardo)\nVista mensile per pianificare i pagamenti\nCampi liberi per importi e note\nLe date vanno verificate ogni anno con il calendario fiscale ufficiale o con il commercialista.",
+      "immagine": "",
+      "icona": "📅",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Annual tax deadline planner (Excel)",
+          "descrizione": "Excel calendar to track the year's deadlines, payments and filings.",
+          "descrizione_completa": "List of deadlines with status (to do, done, late)\nMonthly view to plan payments\nFree fields for amounts and notes\nDates should be checked every year against the official tax calendar or with your accountant."
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "prima-nota-excel",
+      "nome": "Prima nota semplificata (Excel)",
+      "categoria": "excel-partita-iva",
+      "prezzo_centesimi": 1290,
+      "descrizione": "Registro Excel di entrate e uscite con totali per mese e per categoria.",
+      "descrizione_completa": "Registrazione di entrate e uscite con data, descrizione e categoria\nTotali automatici per mese e per categoria\nPronto da condividere con il commercialista a fine periodo",
+      "immagine": "",
+      "icona": "📒",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Simple cash book (Excel)",
+          "descrizione": "Excel ledger of income and expenses with totals by month and category.",
+          "descrizione_completa": "Income and expense entries with date, description and category\nAutomatic totals by month and category\nReady to share with your accountant at the end of the period"
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "preventivi-e-costi-excel",
+      "nome": "Preventivi e gestione costi (Excel)",
+      "categoria": "excel-partita-iva",
+      "prezzo_centesimi": 790,
+      "descrizione": "Foglio Excel per preparare preventivi e calcolare il margine su ogni lavoro.",
+      "descrizione_completa": "Modello di preventivo con voci, quantità e totale\nCalcolo di costi e margine per singolo lavoro\nElenco dei lavori preventivati e accettati",
+      "immagine": "",
+      "icona": "🧾",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Quotes and cost tracking (Excel)",
+          "descrizione": "Excel sheet to prepare quotes and work out the margin on each job.",
+          "descrizione_completa": "Quote template with items, quantities and total\nCost and margin calculation for each job\nList of quoted and accepted jobs"
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "pacchetto-avvio-partita-iva",
+      "nome": "Pacchetto avvio partita IVA",
+      "categoria": "excel-partita-iva",
+      "prezzo_centesimi": 2490,
+      "descrizione": "Gestionale, scadenzario, checklist di apertura e guida del primo anno in un unico pacchetto.",
+      "descrizione_completa": "Gestionale Excel per regime forfettario\nScadenzario fiscale annuale (Excel)\nChecklist apertura partita IVA (PDF)\nGuida: il primo anno con la partita IVA (PDF)",
+      "immagine": "",
+      "icona": "🎁",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "VAT number starter bundle",
+          "descrizione": "Manager, deadline planner, opening checklist and first-year guide in one bundle.",
+          "descrizione_completa": "Excel manager for the flat-rate tax regime\nAnnual tax deadline planner (Excel)\nVAT number opening checklist (PDF)\nGuide: your first year with a VAT number (PDF)"
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "checklist-documenti-commercialista-pdf",
+      "nome": "Checklist documenti per il commercialista (PDF)",
+      "categoria": "modelli-checklist",
+      "prezzo_centesimi": 390,
+      "descrizione": "Elenco stampabile dei documenti da preparare prima di ogni incontro con lo studio.",
+      "descrizione_completa": "Elenco diviso per fatture, spese, contratti, personale e situazione personale\nSpazio per spuntare e annotare\nBase: l'articolo del blog dello studio, in versione stampabile",
+      "immagine": "",
+      "icona": "📋",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Document checklist for your accountant (PDF)",
+          "descrizione": "Printable list of the documents to prepare before each meeting with your accountant.",
+          "descrizione_completa": "List split into invoices, expenses, contracts, staff and personal situation\nSpace to tick off and take notes\nBased on the studio blog article, in printable form"
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "checklist-apertura-partita-iva-pdf",
+      "nome": "Checklist apertura partita IVA (PDF)",
+      "categoria": "modelli-checklist",
+      "prezzo_centesimi": 490,
+      "descrizione": "Passi da seguire e domande da farsi prima di aprire una partita IVA.",
+      "descrizione_completa": "Passi in ordine: attività, codice ATECO, regime, iscrizioni\nDomande da chiarire con il commercialista\nSpazio per annotare scelte e scadenze",
+      "immagine": "",
+      "icona": "🚀",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "VAT number opening checklist (PDF)",
+          "descrizione": "Steps to follow and questions to ask before opening a VAT number.",
+          "descrizione_completa": "Steps in order: activity, ATECO code, tax regime, registrations\nQuestions to clarify with your accountant\nSpace to note choices and deadlines"
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "modelli-sollecito-pagamento-word",
+      "nome": "Modelli di sollecito di pagamento (Word)",
+      "categoria": "modelli-checklist",
+      "prezzo_centesimi": 590,
+      "descrizione": "Lettere pronte da personalizzare per ricordare una fattura non pagata, con tono crescente.",
+      "descrizione_completa": "Tre lettere: promemoria cordiale, sollecito, ultimo avviso\nFile Word modificabile\nNon costituiscono un parere legale",
+      "immagine": "",
+      "icona": "✉️",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Payment reminder letter templates (Word)",
+          "descrizione": "Ready-to-edit letters to remind a client of an unpaid invoice, with an increasing tone.",
+          "descrizione_completa": "Three letters: friendly reminder, follow-up, final notice\nEditable Word file\nThey are not legal advice"
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "guida-scegliere-regime-fiscale-pdf",
+      "nome": "Forfettario, semplificato o ordinario: come scegliere (PDF)",
+      "categoria": "guide-fiscali",
+      "prezzo_centesimi": 990,
+      "descrizione": "Guida per confrontare i regimi e capire quale domande farti prima di decidere.",
+      "descrizione_completa": "Differenze pratiche tra i tre regimi\nDomande da porsi su ricavi, costi e clienti\nEsempi di scelta e punti da verificare con il commercialista",
+      "immagine": "",
+      "icona": "🧭",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Flat-rate, simplified or ordinary: how to choose (PDF)",
+          "descrizione": "Guide to compare the tax regimes and the questions to ask before you decide.",
+          "descrizione_completa": "Practical differences between the three regimes\nQuestions to ask about revenue, costs and clients\nExamples of choices and points to check with your accountant"
+        }
+      }
+    },
+    {
+      "tipo": "digitale",
+      "id": "guida-primo-anno-partita-iva-pdf",
+      "nome": "Il primo anno con la partita IVA (PDF)",
+      "categoria": "guide-fiscali",
+      "prezzo_centesimi": 990,
+      "descrizione": "Guida mese per mese a cosa fare, preparare e controllare nel primo anno di attività.",
+      "descrizione_completa": "Cosa fare subito dopo l'apertura\nChe cosa conservare e come organizzare i documenti\nUn promemoria per le scadenze principali dell'anno",
+      "immagine": "",
+      "icona": "📘",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Your first year with a VAT number (PDF)",
+          "descrizione": "A month-by-month guide to what to do, prepare and check in your first year in business.",
+          "descrizione_completa": "What to do right after opening\nWhat to keep and how to organise your documents\nA reminder of the main deadlines of the year"
         }
       }
     }

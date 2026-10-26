@@ -188,7 +188,7 @@ contact_endpoint: ""
 # ecommerce: true accende TUTTO lo shop: voce "Shop" nel menu (masthead.html), css/js del carrello
 # (head/custom.html), pagine /negozio/ /carrello/ /ordine/ /grazie/. false = nessuna traccia nel sito.
 # Prodotti e categorie: _data/catalogo.json (+ una pagina in _negozio/ per ognuno, vedi CLAUDE.md).
-ecommerce: false
+ecommerce: true
 # ordini.tracker: URL dell'Apps Script che riceve gli ordini (SMOKE TEST, nessun pagamento).
 # Vuoto = il pulsante 'Invia richiesta d'ordine' resta spento.
 ordini:
