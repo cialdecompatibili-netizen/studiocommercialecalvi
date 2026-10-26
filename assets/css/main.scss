@@ -366,3 +366,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 .video-shortcode iframe,.page__content iframe[src*="youtube"]{width:100%;height:100%;border:0}
 .page__content iframe[src*="youtube"]:not(.video-shortcode iframe){aspect-ratio:16/9;height:auto}
 .page__content img{max-width:100%;height:auto}
+/* 26/10/2026: barra destra stile EdilExtreme (author_profile del tema). WhatsApp = primo link, bottone pieno; cerca sotto. */
+.author__urls li:first-child a{display:block;margin:.2rem 0 .5rem;padding:.55rem 1rem;border-radius:999px;background:var(--t-accent,#1e3a5f);color:#fff !important;font-weight:700;text-align:center;text-decoration:none}
+.author__urls li:first-child a:hover{opacity:.9}
+.sb-cerca{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;margin:.6rem 0 0;padding:.5rem 1rem;border:1px solid #d9dde3;border-radius:999px;background:#fff;color:#555;font:inherit;font-size:.9rem;cursor:pointer}
+.sb-cerca:hover{border-color:var(--t-accent,#1e3a5f);color:var(--t-accent,#1e3a5f)}

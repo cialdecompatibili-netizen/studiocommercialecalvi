@@ -543,3 +543,16 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 {%- endif -%}
 {%- endif -%}
+
+<script>
+/* Barra destra: "Segui"->"Segui", "Website"->"Sito web" e bottone Cerca (apre la ricerca del tema) */
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.author__urls-wrapper .btn').forEach(function(el){if(el.textContent.trim()==='Follow')el.textContent='Segui';});
+  var w=document.querySelector('.sidebar .author__urls-wrapper');
+  if(w&&!document.querySelector('.sb-cerca')){
+    var b=document.createElement('button');b.type='button';b.className='sb-cerca';b.innerHTML='Cerca <span aria-hidden="true">&#128269;</span>';
+    b.addEventListener('click',function(){var t=document.querySelector('.search__toggle');if(t)t.click();});
+    w.parentNode.insertBefore(b,w.nextSibling);
+  }
+});
+</script>

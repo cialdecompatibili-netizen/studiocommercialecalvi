@@ -5,7 +5,7 @@ layout: default
 GUIDA-SVILUPPO: LAYOUT "single" = pagina standard del sito (pagine _pages e en/, articoli _posts, servizi/progetti; i layout negozio-* lo estendono).
 Estende il layout del tema (minimal-mistakes, remote_theme). ORDINE di cio' che stampa: hero (se header.overlay_*), briciole, titolo, contenuto,
 [solo servizi/progetti: galleria foto + FAQ + CTA], piede (tassonomia + date da page__date.html), share (solo se page.share), paginazione,
-barra laterale articoli (post-sidebar.html, per post e servizi), articoli correlati, "altri servizi".
+barra laterale articoli (barra a destra = author_profile del tema, config in _config.yml sezione author), articoli correlati, "altri servizi".
 NON TOCCARE: la classe has-postside su #main (la usa post-sidebar.html) e posts_l (articoli della lingua della pagina: ogni articolo deve avere lang).
 PER CAMBIARE COSA COMPARE usa il front matter della pagina (header, share, related, breadcrumbs), non questo file. Testi di interfaccia: _data/ui-text.yml.
 {%- endcomment -%}
@@ -28,7 +28,7 @@ PER CAMBIARE COSA COMPARE usa il front matter della pagina (header, share, relat
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main"{% if page.collection == "posts" or page.collection == "servizi" %} class="has-postside"{% endif %}>
+<div id="main" role="main">
   {% include sidebar.html locale=locale %}
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
@@ -98,7 +98,6 @@ PER CAMBIARE COSA COMPARE usa il front matter della pagina (header, share, relat
     {% endif %}
   </article>
 
-  {% if page.collection == "posts" or page.collection == "servizi" %}{% include post-sidebar.html %}{% endif %}
 
   {% if page.id and page.related and site.related_posts.size > 0 %}
     {% include page__related.html locale=locale posts=site.related_posts %}

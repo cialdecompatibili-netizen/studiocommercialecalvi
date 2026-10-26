@@ -42,7 +42,32 @@ search: true
 
 # SEO globale
 author:
-  name: ""
+  name: "Studio Commerciale"
+  avatar: "/assets/images/favicon-512.png"
+  bio: "Consulenza fiscale, contabile e societaria per imprese e professionisti. Hai un dubbio sul tuo caso? Scrivici su WhatsApp due righe: ti diciamo se possiamo aiutarti e da dove partire. Primo contatto gratuito e senza impegno."
+  # LINK BARRA DESTRA (articoli e servizi): url "#" = da mettere. WhatsApp: quando c'e' il numero usare https://wa.me/39XXXXXXXXXX?text=Buongiorno%2C%20vorrei%20un%20primo%20contatto
+  links:
+    - label: "Scrivici su WhatsApp"
+      icon: "fab fa-fw fa-whatsapp"
+      url: "#"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:info@studiocommercialista.it"
+    - label: "Sito web"
+      icon: "fas fa-fw fa-link"
+      url: "#"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "#"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "#"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "#"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "#"
 
 social:
   links: []
@@ -133,7 +158,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       read_time: true
       comments: true
       share: true
@@ -155,7 +180,7 @@ defaults:
       type: servizi
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       read_time: true
       share: true
   - scope:
