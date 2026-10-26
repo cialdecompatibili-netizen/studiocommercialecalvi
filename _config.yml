@@ -44,7 +44,7 @@ search: true
 author:
   name: "Studio Commerciale"
   avatar: "/assets/images/favicon-512.png"
-  bio: "Consulenza fiscale, contabile e societaria. Scrivici due righe su WhatsApp: primo contatto gratuito."
+  bio: "Consulenza fiscale, contabile e societaria. Scrivici su WhatsApp se hai un idea in mente o desideri parlare del tuo progetto: primo contatto gratuito."
   # LINK BARRA DESTRA (articoli e servizi): url "#" = da mettere. WhatsApp: quando c'e' il numero usare https://wa.me/39XXXXXXXXXX?text=Buongiorno%2C%20vorrei%20un%20primo%20contatto
   links:
     - label: "WhatsApp"
