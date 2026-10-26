@@ -49,7 +49,7 @@ INVITO WHATSAPP - box di contatto in fondo a servizi e articoli (UNA sola fonte 
 <div class="inv-wa__act">
 {%- if site.whatsapp != "" or site.whatsapp_demo %}<a class="inv-wa__btn" href="{{ inv_href }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9.5L4 22v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>{{ t.bottone }}</a>{% endif %}
 <p class="inv-wa__alt">{{ t.alternativa }}
-{%- if site.email and site.email != "" %} <a href="mailto:{{ site.email }}?subject={{ t.oggetto_email | append: ' ' | append: page.title | uri_escape }}">{{ t.email }}</a>{% endif %}
+{%- if site.email and site.email != "" %} <a href="mailto:{{ site.email }}?subject={{ t.oggetto_email | append: ' ' | append: page.title | url_encode | replace: '+', '%20' }}">{{ t.email }}</a>{% endif %}
  <a href="{% include url-ref.html ref='contatti' %}">{{ t.modulo }}</a></p>
 </div>
 </aside>
