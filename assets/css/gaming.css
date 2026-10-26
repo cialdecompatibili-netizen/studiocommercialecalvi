@@ -116,3 +116,11 @@
 @media(max-width:900px){.gc .gc-plat.ent-4{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:560px){.gc .gc-plat.ent-4{grid-template-columns:1fr!important}}
 @media(prefers-reduced-motion:reduce){.gc .ent-pl,.gc .ent-pl b a{transition:none}.gc .ent-pl:hover,.gc .ent-pl:focus-within{transform:none}}
+
+/* Home: sezione "Lo studio" con 3 pilastri (sostituisce le 4 fasce testo+foto) */
+.gc-pil{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.gc-pil article{background:var(--gc-soft);border:1px solid var(--gc-line);border-radius:12px;padding:1.6rem 1.5rem}
+.gc-pil .n{display:block;font:700 2.2rem var(--gc-head);color:var(--gc-acc);opacity:.35;line-height:1;margin-bottom:.9rem}
+.gc-pil h3{font:700 1.2rem var(--gc-head);margin:0 0 .5rem;color:var(--gc-ink)}
+.gc-pil p{margin:0;font-size:.98rem;line-height:1.65;color:var(--gc-mut)}
+@media(max-width:860px){.gc-pil{grid-template-columns:1fr}}

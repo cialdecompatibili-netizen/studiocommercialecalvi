@@ -8,36 +8,19 @@ INVITO WHATSAPP - box di contatto in fondo a servizi e articoli (UNA sola fonte 
   email (mailto con oggetto gia' scritto) e modulo contatti.
 - Numero: `whatsapp` in _config.yml. Vuoto + `whatsapp_demo: true` = bottone visibile con link "#" (segnaposto).
   Vuoto + whatsapp_demo false = niente bottone WhatsApp, restano email e modulo.
-- Stile: blocco <style> qui sotto (classi .inv-wa*). Pannello navy per staccare dal testo (contrasto = si nota),
-  bottone verde WhatsApp con testo scuro (contrasto alto). Cambiare il navy: variabile --inv-bg.
-{%- endcomment -%}
-{%- assign inv = site.data.invito_whatsapp -%}
-{%- if inv.attivo and inv.mostra_su contains page.collection -%}
-{%- assign L = page.lang | default: site.default_lang | default: "it" -%}
-{%- if L == "en" -%}{%- assign t = inv.en -%}{%- else -%}{%- assign t = inv.it -%}{%- endif -%}
-{%- assign inv_msg = t.messaggio | replace: "{titolo}", page.title -%}
-{%- if site.whatsapp and site.whatsapp != "" -%}
-  {%- capture inv_href -%}https://wa.me/{{ site.whatsapp }}?text={{ inv_msg | url_encode }}{%- endcapture -%}
-{%- else -%}
-  {%- assign inv_href = "#" -%}
-{%- endif -%}
-{%- unless inv_css_done -%}{%- assign inv_css_done = true -%}
-<style>
-.inv-wa{--inv-bg:#0f2540;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1.5rem 2.5rem;align-items:center;margin:3rem 0 1.5rem;padding:2rem 2.2rem;border-radius:14px;background:var(--inv-bg);color:#e8eef6}
-.inv-wa__title{margin:0 0 .6rem;font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.35rem,2.4vw,1.75rem);font-weight:600;line-height:1.25;color:#fff}
-.inv-wa__text{margin:0 0 .5rem;max-width:52ch;line-height:1.65;color:#cdd8e6}
-.inv-wa__note{margin:0;font-size:.92rem;font-weight:600;color:#9fe3c4}
-.inv-wa__act{display:flex;flex-direction:column;gap:.9rem}
-.inv-wa__btn{display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;padding:.8rem 1.4rem;border-radius:10px;background:#25d366;color:#06281c;font-size:1.1rem;font-weight:700;text-decoration:none;transition:background-color .15s ease,transform .15s ease}
-.inv-wa__btn:hover,.inv-wa__btn:focus-visible{background:#3fe07f;color:#06281c;transform:translateY(-2px)}
-.inv-wa__btn svg{width:1.4rem;height:1.4rem;flex:none;fill:currentColor}
-.inv-wa__alt{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.4rem 1.2rem;font-size:.95rem;color:#cdd8e6}
-.inv-wa__alt a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.inv-wa__alt a:hover{color:#9fe3c4}
-.inv-wa a:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.inv-wa--alto{margin:0 0 2rem;padding:1.5rem 2rem}
-@media(max-width:760px){.inv-wa{grid-template-columns:1fr;padding:1.6rem 1.3rem}}
-@media(prefers-reduced-motion:reduce){.inv-wa__btn{transition:none}.inv-wa__btn:hover{transform:none}}
+- Stile: blocco <style>
+.inv-wa{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem 1.5rem;margin:0 0 1.6rem;padding:1rem 1.3rem;border-radius:10px;background:var(--gc-soft,#f5f6fa);border:1px solid var(--gc-line,#e6e8ee);color:var(--gc-ink,#0e1116)}
+.inv-wa__title{margin:0;font-size:1.05rem;font-weight:700;line-height:1.3;color:var(--gc-ink,#0e1116)}
+.inv-wa__text{margin:.2rem 0 0;max-width:46ch;font-size:.92rem;line-height:1.5;color:var(--gc-mut,#56606b)}
+.inv-wa__note{display:none}
+.inv-wa__act{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
+.inv-wa__btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.65rem 1.2rem;border-radius:8px;background:#1e3a5f;color:#fff;font-size:.98rem;font-weight:700;text-decoration:none;transition:background-color .15s ease}
+.inv-wa__btn:hover,.inv-wa__btn:focus-visible{background:#15304f;color:#fff}
+.inv-wa__btn svg{width:1.15rem;height:1.15rem;flex:none;fill:currentColor}
+.inv-wa__alt{margin:0;font-size:.85rem;color:var(--gc-mut,#56606b)}
+.inv-wa__alt a{color:var(--gc-acc,#1e3a5f);text-decoration:underline;text-underline-offset:3px}
+.inv-wa a:focus-visible{outline:3px solid #1e3a5f;outline-offset:3px}
+@media(max-width:760px){.inv-wa{flex-direction:column;align-items:stretch}.inv-wa__act{align-items:stretch}}
 </style>
 {%- endunless -%}
 <aside class="inv-wa{% if include.pos == 'alto' %} inv-wa--alto{% endif %}" aria-label="{{ t.titolo | escape }}">
