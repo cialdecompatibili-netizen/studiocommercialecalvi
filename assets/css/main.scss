@@ -393,3 +393,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 /* WhatsApp: solo nome, con contorno */
 .author__urls li:first-child a{background:#fff !important;color:var(--t-accent,#1e3a5f) !important;border:2px solid var(--t-accent,#1e3a5f) !important;padding:.3rem 1rem !important}
 .author__urls li:first-child a:hover{background:var(--t-accent,#1e3a5f) !important;color:#fff !important}
+
+/* 26/10/2026: larghezza sito = larghezza menu in alto (nv__inner 1360px, padding 1rem) */
+#main,.breadcrumbs,.page__footer footer{max-width:1360px !important;padding-left:1rem !important;padding-right:1rem !important;box-sizing:border-box}
+.gc-wrap{max-width:1360px !important}
