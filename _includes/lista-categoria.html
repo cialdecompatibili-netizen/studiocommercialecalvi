@@ -61,9 +61,9 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
     {%- unless all_mode %}
     <p class="cl-crumb"><a href="{% include url-ref.html ref=home_ref %}">{% if home_ref == "servizi" %}Servizi{% else %}Blog{% endif %}</a> &rsaquo; {{ cat_nome }}</p>
     {%- endunless %}
-    <h1 class="cl-h1">{% if all_mode %}Blog{% else %}{{ cat_nome }}{% endif %}</h1>
+    <h1 class="cl-h1">{% if all_mode %}{% if home_ref == "servizi" %}Servizi{% else %}Blog{% endif %}{% else %}{{ cat_nome }}{% endif %}</h1>
     {%- if all_mode %}
-    <p class="cl-desc">{{ t_blogdesc }}</p>
+    <p class="cl-desc">{% if home_ref == "servizi" %}Consulenza fiscale, contabile e societaria per imprese e professionisti. Scegli un'area o apri direttamente il servizio.{% else %}{{ t_blogdesc }}{% endif %}</p>
     {%- elsif cdata.descrizione and cdata.descrizione != "" %}
     <p class="cl-desc">{{ cdata.descrizione | strip_html }}</p>
     {%- endif %}
@@ -88,12 +88,12 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
     {%- assign kick = cat_nome -%}
     {%- if all_mode -%}{%- assign pcs = p.categories | where_exp: "c", "c != page.lang" -%}{%- assign kick = pcs | first -%}{%- endif %}
     <li class="cl-item">
-      <a class="cl-img" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true">{% if p.header.teaser %}<img src="{{ p.header.teaser | relative_url }}" alt="" loading="lazy">{% endif %}</a>
+      <a class="cl-img" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true">{% if p.header.teaser %}<img src="{{ p.header.teaser | relative_url }}" alt="" loading="lazy">{% elsif home_ref == "servizi" %}<img src="{{ '/assets/images/blog/' | append: p.slug | append: '.jpg' | relative_url }}" alt="" loading="lazy" onerror="this.remove()">{% endif %}</a>
       <div class="cl-body">
         <span class="cl-kick">{{ kick }}</span>
         <a class="cl-title" href="{{ p.url | relative_url }}">{{ p.title }}</a>
         <div class="cl-ex">{{ p.excerpt | strip_html | strip_newlines | truncate: 220 }}</div>
-        <div class="cl-meta">{% if L == "en" %}{{ mesi[m] }} {{ p.date | date: "%-d, %Y" }}{% else %}{{ p.date | date: "%-d" }} {{ mesi[m] }} {{ p.date | date: "%Y" }}{% endif %} · {{ p.content | number_of_words | divided_by: 200 | plus: 1 }} {{ t_min }}</div>
+        {% unless home_ref == "servizi" %}<div class="cl-meta">{% if L == "en" %}{{ mesi[m] }} {{ p.date | date: "%-d, %Y" }}{% else %}{{ p.date | date: "%-d" }} {{ mesi[m] }} {{ p.date | date: "%Y" }}{% endif %} · {{ p.content | number_of_words | divided_by: 200 | plus: 1 }} {{ t_min }}</div>{% endunless %}
         <a class="cl-more" href="{{ p.url | relative_url }}">{{ t_read }} &rarr;</a>
       </div>
     </li>
