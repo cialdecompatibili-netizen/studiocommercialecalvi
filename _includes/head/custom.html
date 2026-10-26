@@ -552,7 +552,7 @@ document.addEventListener('DOMContentLoaded',function(){
   if(w&&!document.querySelector('.sb-cerca')){
     var b=document.createElement('button');b.type='button';b.className='sb-cerca';b.innerHTML='Cerca <span aria-hidden="true">&#128269;</span>';
     b.addEventListener('click',function(){var t=document.querySelector('.search__toggle');if(t)t.click();});
-    w.parentNode.insertBefore(b,w.nextSibling);
+    w.parentNode.insertBefore(b,w);
   }
 });
 </script>
