@@ -1,11 +1,14 @@
 {%- comment -%}
-INVITO WHATSAPP - box "scrivici, gratis e senza impegno" (UNA sola fonte per tutto il sito).
+INVITO WHATSAPP - box di contatto in fondo a servizi e articoli (UNA sola fonte per tutto il sito).
 - Testi e attivazione: _data/invito_whatsapp.yml (cambi li', cambia ovunque; EN nella chiave `en`).
-- Dove compare: lo richiama _layouts/single.html in fondo al contenuto; qui sotto si decide se mostrarlo
-  in base a `mostra_su` (collezioni: servizi, posts). Pagine normali (home, contatti...) = non compare.
+- Dove compare: lo richiama _layouts/single.html in fondo al contenuto; qui si decide se mostrarlo in base a
+  `mostra_su` (collezioni: servizi, posts). Pagine normali (home, contatti...) = non compare.
+- Gerarchia (di proposito): 1 sola azione grande = WhatsApp (la piu' veloce); sotto, due vie classiche piu' piccole:
+  email (mailto con oggetto gia' scritto) e modulo contatti.
 - Numero: `whatsapp` in _config.yml. Vuoto + `whatsapp_demo: true` = bottone visibile con link "#" (segnaposto).
-  Vuoto + whatsapp_demo false = niente bottone WhatsApp, resta solo il link al modulo contatti.
-- Stile: blocco <style> qui sotto (classi .inv-wa*). Colori: --t-accent del tema; verde WhatsApp scuro per contrasto.
+  Vuoto + whatsapp_demo false = niente bottone WhatsApp, restano email e modulo.
+- Stile: blocco <style> qui sotto (classi .inv-wa*). Pannello navy per staccare dal testo (contrasto = si nota),
+  bottone verde WhatsApp con testo scuro (contrasto alto). Cambiare il navy: variabile --inv-bg.
 {%- endcomment -%}
 {%- assign inv = site.data.invito_whatsapp -%}
 {%- if inv.attivo and inv.mostra_su contains page.collection -%}
@@ -18,23 +21,32 @@ INVITO WHATSAPP - box "scrivici, gratis e senza impegno" (UNA sola fonte per tut
   {%- assign inv_href = "#" -%}
 {%- endif -%}
 <style>
-.inv-wa{margin:2.5rem 0 1rem;padding:1.6rem 1.8rem;border:1px solid #e3e6ea;border-left:4px solid #0a7c5f;border-radius:12px;background:#f6f8fb}
-.inv-wa__title{margin:0 0 .4rem;font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;line-height:1.3;color:#0f2540}
-.inv-wa__text{margin:0;max-width:60ch;color:#4a5361;line-height:1.65}
-.inv-wa__row{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.2rem;margin-top:1.1rem}
-.inv-wa__btn{display:inline-block;padding:.75rem 1.4rem;border-radius:8px;background:#0a7c5f;color:#fff;font-weight:600;font-size:1rem;text-decoration:none;transition:background-color .15s ease}
-.inv-wa__btn:hover,.inv-wa__btn:focus-visible{background:#08634d;color:#fff}
-.inv-wa__note{font-size:.9rem;color:#4a5361}
-.inv-wa__alt{font-size:.9rem;color:var(--t-accent,#1e3a5f);text-decoration:underline}
-@media(prefers-reduced-motion:reduce){.inv-wa__btn{transition:none}}
+.inv-wa{--inv-bg:#0f2540;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1.5rem 2.5rem;align-items:center;margin:3rem 0 1.5rem;padding:2rem 2.2rem;border-radius:14px;background:var(--inv-bg);color:#e8eef6}
+.inv-wa__title{margin:0 0 .6rem;font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.35rem,2.4vw,1.75rem);font-weight:600;line-height:1.25;color:#fff}
+.inv-wa__text{margin:0 0 .5rem;max-width:52ch;line-height:1.65;color:#cdd8e6}
+.inv-wa__note{margin:0;font-size:.92rem;font-weight:600;color:#9fe3c4}
+.inv-wa__act{display:flex;flex-direction:column;gap:.9rem}
+.inv-wa__btn{display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;padding:.8rem 1.4rem;border-radius:10px;background:#25d366;color:#06281c;font-size:1.1rem;font-weight:700;text-decoration:none;transition:background-color .15s ease,transform .15s ease}
+.inv-wa__btn:hover,.inv-wa__btn:focus-visible{background:#3fe07f;color:#06281c;transform:translateY(-2px)}
+.inv-wa__btn svg{width:1.4rem;height:1.4rem;flex:none;fill:currentColor}
+.inv-wa__alt{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.4rem 1.2rem;font-size:.95rem;color:#cdd8e6}
+.inv-wa__alt a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.inv-wa__alt a:hover{color:#9fe3c4}
+.inv-wa a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:760px){.inv-wa{grid-template-columns:1fr;padding:1.6rem 1.3rem}}
+@media(prefers-reduced-motion:reduce){.inv-wa__btn{transition:none}.inv-wa__btn:hover{transform:none}}
 </style>
 <aside class="inv-wa" aria-label="{{ t.titolo | escape }}">
+<div>
 <p class="inv-wa__title">{{ t.titolo }}</p>
 <p class="inv-wa__text">{{ t.testo }}</p>
-<div class="inv-wa__row">
-{%- if site.whatsapp != "" or site.whatsapp_demo %}<a class="inv-wa__btn" href="{{ inv_href }}" target="_blank" rel="noopener">{{ t.bottone }}</a>{% endif %}
-<span class="inv-wa__note">{{ t.nota }}</span>
-<a class="inv-wa__alt" href="{% include url-ref.html ref='contatti' %}">{{ t.alternativa }}</a>
+<p class="inv-wa__note">{{ t.nota }}</p>
+</div>
+<div class="inv-wa__act">
+{%- if site.whatsapp != "" or site.whatsapp_demo %}<a class="inv-wa__btn" href="{{ inv_href }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9.5L4 22v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>{{ t.bottone }}</a>{% endif %}
+<p class="inv-wa__alt">{{ t.alternativa }}
+{%- if site.email and site.email != "" %} <a href="mailto:{{ site.email }}?subject={{ t.oggetto_email | append: ' ' | append: page.title | uri_escape }}">{{ t.email }}</a>{% endif %}
+ <a href="{% include url-ref.html ref='contatti' %}">{{ t.modulo }}</a></p>
 </div>
 </aside>
 {%- endif -%}

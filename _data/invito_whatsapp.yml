@@ -14,7 +14,8 @@
 #  2. testo = un solo passo, piccolo: "raccontaci in due righe" (meno sforzo percepito)
 #  3. bottone = verbo + canale concreto ("Scrivici su WhatsApp"), non "Invia"
 #  4. nota sotto il bottone = riduce il rischio percepito ("gratuito, senza impegno")
-#  5. niente promesse non verificabili (tempi di risposta, prezzi): non aggiungerle se non sono vere
+#  5. UNA azione grande (WhatsApp = la piu' veloce) + due vie classiche piccole (email, modulo): piu' scelte uguali = meno clic
+#  6. niente promesse non verificabili (tempi di risposta, prezzi): non aggiungerle se non sono vere
 # =====================================================================================
 attivo: true
 mostra_su: [servizi, posts]
@@ -24,7 +25,10 @@ it:
   testo: "Raccontaci la tua situazione in due righe: ti diciamo se possiamo aiutarti e da dove partire."
   bottone: "Scrivici su WhatsApp"
   nota: "Primo contatto gratuito e senza impegno."
-  alternativa: "Preferisci il modulo?"
+  alternativa: "Preferisci un altro modo?"
+  email: "Scrivi una email"
+  modulo: "Compila il modulo"
+  oggetto_email: "Richiesta informazioni:"
   messaggio: "Buongiorno, vorrei un primo contatto gratuito e senza impegno su: {titolo}."
 
 en:
@@ -32,5 +36,8 @@ en:
   testo: "Tell us about your case in a couple of lines: we will tell you if we can help and where to start."
   bottone: "Message us on WhatsApp"
   nota: "Free first contact, no obligation."
-  alternativa: "Prefer the contact form?"
+  alternativa: "Prefer another way?"
+  email: "Send an email"
+  modulo: "Use the contact form"
+  oggetto_email: "Information request:"
   messaggio: "Hello, I would like a free, no-obligation first contact about: {titolo}."
