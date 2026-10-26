@@ -389,3 +389,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 
 /* cerca staccato dalla linea del menu */
 .sb-cerca{margin-top:1rem !important}
+
+/* WhatsApp: solo nome, con contorno */
+.author__urls li:first-child a{background:#fff !important;color:var(--t-accent,#1e3a5f) !important;border:2px solid var(--t-accent,#1e3a5f) !important;padding:.3rem 1rem !important}
+.author__urls li:first-child a:hover{background:var(--t-accent,#1e3a5f) !important;color:#fff !important}

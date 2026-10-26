@@ -47,7 +47,7 @@ author:
   bio: "Consulenza fiscale, contabile e societaria. Scrivici due righe su WhatsApp: primo contatto gratuito."
   # LINK BARRA DESTRA (articoli e servizi): url "#" = da mettere. WhatsApp: quando c'e' il numero usare https://wa.me/39XXXXXXXXXX?text=Buongiorno%2C%20vorrei%20un%20primo%20contatto
   links:
-    - label: "Scrivici su WhatsApp"
+    - label: "WhatsApp"
       icon: "fab fa-fw fa-whatsapp"
       url: "#"
     - label: "Email"
