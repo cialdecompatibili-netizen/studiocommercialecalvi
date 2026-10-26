@@ -21,6 +21,7 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
   {%- assign mesi = "gennaio,febbraio,marzo,aprile,maggio,giugno,luglio,agosto,settembre,ottobre,novembre,dicembre" | split: "," -%}
 {%- endif -%}
 {%- if include.src == "servizi" -%}{%- assign posts_l = site.servizi | where: "lang", page.lang | sort: "date" | reverse -%}{%- assign home_ref = "servizi" -%}{%- else -%}{%- assign posts_l = site.posts | where: "lang", page.lang -%}{%- assign home_ref = "blog" -%}{%- endif -%}
+{%- if home_ref == "servizi" and L != "en" -%}{%- assign t_one = "servizio" -%}{%- assign t_many = "servizi" -%}{%- assign t_read = "Apri il servizio" -%}{%- assign t_other = "Aree di servizio" -%}{%- assign t_empty = "Qui non ci sono ancora servizi." -%}{%- assign t_goblog = "Vai ai servizi" -%}{%- endif -%}
 {%- assign cdat_all = site.data.i18n[L].categorie | default: site.data.categorie -%}
 {%- assign cdata = cdat_all | where: "nome", cat_nome | first -%}
 {%- assign n = 0 -%}

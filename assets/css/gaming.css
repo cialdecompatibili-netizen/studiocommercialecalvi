@@ -82,3 +82,16 @@
 @media(max-width:560px){.gc-grid,.gc-plat{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.gc *{transition:none!important}}
 .art-nota{background:var(--gc-soft);border:1px solid var(--gc-line);border-radius:10px;padding:1.1rem 1.4rem;margin:2rem 0 0}.art-nota p{margin:0}
+
+/* HERO corporate: foto grattacieli + velo blu navy, testo bianco */
+.ent-hero{background:#0f2540 url(../images/hero.jpg) center 40%/cover no-repeat}
+.ent-hero::before{background:linear-gradient(100deg,rgba(9,24,46,.9) 0%,rgba(15,37,64,.74) 48%,rgba(15,37,64,.38) 100%)}
+.ent-hero .gc-h1{color:#fff;text-shadow:none}
+.ent-hero .gc-h1 em{color:inherit;font-style:normal}
+.ent-hero .gc-lead{color:rgba(255,255,255,.88);text-shadow:none}
+.ent-hero .gc-eyebrow{color:#b9d0ee;text-shadow:none}
+.ent-hero .gc-btn-a{background:#fff;border-color:#fff;color:#0f2540;text-shadow:none;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.ent-hero .gc-btn-a:hover{background:#eaf1fb;color:#0f2540;filter:none}
+.ent-hero .gc-btn-o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.75);box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.ent-hero .gc-btn-o:hover{background:rgba(255,255,255,.14);color:#fff;filter:none}
+@media(max-width:900px){.ent-hero::before{background:linear-gradient(180deg,rgba(9,24,46,.86),rgba(15,37,64,.72))}}
