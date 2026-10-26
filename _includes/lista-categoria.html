@@ -28,7 +28,7 @@ NON toccare: gli attributi data-pg* abilitano la paginazione del sito (assets/js
 {%- for p in posts_l -%}{%- if all_mode or p.categories contains cat_nome -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
 <style>
 #page-title{display:none}
-.cl{--cl-ink:#14181f;--cl-mute:#5d6673;--cl-line:#e3e6ea;--cl-acc:var(--t-accent,#1f3a5f);max-width:1080px;margin:0 auto;color:var(--cl-ink)}
+.cl{--cl-ink:#14181f;--cl-mute:#5d6673;--cl-line:#e3e6ea;--cl-acc:var(--t-accent,#1f3a5f);max-width:none;margin:0;color:var(--cl-ink)}
 .cl a{text-decoration:none}
 .cl-crumb{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cl-mute);margin:0 0 1rem}
 .cl-crumb a{color:var(--cl-acc)}
