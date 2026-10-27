@@ -92,3 +92,10 @@ Lezioni dalla migrazione "pelletteria" -> "pelletteria2" (24/10/2026)
 - Card servizi in home: si stilizzano solo con CSS in fondo a assets/css/gaming.css (selettori '.gc .ent-pl', griglia '.gc .gc-plat.ent-4' con !important); i blocchi html di _data/blocks_home.json non si toccano. Numeri 01-12 nascosti, intera card cliccabile con link stirato (b a::after).
 - DA NON FARE (stile): mai barrette/bordini colorati su un lato di box, card o citazioni (border-left e simili, o barre che compaiono all'hover): sembrano artificiali. Per distinguere un box usare sfondo, contrasto e spazio.
 - Contatti: NIENTE box WhatsApp nel testo. Il contatto sta nella barra DESTRA di articoli e servizi = author_profile del tema (come edilextreme4): config in _config.yml sezione `author` (nome, avatar tondo, bio, links; WhatsApp e` il primo link, url "#" finche non c'e` il numero), stile in fondo a assets/css/main.scss, bottone Cerca aggiunto da JS in _includes/head/custom.html. Non ricreare post-sidebar/box.
+
+
+Guide e banner contatto (27/10/2026)
+- Nuova categoria blog: aggiungere la voce in `_data/categorie.json` e, nella stessa posizione, in `_data/i18n/en/categorie.json`, poi `python automation/permalink_articoli.py --apply` (crea `_pages/cat-<slug>.md` e `en/category-*.md`). Con edit_block usare un'ancora su UNA riga (i file sono CRLF) e inserire la nuova voce prima di quella ancorata.
+- Banner contatto negli articoli: `<div class="art-cta"><strong class="t">Titolo</strong><p>Testo</p><a class="btn-cta" href="{% include url-ref.html ref="contatti" %}">Contattaci</a></div>`; versione compatta a meta' articolo: `art-cta art-cta-min` con solo `<p>` e link. Stile in fondo a `assets/css/gaming.css` (box con sfondo tinta accento, niente barre laterali).
+- Link allo shop dentro un articolo: `{% include shop-url.html k="prod" id="<id prodotto>" %}`.
+- Guide fiscali: cifre solo verificate sul web; dove le fonti discordano (es. soglia reddito da lavoro dipendente nel forfettario, 30.000 o 35.000) non scrivere il numero.
