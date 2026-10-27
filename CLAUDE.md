@@ -106,3 +106,13 @@ Regola shop FREEMIUM (27/10/2026, obbligatoria per ogni prodotto)
 - Leve psicologiche da applicare (esperti: Cialdini, Kahneman, Ariely, Yu-kai Chou, ricerche ECIS 2020): reciprocita' (il free da' valore subito); effetto possesso (l'utente inserisce i suoi dati nel free e Pro li mantiene); avversione alla perdita (invito a Pro solo quando si raggiunge un limite reale); paywall DOPO il risultato (l'invito a Pro compare dopo che l'utente ha ottenuto il suo risultato, non prima); distanza di valore (free ridotto + Pro ricco = piu' conversioni); ancoraggio e pacchetto con risparmio reale; opzione esca alla Ariely solo se esiste davvero come prodotto.
 - Conversione tipica freemium 3-5% (fonte secondaria): servono volumi, il dato vero lo da' lo smoke test.
 - Vietato: countdown o scarsita' finti, recensioni inventate, limiti artificiali che rendono inutile il free.
+
+
+## Banner contatto automatico (27/10/2026) - LEGGERE PRIMA DI TOCCARE ARTICOLI E SERVIZI
+- Cos'e': piccolo banner "Consulenza gratuita" (testo + bottone WhatsApp + bottone "Compila il modulo") che compare DA SOLO a meta' del testo di OGNI articolo (`_posts`) e OGNI pagina servizio (`_servizi`), in tutte le lingue. Non va copiato a mano negli articoli.
+- UN SOLO PUNTO per modificarlo: testi in `_data/banner_contatto.yml` (per lingua; senza voce usa l'italiano). Markup in `_includes/banner-contatto.html`. Posizione (meta' testo) in `_includes/contenuto-con-banner.html`, chiamato da `_layouts/single.html` al posto di `{{ content }}`. Stile in fondo a `assets/css/gaming.css` (blocco "BANNER CONTATTO AUTOMATICO", classi `.cb`).
+- Dove lo mette: prima dell'H2 di meta' (servono almeno 3 H2), altrimenti dopo il paragrafo di meta' (almeno 4 paragrafi), altrimenti niente. Per spegnerlo in una pagina: front matter `banner_contatto: false`.
+- WhatsApp: legge `whatsapp` in `_config.yml`. Vuoto = bottone con `#` (inerte). Quando c'e' il numero (es. 393331234567) scriverlo li' e il bottone si attiva ovunque da solo (e `whatsapp_demo` va rimesso `false` come da commento in _config.yml).
+- NON usare piu' `art-cta art-cta-min` a meta' articolo (era il vecchio banner manuale: ora sarebbe doppio). Resta valido il banner grande `art-cta` in fondo agli articoli.
+- La card "Consulenza gratuita" dell'hero in home e' separata: sta nel blocco hero di `_data/blocks_home.json` (html statico, classe `.gc-hero-card`, stile in gaming.css). Se cambiano i testi del banner, allinearla a mano.
+- Tag per tornare indietro: `prima-banner-auto`.

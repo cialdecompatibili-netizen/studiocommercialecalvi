@@ -191,3 +191,19 @@
 .gc .ent-hero .gc-hero-card .gc-btn-wa{background:#25d366;border-color:#25d366!important;color:#fff;gap:.5rem;margin:0 0 1.25rem}
 .gc .ent-hero .gc-hero-card .gc-btn-wa:hover{background:#1ebe5b}
 .gc .ent-hero .gc-hero-card .gc-hero-card-s{margin-bottom:.75rem}
+
+
+/* ===== BANNER CONTATTO AUTOMATICO (.cb) =====
+   Piccolo banner "consulenza gratuita" inserito da solo a meta' di articoli e servizi (_includes/contenuto-con-banner.html).
+   Markup: _includes/banner-contatto.html. Testi: _data/banner_contatto.yml. Colori: --gc-acc / --gc-acc-s. Niente barre sui lati. */
+.cb{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1.25rem;clear:both;margin:2rem 0;padding:.9rem 1.1rem;background:var(--gc-acc-s,#edeff2);border:1px solid var(--gc-line,#e6e8ee);border-radius:8px;font-size:.95rem;line-height:1.45}
+.cb-t{flex:1 1 15rem;display:flex;flex-direction:column;gap:.15rem;color:var(--gc-mut,#56606b)}
+.cb-t strong{color:var(--gc-ink,#0e1116);font-size:1rem}
+.cb-b{display:flex;flex-wrap:wrap;gap:.6rem}
+.page__content .cb a{display:inline-flex;align-items:center;gap:.4rem;min-height:40px;padding:0 1rem;border:1.5px solid;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
+.page__content .cb .cb-wa{background:#25d366;border-color:#25d366;color:#fff}
+.page__content .cb .cb-wa:hover{background:#1ebe5b;border-color:#1ebe5b;color:#fff}
+.page__content .cb .cb-f{background:#fff;border-color:var(--gc-acc,#1e3a5f);color:var(--gc-acc,#1e3a5f)}
+.page__content .cb .cb-f:hover{background:var(--gc-acc,#1e3a5f);color:#fff}
+.page__content .cb a:focus-visible{outline:3px solid var(--gc-acc,#1e3a5f);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.page__content .cb a{transition:none}}

@@ -1,0 +1,13 @@
+{%- comment -%}
+GUIDA-SVILUPPO: BANNER CONTATTO (markup). Non si include a mano: lo inserisce _includes/contenuto-con-banner.html in mezzo al testo di articoli e servizi.
+TESTI: _data/banner_contatto.yml (un solo punto, per lingua). STILE: assets/css/gaming.css, blocco "BANNER CONTATTO AUTOMATICO" (.cb).
+WHATSAPP: usa site.whatsapp (_config.yml); se e' vuoto il link e' "#" (inerte, finche' non c'e' il numero).
+Pagina modulo: ricavata dal ref "contatti" (url-ref.html), quindi funziona in ogni lingua.
+{%- endcomment -%}
+{%- assign bc_d = site.data.banner_contatto[page.lang] | default: site.data.banner_contatto.it -%}
+{%- if site.whatsapp and site.whatsapp != "" -%}
+  {%- capture bc_wa -%}https://wa.me/{{ site.whatsapp }}?text={{ bc_d.wa_msg | url_encode }}{%- endcapture -%}
+{%- else -%}
+  {%- assign bc_wa = "#" -%}
+{%- endif -%}
+<aside class="cb" aria-label="{{ bc_d.titolo | escape }}"><div class="cb-t"><strong>{{ bc_d.titolo }}</strong><span>{{ bc_d.testo }}</span></div><div class="cb-b"><a class="cb-wa" href="{{ bc_wa }}"{% if bc_wa != "#" %} target="_blank" rel="noopener"{% endif %}><i class="fab fa-whatsapp" aria-hidden="true"></i> {{ bc_d.wa }}</a><a class="cb-f" href="{% include url-ref.html ref="contatti" %}">{{ bc_d.modulo }}</a></div></aside>

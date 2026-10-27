@@ -68,7 +68,8 @@ PER CAMBIARE COSA COMPARE usa il front matter della pagina (header, share, relat
             <figure class="post-cover"><img src="{{ cover_src }}" alt="{{ page.header.teaser_alt | default: page.title | escape }}" decoding="async" fetchpriority="high"></figure>
           {% endunless %}
         {% endif %}
-        {{ content }}
+        {%- comment -%} Il contenuto passa da contenuto-con-banner.html: a meta' di articoli e servizi compare il banner contatto automatico (vedi quel file e _data/banner_contatto.yml). {%- endcomment -%}
+        {% include contenuto-con-banner.html html=content %}
         {%- comment -%} Pagine servizio: FAQ + dati strutturati, poi blocco CTA finale (WhatsApp, telefono, modulo) {%- endcomment -%}
         {% if page.collection == "servizi" %}
           {% include servizio-faq.html %}

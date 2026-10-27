@@ -1,0 +1,19 @@
+# BANNER CONTATTO AUTOMATICO - TESTI (UNICO PUNTO DOVE SI MODIFICANO I TESTI)
+# Il banner compare da solo in mezzo al testo di ogni articolo (_posts) e di ogni pagina servizio (_servizi), in tutte le lingue.
+# Come funziona: _layouts/single.html -> _includes/contenuto-con-banner.html (decide DOVE: a meta' articolo) -> _includes/banner-contatto.html (markup).
+# Stile: assets/css/gaming.css, blocco "BANNER CONTATTO AUTOMATICO" (classi .cb).
+# WhatsApp: il link usa site.whatsapp di _config.yml (numero con prefisso, senza + e senza spazi). Se e' vuoto il bottone punta a "#" (inerte): basta
+# scrivere il numero in _config.yml e il bottone si attiva da solo, in tutte le pagine, senza toccare altro.
+# Una lingua senza voce qui usa quella italiana. Per spegnere il banner in UNA pagina: nel front matter scrivere  banner_contatto: false
+it:
+  titolo: "Consulenza gratuita"
+  testo: "Hai un'idea o un progetto? Parlane con noi: consulenza fiscale, contabile e societaria gratuita."
+  wa: "Scrivici su WhatsApp"
+  wa_msg: "Buongiorno, vorrei un primo contatto"
+  modulo: "Compila il modulo"
+en:
+  titolo: "Free consultation"
+  testo: "Have an idea or a project? Talk to us: free tax, accounting and corporate advice."
+  wa: "Message us on WhatsApp"
+  wa_msg: "Hello, I would like a first contact"
+  modulo: "Fill in the form"

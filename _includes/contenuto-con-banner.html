@@ -1,0 +1,43 @@
+{%- comment -%}
+GUIDA-SVILUPPO: INSERISCE IL BANNER CONTATTO A META' DEL TESTO (automatico). Chiamato da _layouts/single.html al posto di stampare direttamente il contenuto.
+Uso: include contenuto-con-banner.html html=content
+Dove va il banner (nessuna modifica ai file degli articoli):
+  - almeno 3 titoli H2 nel testo -> prima dell'H2 che sta a meta';
+  - altrimenti, almeno 4 paragrafi -> dopo il paragrafo a meta';
+  - testo troppo corto -> nessun banner.
+Solo per articoli (collection posts) e servizi (collection servizi); le altre pagine (home, shop, contatti...) non cambiano.
+Per spegnerlo in UNA pagina: front matter  banner_contatto: false
+Testi in _data/banner_contatto.yml, markup in _includes/banner-contatto.html, stile in gaming.css (.cb).
+{%- endcomment -%}
+{%- assign cb_on = false -%}
+{%- if page.collection == "posts" or page.collection == "servizi" -%}{%- assign cb_on = true -%}{%- endif -%}
+{%- if page.banner_contatto == false -%}{%- assign cb_on = false -%}{%- endif -%}
+{%- assign cb_mode = "" -%}
+{%- if cb_on -%}
+  {%- assign cb_parts = include.html | split: "<h2" -%}
+  {%- if cb_parts.size >= 4 -%}
+    {%- assign cb_mode = "h2" -%}
+    {%- assign cb_at = cb_parts.size | divided_by: 2 -%}
+  {%- else -%}
+    {%- assign cb_parts = include.html | split: "</p>" -%}
+    {%- if cb_parts.size >= 5 -%}
+      {%- assign cb_mode = "p" -%}
+      {%- assign cb_at = cb_parts.size | divided_by: 2 | minus: 1 -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if cb_mode == "" -%}
+{{ include.html }}
+{%- else -%}
+  {%- capture cb_banner -%}{% include banner-contatto.html %}{%- endcapture -%}
+  {%- assign cb_last = cb_parts.size | minus: 1 -%}
+  {%- for cb_p in cb_parts -%}
+    {%- if cb_mode == "h2" -%}
+      {%- if forloop.index0 == cb_at -%}{{ cb_banner }}{%- endif -%}
+      {%- if forloop.index0 > 0 -%}<h2{%- endif -%}{{ cb_p }}
+    {%- else -%}
+      {{ cb_p }}{%- if forloop.index0 < cb_last -%}</p>{%- endif -%}
+      {%- if forloop.index0 == cb_at -%}{{ cb_banner }}{%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
