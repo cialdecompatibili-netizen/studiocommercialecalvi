@@ -175,3 +175,5 @@
 /* contatti: stesso allineamento a sinistra del resto */
 .gc .gc-dark{text-align:left}
 .gc .gc-dark .gc-lead{margin:0 0 1.75rem;max-width:40rem}
+.gc .ent-hero .gc-lead{text-wrap:pretty}
+.gc .ent-pl b{min-height:2.5em}
