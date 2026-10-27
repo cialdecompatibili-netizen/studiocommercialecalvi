@@ -11,7 +11,9 @@ REGOLE: dentro le doppie graffe di output di Liquid non scrivere MAI una graffa 
 {%- comment -%} SHOP MULTILINGUA: NZ_DICT = tabella it->lingua della pagina (_data/shop_ui.yml); shop-i18n.js la applica, DEVE stare prima di carrello.js. Pagina italiana: nessun dizionario. {%- endcomment -%}
 {% if site.ecommerce == true %}{% assign nz_d = site.data.shop_ui[page.lang] %}<script>window.NZ_ECOM=true;{% if nz_d %}window.NZ_DICT={{ nz_d | jsonify }};{% endif %}</script><link rel="stylesheet" href="{{ '/assets/css/negozio.css' | relative_url }}"><script src="{{ '/assets/js/shop-i18n.js' | relative_url }}" defer></script><script src="{{ '/assets/js/carrello.js' | relative_url }}" defer></script>{% endif %}
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/images/favicon-48.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/favicon-192.png' | relative_url }}">
 <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 {% assign t = site.data.tema %}
