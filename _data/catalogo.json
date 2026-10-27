@@ -222,6 +222,110 @@
           "descrizione_completa": "What to do right after opening\nWhat to keep and how to organise your documents\nA reminder of the main deadlines of the year"
         }
       }
-    }
+    },
+{
+    "tipo":  "digitale",
+    "id":  "fattura-forfettario-excel",
+    "nome":  "Fattura forfettario in Excel (Free + Pro)",
+    "categoria":  "excel-partita-iva",
+    "prezzo_centesimi":  1290,
+    "descrizione":  "Modello di fattura per il regime forfettario con diciture e bollo gia\u0027 impostati.",
+    "descrizione_completa":  "FREE: fattura pronta con il marchio dello studio, per iniziare subito.\nPRO: senza marchio, numerazione automatica, archivio clienti e riepilogo incassi, aggiornato ogni anno.\nInformazione di carattere generale: non sostituisce la consulenza del commercialista.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+},
+{
+    "tipo":  "digitale",
+    "id":  "calcolo-convenienza-forfettario-excel",
+    "nome":  "Calcolo tasse e convenienza forfettario (Free + Pro)",
+    "categoria":  "excel-partita-iva",
+    "prezzo_centesimi":  1990,
+    "descrizione":  "Confronta forfettario e regime ordinario con i tuoi numeri e stima imposte e contributi.",
+    "descrizione_completa":  "FREE: calcolo semplificato con il marchio dello studio, per avere subito un risultato.\nPRO: confronto completo forfettario/ordinario, contributi per cassa, scenari multipli e salvataggio dei tuoi dati, aggiornato ogni anno.\nLe stime sono indicative: verifica sempre con un professionista.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+},
+{
+    "tipo":  "digitale",
+    "id":  "ebook-scegliere-codice-ateco-pdf",
+    "nome":  "Guida: scegliere il codice ATECO (Free + Pro)",
+    "categoria":  "guide-fiscali",
+    "prezzo_centesimi":  990,
+    "descrizione":  "Come scegliere il codice ATECO giusto e perche\u0027 incide su tasse e contributi.",
+    "descrizione_completa":  "FREE: capitolo introduttivo gratuito con i criteri di scelta.\nPRO: guida completa con esempi per attivita\u0027, errori comuni e checklist finale.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+},
+{
+    "tipo":  "digitale",
+    "id":  "ebook-acconti-saldo-pdf",
+    "nome":  "Guida: acconti e saldo per la partita IVA (Free + Pro)",
+    "categoria":  "guide-fiscali",
+    "prezzo_centesimi":  990,
+    "descrizione":  "Capire acconti, saldo e scadenze per non farti trovare impreparato.",
+    "descrizione_completa":  "FREE: schema delle scadenze principali.\nPRO: guida completa con esempi di calcolo e promemoria annuale.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+},
+{
+    "tipo":  "digitale",
+    "id":  "ebook-inps-forfettari-pdf",
+    "nome":  "Guida: contributi INPS per forfettari (Free + Pro)",
+    "categoria":  "guide-fiscali",
+    "prezzo_centesimi":  990,
+    "descrizione":  "Come funzionano i contributi INPS per chi e\u0027 in regime forfettario.",
+    "descrizione_completa":  "FREE: panoramica delle gestioni INPS.\nPRO: guida completa con esempi pratici e scadenze.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+},
+{
+    "tipo":  "digitale",
+    "id":  "ebook-chiusura-partita-iva-pdf",
+    "nome":  "Guida: chiudere la partita IVA o cambiare regime (Free + Pro)",
+    "categoria":  "guide-fiscali",
+    "prezzo_centesimi":  990,
+    "descrizione":  "Passi, tempi e adempimenti per chiudere la partita IVA o cambiare regime.",
+    "descrizione_completa":  "FREE: elenco dei passaggi essenziali.\nPRO: guida completa con casi pratici e checklist.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+},
+{
+    "tipo":  "digitale",
+    "id":  "contratto-prestazione-freelance-word",
+    "nome":  "Contratto di prestazione per freelance (Free + Pro)",
+    "categoria":  "modelli-checklist",
+    "prezzo_centesimi":  790,
+    "descrizione":  "Modello di contratto di prestazione di servizi per liberi professionisti.",
+    "descrizione_completa":  "FREE: modello base con il marchio dello studio.\nPRO: modello completo senza marchio, clausole opzionali commentate e lettera di incarico inclusa.\nModello di carattere generale: fallo verificare per il tuo caso.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+},
+{
+    "tipo":  "digitale",
+    "id":  "lettera-incarico-freelance-word",
+    "nome":  "Lettera di incarico per freelance (Free + Pro)",
+    "categoria":  "modelli-checklist",
+    "prezzo_centesimi":  490,
+    "descrizione":  "Lettera di incarico semplice da personalizzare per ogni cliente.",
+    "descrizione_completa":  "FREE: versione base con il marchio dello studio.\nPRO: senza marchio, con varianti per tipo di incarico.",
+    "immagine":  "",
+    "icona":  "📄",
+    "visibile":  true,
+    "in_preparazione":  true
+}
   ]
 }
