@@ -124,3 +124,13 @@
 .gc-pil h3{font:700 1.2rem var(--gc-head);margin:0 0 .5rem;color:var(--gc-ink)}
 .gc-pil p{margin:0;font-size:.98rem;line-height:1.65;color:var(--gc-mut)}
 @media(max-width:860px){.gc-pil{grid-template-columns:1fr}}
+
+/* BANNER CONTATTO negli articoli/guide (.art-cta): box pulito con sfondo tinta accento e bordo uniforme (niente barre laterali). Colori = --gc-acc / --gc-acc-s. .art-cta-min = versione compatta a meta' articolo. Link al contatto via {% include url-ref.html ref="contatti" %}. */
+.art-cta{background:var(--gc-acc-s);border:1px solid var(--gc-line);border-radius:14px;padding:1.6rem 1.8rem;margin:2.2rem 0}
+.art-cta .t{display:block;font:700 1.35rem var(--gc-head);color:var(--gc-ink);margin:0 0 .5rem}
+.art-cta p{margin:0 0 1.1rem;color:var(--gc-mut);line-height:1.65}
+.art-cta .btn-cta{display:inline-flex;align-items:center;min-height:48px;padding:.8rem 1.8rem;background:var(--gc-acc);color:#fff;font:600 1rem var(--gc-sans);text-decoration:none;border-radius:10px;transition:filter .2s}
+.art-cta .btn-cta:hover{filter:brightness(1.12);color:#fff}
+.art-cta .btn-cta:focus-visible{outline:3px solid var(--gc-acc);outline-offset:3px}
+.art-cta-min{padding:1rem 1.3rem;margin:1.6rem 0}.art-cta-min p{margin:0}
+@media(prefers-reduced-motion:reduce){.art-cta .btn-cta{transition:none}}

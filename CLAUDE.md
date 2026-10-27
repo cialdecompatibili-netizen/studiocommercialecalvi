@@ -19,6 +19,7 @@ Template Jekyll per GitHub Pages: si clona, si cambia quasi solo `_config.yml` e
 - Valore vuoto in config = funzione spenta, mai errore: i layout controllano che il campo sia pieno.
 - Nessun plugin fuori da GitHub Pages. Build locale non disponibile su questo PC: si controlla online dopo il deploy.
 - COMMENTARE i punti critici (layout, include, JS, CSS, config): dire cosa fa, cosa legge, cosa NON toccare.
+- HERO HOME ADATTIVO (OBBLIGATORIO, NON MODIFICARE): `.ent-hero` e `.gc-hero` in `assets/css/gaming.css` si adattano allo schermo come ora e restano cosi' in ogni clone e in ogni nuovo template. Comportamento: `min-height:calc(100svh - 80px)` (fallback `100vh`) + `display:flex;align-items:center` = riempie la prima schermata sotto l'header e centra il contenuto; padding `clamp(1.5rem,4vh,3.5rem)`; titolo `.ent-hero .gc-h1{font-size:clamp(2rem,3.2vw + 1.2vh,3.6rem)}` (scala con larghezza E altezza); sfondo `cover`; sotto 900px colonne in pila e velo verticale. Nei cloni si cambiano SOLO foto e colori, mai queste regole: niente altezze fisse in px, niente rimozione di `clamp`/`svh`/`flex`.
 
 ## Multilingua (dettagli in `docs/MULTILINGUA.md`)
 IT alla radice, altre lingue in `/xx/` create da admin > Lingue. Cambiare solo `default_lang` e `languages`. Traduzioni: `tr: copia|tradotto|da_aggiornare`, `tr_hash`; `automation/traduzioni_sync.py` + workflow marcano `da_aggiornare`. In Liquid niente `a contains b == false`: usare `{% if a contains b %}{% continue %}{% endif %}`.
