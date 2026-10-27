@@ -180,3 +180,11 @@
 
 /* Home: solo i primi 6 servizi (gli altri restano nella pagina Servizi). Per mostrarli tutti: togliere questa riga. */
 .gc #servizi .ent-pl:nth-child(n+7){display:none}
+
+/* HERO: riquadro "consulenza gratuita" a destra (messaggio WhatsApp). Sotto i 900px va sotto il testo. Per toglierlo: rimuovere l'elemento aside.gc-hero-card dal blocco hero. */
+.gc .ent-hero .gc-hero-card{max-width:32rem;margin-top:2.25rem;padding:1.75rem;border:1px solid rgba(255,255,255,.35);border-radius:8px;background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff}
+.gc .ent-hero .gc-hero-card p{margin:0 0 1rem;font-size:1.0625rem;line-height:1.6;color:rgba(255,255,255,.92)}
+.gc .ent-hero .gc-hero-card .gc-hero-card-t{font:700 1.35rem/1.2 var(--gc-head);color:#fff}
+.gc .ent-hero .gc-hero-card .gc-hero-card-s{font-size:.95rem;color:rgba(255,255,255,.8)}
+.gc .ent-hero .gc-hero-card .gc-btn{width:100%}
+@media(min-width:900px){.gc .ent-hero .gc-hero-in{display:grid;grid-template-columns:minmax(0,32rem) minmax(0,24rem);justify-content:space-between;align-items:center;gap:3rem}.gc .ent-hero .gc-hero-card{margin-top:0}}
