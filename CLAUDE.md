@@ -99,3 +99,10 @@ Guide e banner contatto (27/10/2026)
 - Banner contatto negli articoli: `<div class="art-cta"><strong class="t">Titolo</strong><p>Testo</p><a class="btn-cta" href="{% include url-ref.html ref="contatti" %}">Contattaci</a></div>`; versione compatta a meta' articolo: `art-cta art-cta-min` con solo `<p>` e link. Stile in fondo a `assets/css/gaming.css` (box con sfondo tinta accento, niente barre laterali).
 - Link allo shop dentro un articolo: `{% include shop-url.html k="prod" id="<id prodotto>" %}`.
 - Guide fiscali: cifre solo verificate sul web; dove le fonti discordano (es. soglia reddito da lavoro dipendente nel forfettario, 30.000 o 35.000) non scrivere il numero.
+
+
+Regola shop FREEMIUM (27/10/2026, obbligatoria per ogni prodotto)
+- Ogni prodotto ha una versione FREE (con marchio dello studio, limiti reali ma davvero utile) e una PRO a pochi euro (senza marchio, senza limiti, funzioni in piu', aggiornamento annuale). Mai un prodotto solo a pagamento senza versione free.
+- Leve psicologiche da applicare (esperti: Cialdini, Kahneman, Ariely, Yu-kai Chou, ricerche ECIS 2020): reciprocita' (il free da' valore subito); effetto possesso (l'utente inserisce i suoi dati nel free e Pro li mantiene); avversione alla perdita (invito a Pro solo quando si raggiunge un limite reale); paywall DOPO il risultato (l'invito a Pro compare dopo che l'utente ha ottenuto il suo risultato, non prima); distanza di valore (free ridotto + Pro ricco = piu' conversioni); ancoraggio e pacchetto con risparmio reale; opzione esca alla Ariely solo se esiste davvero come prodotto.
+- Conversione tipica freemium 3-5% (fonte secondaria): servono volumi, il dato vero lo da' lo smoke test.
+- Vietato: countdown o scarsita' finti, recensioni inventate, limiti artificiali che rendono inutile il free.
