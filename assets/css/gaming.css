@@ -188,3 +188,6 @@
 .gc .ent-hero .gc-hero-card .gc-hero-card-s{font-size:.95rem;color:rgba(255,255,255,.8)}
 .gc .ent-hero .gc-hero-card .gc-btn{width:100%}
 @media(min-width:900px){.gc .ent-hero .gc-hero-in{display:grid;grid-template-columns:minmax(0,32rem) minmax(0,24rem);justify-content:space-between;align-items:center;gap:3rem}.gc .ent-hero .gc-hero-card{margin-top:0}}
+.gc .ent-hero .gc-hero-card .gc-btn-wa{background:#25d366;border-color:#25d366!important;color:#fff;gap:.5rem;margin:0 0 1.25rem}
+.gc .ent-hero .gc-hero-card .gc-btn-wa:hover{background:#1ebe5b}
+.gc .ent-hero .gc-hero-card .gc-hero-card-s{margin-bottom:.75rem}
