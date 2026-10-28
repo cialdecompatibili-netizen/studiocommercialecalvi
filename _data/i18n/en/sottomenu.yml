@@ -5,26 +5,26 @@ Services:
     url: /en/services/
   - divider: true
   - title: "Startups & Innovative SMEs"
-    url: /en/services/#startup-pmi-innovative
+    url: /en/services/startups-innovative-smes/
   - title: "E-commerce & Digital Business"
-    url: /en/services/#ecommerce-business-digitali
+    url: /en/services/e-commerce-digital-business/
   - title: "Strategic Tax Advice"
-    url: /en/services/#consulenza-fiscale-strategica
+    url: /en/services/strategic-tax-advice/
   - title: "VAT Number Opening and Management"
-    url: /en/services/#apertura-gestione-piva
+    url: /en/services/vat-number-opening-and-management/
   - title: "E-invoicing"
-    url: /en/services/#fatturazione-elettronica
+    url: /en/services/e-invoicing/
   - title: "Accounting and Financial Statements"
-    url: /en/services/#contabilita-bilancio
+    url: /en/services/accounting-and-financial-statements/
   - title: "Tax Returns"
-    url: /en/services/#dichiarazioni-fiscali
+    url: /en/services/tax-returns/
   - title: "Advanced Digital Services"
-    url: /en/services/#servizi-digitali-avanzati
+    url: /en/services/advanced-digital-services/
   - title: "Corporate Advisory"
-    url: /en/services/#consulenza-societaria
+    url: /en/services/corporate-advisory/
   - title: "Internationalisation"
-    url: /en/services/#internazionalizzazione
+    url: /en/services/internationalisation/
   - title: "INPS/INAIL Compliance"
-    url: /en/services/#adempimenti-inps-inail
+    url: /en/services/inps-inail-compliance/
   - title: "Employment Law"
-    url: /en/services/#diritto-del-lavoro
+    url: /en/services/employment-law/
