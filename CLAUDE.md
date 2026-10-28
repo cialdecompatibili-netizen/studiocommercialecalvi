@@ -117,3 +117,7 @@ Regola shop FREEMIUM (27/10/2026, obbligatoria per ogni prodotto)
 - NON usare piu' `art-cta art-cta-min` a meta' articolo (era il vecchio banner manuale: ora sarebbe doppio). Resta valido il banner grande `art-cta` in fondo agli articoli.
 - La card "Consulenza gratuita" dell'hero in home e' separata: sta nel blocco hero di `_data/blocks_home.json` (html statico, classe `.gc-hero-card`, stile in gaming.css). Se cambiano i testi del banner, allinearla a mano.
 - Tag per tornare indietro: `prima-banner-auto`.
+
+## Logo (scudetto con C)
+- Font della C: **Pinyon Script** (corsivo calligrafico, file automation/fonts/PinyonScript-Regular.ttf; alternativa Great Vibes, GreatVibes-Regular.ttf, stessa cartella). La C e' bianca su scudo blu/oro a tutta area.
+- Rigenerare con `python automation/genera_stemma.py` (opzionale: nome del font .ttf).
