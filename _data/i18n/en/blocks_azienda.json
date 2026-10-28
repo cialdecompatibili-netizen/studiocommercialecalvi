@@ -1,9 +1,9 @@
 [
   {
     "id": "chi",
-    "nome": "Chi siamo",
+    "nome": "The firm",
     "enabled": true,
-    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap gc-2c\"><div><p class=\"gc-eyebrow\">About us</p><h2 class=\"gc-h2\">Over 15 years alongside businesses.</h2><p class=\"gc-lead\">Our firm was founded to simplify tax and corporate management. We combine the experience of traditional consulting with the skills needed to operate in the modern market.</p><p>With over 15 years of experience in the field, we offer outstanding tax, accounting and corporate advice. We support businesses and professionals with tailored, innovative solutions that are always up to date with current regulations.</p></div><img src=\"__BASEURL__/assets/images/studio-team.jpg\" alt=\"Firm team working on financial statements and documents\" loading=\"lazy\" style=\"width:100%;border-radius:12px;object-fit:cover;max-height:340px;display:block\"></div></section></div>"
+    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap gc-2c\"><div><p class=\"gc-eyebrow\">The firm</p><h2 class=\"gc-h2\">Over 15 years alongside businesses.</h2><p class=\"gc-lead\">Our firm was founded to simplify tax and corporate management. We combine the experience of traditional consulting with the skills needed to operate in the modern market.</p><p>With over 15 years of experience in the field, we offer outstanding tax, accounting and corporate advice. We support businesses and professionals with tailored, innovative solutions that are always up to date with current regulations.</p></div><img src=\"__BASEURL__/assets/images/studio-team.jpg\" alt=\"Firm team working on financial statements and documents\" loading=\"lazy\" style=\"width:100%;border-radius:12px;object-fit:cover;max-height:340px;display:block\"></div></section></div>"
   },
   {
     "id": "principi",

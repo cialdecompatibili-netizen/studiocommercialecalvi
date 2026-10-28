@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "About us"
-description: "About us and what we do."
+title: "The firm"
+description: "The firm and what we do."
 author_profile: false
 ref: azienda
 lang: en

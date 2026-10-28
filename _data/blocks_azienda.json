@@ -1,9 +1,9 @@
 [
   {
     "id": "chi",
-    "nome": "Chi siamo",
+    "nome": "Lo studio",
     "enabled": true,
-    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap gc-2c\"><div><p class=\"gc-eyebrow\">Chi siamo</p><h2 class=\"gc-h2\">Oltre 15 anni al fianco delle imprese.</h2><p class=\"gc-lead\">Il nostro studio nasce con l&#39;obiettivo di semplificare la gestione fiscale e societaria. Uniamo l&#39;esperienza della consulenza tradizionale alle competenze necessarie per muoversi nel mercato moderno.</p><p>Con oltre 15 anni di esperienza nel settore, offriamo consulenza fiscale, contabile e societaria di eccellenza. Supportiamo imprese e professionisti con soluzioni personalizzate, innovative e sempre aggiornate alle normative vigenti.</p></div><img src=\"__BASEURL__/assets/images/studio-team.jpg\" alt=\"Team dello studio al lavoro su bilanci e documenti\" loading=\"lazy\" style=\"width:100%;border-radius:12px;object-fit:cover;max-height:340px;display:block\"></div></section></div>"
+    "html": "<div class=\"gc\"><section class=\"gc-sec\" id=\"chi\"><div class=\"gc-wrap gc-2c\"><div><p class=\"gc-eyebrow\">Lo studio</p><h2 class=\"gc-h2\">Oltre 15 anni al fianco delle imprese.</h2><p class=\"gc-lead\">Il nostro studio nasce con l&#39;obiettivo di semplificare la gestione fiscale e societaria. Uniamo l&#39;esperienza della consulenza tradizionale alle competenze necessarie per muoversi nel mercato moderno.</p><p>Con oltre 15 anni di esperienza nel settore, offriamo consulenza fiscale, contabile e societaria di eccellenza. Supportiamo imprese e professionisti con soluzioni personalizzate, innovative e sempre aggiornate alle normative vigenti.</p></div><img src=\"__BASEURL__/assets/images/studio-team.jpg\" alt=\"Team dello studio al lavoro su bilanci e documenti\" loading=\"lazy\" style=\"width:100%;border-radius:12px;object-fit:cover;max-height:340px;display:block\"></div></section></div>"
   },
   {
     "id": "principi",
