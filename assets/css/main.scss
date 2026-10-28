@@ -359,7 +359,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 .pagination > .pagination--pager:last-child{margin-left:auto !important}
 .pagination > .pagination--pager:hover{border-color:var(--ex-gd) !important;color:var(--ex-gd);background:#fff}
 
-.author__avatar img{border-radius:50% !important;object-fit:cover;aspect-ratio:1/1}
+.author__avatar img{border-radius:0 !important;object-fit:contain;aspect-ratio:1/1;box-shadow:none !important}
 
 /* VIDEO YOUTUBE: sempre a larghezza piena, proporzione 16:9 (gli iframe del vecchio WordPress avevano width/height fissi) */
 .video-shortcode{position:relative;width:100%;aspect-ratio:16/9;margin:1.6rem 0}
