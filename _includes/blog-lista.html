@@ -26,6 +26,8 @@
 .blog-go{flex:0 0 auto;align-self:center;font-size:1.3rem;color:var(--gc-acc,#1e3a5f);padding:0 1rem 0 .2rem;transition:transform .2s}
 .blog-item:hover .blog-go{transform:translateX(3px)}
 @media(max-width:640px){.blog-item{flex-direction:column;gap:0}.blog-img{flex:none;width:100%;min-height:0;aspect-ratio:16/9}.blog-body{padding:.8rem 1rem 1rem}.blog-go{display:none}.blog-excerpt{-webkit-line-clamp:2}}
+/* CARD STRETTE: griglia a colonne (da 641px in su), foto sopra, cosi' la lista e' meno lunga. Per tornare alla lista a righe: cancella questo blocco (o tag git backup-prima-card-blog). */
+@media(min-width:641px){.blog-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}.blog-item{flex-direction:column;gap:0}.blog-img{flex:none;width:100%;min-height:0;aspect-ratio:16/9}.blog-body{justify-content:flex-start;padding:.8rem 1rem 1rem}.blog-go{display:none}}
 </style>
 <ul class="blog-list" data-pg data-pg-item="li.blog-item" data-per="{{ site.per_page | default: 20 }}">
 {%- for post in posts_l %}
