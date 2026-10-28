@@ -2,18 +2,13 @@
 layout: single
 title: "Accounting and Financial Statements"
 permalink: /en/services/accounting-and-financial-statements/
+categoria: "Accounting and Financial Statements"
 author_profile: false
 classes: wide
 lang: en
 locale: en
 ref: srv-contabilita-bilancio
 ---
-
-- Bookkeeping: ordinary, simplified and flat-rate
-- Preparation of EU-format, ordinary and abbreviated financial statements
-- VAT registers, daily takings, depreciable assets
-- LIPE, esterometro (intra/extra-EU)
-- AI-automated accounting entries
-- Automatic bank reconciliations
+{% include lista-categoria.html cat=page.categoria src="servizi" %}
 
 [Request a free consultation]({{ '/en/contact/' | relative_url }}) &middot; [All services]({{ '/en/services/' | relative_url }})

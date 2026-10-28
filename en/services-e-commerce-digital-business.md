@@ -2,19 +2,13 @@
 layout: single
 title: "E-commerce & Digital Business"
 permalink: /en/services/e-commerce-digital-business/
+categoria: "E-commerce & Digital Business"
 author_profile: false
 classes: wide
 lang: en
 locale: en
 ref: srv-ecommerce-business-digitali
 ---
-
-- Amazon FBA, Shopify, Dropshipping
-- OSS VAT regime EU/non-EU
-- Triangular transactions and cross-border sales
-- Marketplaces (eBay, Etsy, Vinted)
-- Influencers and digital creators
-- Crypto and NFTs: reporting and taxation
-- Automated multi-channel invoicing
+{% include lista-categoria.html cat=page.categoria src="servizi" %}
 
 [Request a free consultation]({{ '/en/contact/' | relative_url }}) &middot; [All services]({{ '/en/services/' | relative_url }})

@@ -1,0 +1,17 @@
+---
+layout: single
+title: "Stock options and incentive plans for startups"
+date: 2026-07-18
+permalink: /en/services/startups-innovative-smes/stock-option-piani-incentivazione/
+excerpt: "How stock options and incentive plans work for innovative startups."
+seo_description: "How stock options and incentive plans work for innovative startups."
+categories:
+  - "Startups & Innovative SMEs"
+ref: art-stock-option-piani-incentivazione
+lang: en
+locale: en
+---
+
+![Stock options and incentive plans for startups]({{ '/assets/images/blog/stock-option-piani-incentivazione.jpg' | relative_url }})
+
+<p>Stock options are one of the most powerful tools an innovative startup has to attract and retain talent without weighing on cash: instead of (or in addition to) salary, a future stake in the value the company will create is offered.</p><h2 id="the-tax-advantage-that-makes-the-difference">The tax advantage that makes the difference</h2><p>Art. 27 of Decree-Law 179/2012 provides a specific exemption regime for innovative startups: employment income arising from the allocation, to directors, employees or continuous collaborators, of financial instruments, rights to financial instruments or from the exercise of options to buy them, <strong>does not count towards taxable income</strong>. In practice: no IRPEF, no INPS contributions at the time of allocation or exercise. Taxation is fully deferred to the moment the shares are actually sold (the exit).</p><p>The same regime applies, by express legislative reference, to innovative SMEs as well (art. 4 paragraph 9, Decree-Law 3/2015).</p><h2 id="what-is-covered-by-the-relief">What is covered by the relief</h2><p>Any form of allocation, free of charge or for consideration: shares, quotas, participating financial instruments, restricted stock, subscription or purchase options, restricted stock units (a promise to allocate financial instruments in the future). The plan can also be aimed at only some members of staff — unlike the general relief of art. 51 of the TUIR, which requires a plan open to all employees. The two regimes can coexist.</p><h2 id="something-to-watch-from-the-articles-of-association-onwards">Something to watch from the articles of association onwards</h2><p>To allocate stock options cleanly you need a corporate structure that provides for it: different classes of shares (for example shares without voting rights for financial investors, shares with limited rights for employees) give the flexibility needed to structure incentive plans and complex investment rounds. Transactions on your own shares for Work for Equity also require consistent clauses in the articles. If the articles are written "at the minimum" at incorporation, adding these tools later becomes more complicated and costly.</p><h2 id="the-risk-not-to-underestimate">The risk not to underestimate</h2><p>If the financial instruments or rights are transferred in breach of the conditions of the rule, the income that had not counted towards taxable income is taxed retroactively in the tax period in which the irregular transfer takes place. The plan must therefore be structured correctly from the start, not fixed afterwards.</p><h2 id="how-we-help">How we help</h2><p>We design the stock option plan consistently with the company's articles, check that the beneficiaries (directors, employees, collaborators) fall correctly within the scope of the relief and support you with the tax handling of the exit, when deferred taxation becomes effective.</p>

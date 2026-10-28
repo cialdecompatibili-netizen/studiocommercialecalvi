@@ -1,0 +1,17 @@
+---
+layout: single
+title: "Transition 5.0 credits: super-depreciation at 280%"
+date: 2026-07-18
+permalink: /en/services/strategic-tax-advice/crediti-transizione-5-0-iper-ammortamento/
+excerpt: "How the Transition 5.0 tax credit with 280% super-depreciation works."
+seo_description: "How the Transition 5.0 tax credit with 280% super-depreciation works."
+categories:
+  - "Strategic Tax Advice"
+ref: art-crediti-transizione-5-0-iper-ammortamento
+lang: en
+locale: en
+---
+
+![Transition 5.0 credits: super-depreciation at 280%]({{ '/assets/images/blog/crediti-transizione-5-0-iper-ammortamento.jpg' | relative_url }})
+
+<p>From 1 January 2026 the old Transition 5.0 tax credit no longer exists: the 2026 Budget Law (Law 199/2025, art. 1 paras. 427-436) replaced it with <strong>super-depreciation</strong>, in force until 30 September 2028. The Ministry (MIMIT) and the GSE still call the platform "Transition 5.0" (same portal, same advance notices), but the mechanism of the benefit is completely different from the 2024-2025 one.</p><h2 id="come-funziona-oggi-non-pi-credito-ma-deduzione-maggiorata">How it works today: no longer a credit, but an increased deduction</h2><p>The old tax credit was offset directly on form F24. Super-depreciation is not: it is an <strong>uplift of the asset's tax cost</strong>, which increases the depreciation instalments deductible in the income tax return. In practice you do not collect a credit, but you pay less tax in the years in which you depreciate the asset.</p><h2 id="le-aliquote-2026">2026 rates</h2><ul><li><strong>+180%</strong> for investments up to 2.5 million euros</li><li><strong>+100%</strong> for the portion between 2.5 and 10 million euros</li><li><strong>+50%</strong> for the portion between 10 and 20 million euros</li></ul><p>The old differentiated "green" uplifts (220%/140%/90%) linked to energy savings are gone: today the rates are uniform, in brackets of amount invested.</p><h2 id="cosa-resta-agevolabile">What remains eligible</h2><p>New tangible and intangible assets that are technologically advanced and interconnected with the company system (Annexes IV and V to Law 199/2025, which update the old Annexes A and B). Assets for producing energy from renewable sources (FER) also qualify and — new for 2026 — software is eligible again after being excluded in 2025.</p><h2 id="attenzione-al-doppio-binario">Beware of the double track</h2><p>Super-depreciation cannot be combined with the Transition 4.0/5.0 tax credits on the same investment. Unlike in the past, merely booking by 31/12/2025 is not enough to exclude super-depreciation: the exclusion applies only if the investment actually benefits from the 4.0 credit. In the first half of 2026 a temporary overlap between the two measures can occur: the choice between them must be assessed case by case, before filing the notices.</p><h2 id="perch-serve-un-commercialista-in-questa-fase">Why you need an accountant at this stage</h2><p>The change from an offsettable credit to a tax deduction changes all the planning: it affects liquidity, the corporate/personal income tax due year by year and the very convenience of the investment. We check whether your investment still qualifies for the old 4.0/5.0 credit (with the new reduced percentages for "left-behind" businesses, Decree-Law 42/2026) or whether super-depreciation is better, and we handle the notices on the GSE portal.</p>

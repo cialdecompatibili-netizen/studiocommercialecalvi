@@ -1,0 +1,17 @@
+---
+layout: single
+title: "Real-time reporting: KPIs and cash flows"
+date: 2026-07-18
+permalink: /en/services/advanced-digital-services/reportistica-tempo-reale-kpi-cassa/
+excerpt: "How real-time reporting on KPIs and cash flows works."
+seo_description: "How real-time reporting on KPIs and cash flows works."
+categories:
+  - "Advanced Digital Services"
+ref: art-reportistica-tempo-reale-kpi-cassa
+lang: en
+locale: en
+---
+
+![Real-time reporting: KPIs and cash flows]({{ '/assets/images/blog/reportistica-tempo-reale-kpi-cassa.jpg' | relative_url }})
+
+<p>Waiting for the year-end financial statements, or the accountant's monthly report, to know whether the company has enough cash is like driving while looking only in the rear-view mirror. A real-time KPI dashboard instead shows the cash position and key indicators updated daily, not after the fact.</p><h2 id="what-distinguishes-a-true-real-time-dashboard">What distinguishes a true real-time dashboard</h2><p>It is not an Excel file updated now and then: data flows automatically from source systems (bank, management software, invoicing) to the visualisation engine through APIs, with no manual intervention. When the owner asks "how much have we collected this month", the answer comes from the always up-to-date dashboard — not from a different Excel sheet for each department, with numbers that do not match.</p><h2 id="the-essential-cash-kpis-for-an-sme">The essential cash KPIs for an SME</h2><ul><li><strong>Current cash position</strong> — available balance updated with automatic synchronisation from bank accounts</li><li><strong>Revenue achieved vs budget</strong> — variance from the target, not just the absolute value</li><li><strong>Gross margin and EBITDA</strong> — real profitability, not just turnover</li><li><strong>Cash conversion cycle</strong> — how much time passes between the cash outflow for a cost and the receipt from the customer</li><li><strong>Main operating costs</strong> — the expense items that weigh most on the result</li></ul><p>Every number is only valuable if accompanied by context: a trend against the previous period, a reference target, a visual indicator (green/yellow/red) that signals at a glance whether the situation needs attention.</p><h2 id="why-less-is-more">Why "less is more"</h2><p>The most common mistake is building dashboards with dozens of indicators that nobody really looks at. An effective dashboard selects only the KPIs that are truly actionable for whoever consults it — not a universal list valid for all companies, but indicators chosen together with the entrepreneur based on the decisions they have to make every day.</p><h2 id="the-prerequisite-correct-and-up-to-date-data">The prerequisite: correct and up-to-date data</h2><p>Even the best set of KPIs becomes useless if the data feeding it is not correct: duplicated information, misaligned files, manual processing that introduces errors. A management dashboard works only with a stable data flow, correctly reclassified and updated without manual intervention.</p><h2 id="how-we-build-reporting-for-our-clients">How we build reporting for our clients</h2><p>Together with the entrepreneur we select the indicators that are really useful for their business (not a predefined template), connect the data sources — bank, management software, invoicing — in an automatic, up-to-date flow, and present the results with an easy-to-read dashboard: the summary that allows a quick decision, not another table to interpret.</p>

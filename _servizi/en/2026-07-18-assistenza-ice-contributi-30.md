@@ -1,0 +1,17 @@
+---
+layout: single
+title: "ICE support: grants of up to 30% for internationalisation"
+date: 2026-07-18
+permalink: /en/services/internationalisation/assistenza-ice-contributi-30/
+excerpt: "How to access ICE grants of up to 30% to take your business international."
+seo_description: "How to access ICE grants of up to 30% to take your business international."
+categories:
+  - "Internationalisation"
+ref: art-assistenza-ice-contributi-30
+lang: en
+locale: en
+---
+
+![ICE support: grants of up to 30% for internationalisation]({{ '/assets/images/blog/assistenza-ice-contributi-30.jpg' | relative_url }})
+
+<p>Taking part in a trade fair abroad, opening a new market, making yourself known beyond Italy's borders: these steps are costly, especially for a small or medium-sized business. That is why public support tools for internationalisation exist, and ICE — the Italian Trade Agency for the promotion abroad and internationalisation of Italian companies — is the main point of reference, together with SIMEST, the Cassa Depositi e Prestiti group company that manages subsidised loans.</p><h2 id="cosa-fa-ice-in-pratica">What ICE does in practice</h2><p>ICE organises collective Italian participation in international trade fairs, business missions and Made in Italy promotion initiatives in foreign markets, offering companies a shared exhibition space, logistical support services and institutional visibility that a single small business would hardly obtain on its own. Alongside this coordinating role, ICE works with SIMEST and the Regions to provide direct grants towards participation costs.</p><h2 id="i-contributi-quanto-arriva-fino-al-30-e-oltre">The grants: how much, up to 30% and beyond</h2><p>There is no single percentage valid everywhere: the non-repayable grant varies depending on the instrument and the area. SIMEST, through Fund 394/81, grants non-repayable portions of the subsidised loan for participation in international trade fairs ranging from a 10% base up to 20-40% for innovative SMEs, businesses in Southern Italy or those with sustainability certifications. Many regional and chamber of commerce calls, on the other hand, reach exactly 30% of eligible expenses as the standard threshold for SMEs (with higher peaks for business networks, which can receive up to 45%), on an eligible cost typically between 20,000 and 100,000 euros.</p><p>Covered expenses generally include rental and fitting out of the exhibition space, transport of materials, travel and accommodation costs for staff, consultancy for entering the target market and, in some calls, also commercial follow-up activities in the months after the event.</p><h2 id="a-chi-conviene-e-come-si-accede">Who benefits and how to apply</h2><p>These grants are designed above all for SMEs (including micro-businesses) that want to structure a first entry into a foreign market or consolidate a presence already under way. Access is through first-come or ranking-based calls, often with click days or tight time windows: submitting the application promptly greatly affects your chances of obtaining the grant, especially in regional calls with a maximum number of applications that can be accepted.</p><h2 id="come-possiamo-aiutarti">How we can help</h2><p>We help you identify the call best suited to your sector and region, check the eligibility requirements, prepare the expense documentation and submit the application on time, so you do not miss the chance of a grant that can cover a significant part of the cost of entering a foreign market.</p>

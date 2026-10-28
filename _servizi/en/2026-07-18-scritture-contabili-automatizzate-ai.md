@@ -1,0 +1,17 @@
+---
+layout: single
+title: "Accounting entries automated with artificial intelligence"
+date: 2026-07-18
+permalink: /en/services/accounting-and-financial-statements/scritture-contabili-automatizzate-ai/
+excerpt: "How artificial intelligence automates accounting entries."
+seo_description: "How artificial intelligence automates accounting entries."
+categories:
+  - "Accounting and Financial Statements"
+ref: art-scritture-contabili-automatizzate-ai
+lang: en
+locale: en
+---
+
+![Accounting entries automated with artificial intelligence]({{ '/assets/images/blog/scritture-contabili-automatizzate-ai.jpg' | relative_url }})
+
+<p>Recording invoices, calculating accruals and deferrals, depreciation charges, reconciling bank transactions: these are the most repetitive accounting tasks, and also the ones where artificial intelligence is having the most concrete impact. It does not replace the accountant, it removes the mechanical work and frees time for analysis and advice.</p><h2 id="how-it-works-in-practice">How it works in practice</h2><p>The software receives the electronic invoice (XML) or the scanned document, automatically extracts customer/supplier data, accrual date, amount, VAT rate and payment terms, then generates the accounting entry under the accruals principle — booking the revenue or cost in the correct year, even when the date of receipt or payment falls in a different year from the one it relates to. For depreciable assets, it automatically applies the formula (historical cost ÷ useful life) and generates the periodic charge, requesting supporting documentation to guarantee traceability even without a specific invoice.</p><h2 id="adoption-figures-in-italy">Adoption figures in Italy</h2><p>65% of Italian accountants already use artificial intelligence tools in their work, with 84% of firms perceiving a positive impact, above all in terms of time saved. In the most advanced software, over 80% of invoices and receipts are already pre-filled by AI and confirmed with a single or bulk click.</p><h2 id="the-professional-s-role-does-not-change">The professional's role does not change</h2><p>AI proposes the classification and the entry, but does not sign or take responsibility: the accountant keeps sole responsibility for the work delivered and checks every output before use. The system learns from the professional's corrections over time — the more it is used, the more precise and consistent with the firm's specific practices the suggestions become.</p><h2 id="the-regulatory-framework-eu-ai-act">The regulatory framework: EU AI Act</h2><p>The use of AI tools in a professional setting is regulated by the European Regulation on artificial intelligence, which classifies systems by risk level and imposes transparency obligations on those who use them. Client data remain subject to EU Regulation 2016/679 (GDPR) and are not shared with unauthorised third-party platforms.</p><h2 id="how-we-integrate-ai-into-our-clients-accounting">How we integrate AI into our clients' accounting</h2><p>We use artificial intelligence tools to automate the recording of invoices and receipts, the calculation of accruals/deferrals and depreciation, and bank reconciliation — always keeping a human check on every entry before the accounts are closed. The result is accounting that is updated almost in real time, with fewer mechanical errors and more time spent analysing the numbers, not just recording them.</p>

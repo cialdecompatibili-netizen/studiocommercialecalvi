@@ -1,0 +1,17 @@
+---
+layout: single
+title: "Transfer pricing: the documentation required"
+date: 2026-07-18
+permalink: /en/services/internationalisation/transfer-pricing-documentazione/
+excerpt: "What documentation is needed for international transfer pricing."
+seo_description: "What documentation is needed for international transfer pricing."
+categories:
+  - "Internationalisation"
+ref: art-transfer-pricing-documentazione
+lang: en
+locale: en
+---
+
+![Transfer pricing: the documentation required]({{ '/assets/images/blog/transfer-pricing-documentazione.jpg' | relative_url }})
+
+<p>Knowing that transfer pricing must be applied under the arm's length principle is not enough: you must also be able to prove it, with documentation structured according to precise rules. It is this documentation — not just the substantive correctness of prices — that determines whether, in an audit, the company risks heavy penalties or avoids them entirely.</p><h2 id="masterfile-and-national-documentation-two-levels-of-the-same-story">Masterfile and National Documentation: two levels of the same story</h2><p>The reference scheme comes from the OECD approach (BEPS Action 13) and has several levels: the Masterfile, the Local File (called Documentazione Nazionale in Italy) and, for larger groups, the Country-by-Country Report. The Masterfile describes the group's organisational structure, core business, activities carried out and intangibles at global level — it can be partly reused from the foreign parent, adapting it to Italian rules. The National Documentation, on the other hand, goes into detail on the Italian company's intercompany transactions, showing that the prices applied respect the arm's length principle: this part is best drafted locally and in Italian, not simply translated from English.</p><h2 id="why-documentation-matters-penalty-protection">Why documentation matters: penalty protection</h2><p>Article 1, paragraph 6, of Legislative Decree 471/97 provides that, if in an audit the Revenue Agency adjusts the transfer prices applied, the penalties for incorrect returns do not apply provided the company holds documentation prepared according to the official guidelines (the reference is the Revenue Agency order of 23 November 2020, no. 360494). This mechanism is called penalty protection: it does not remove the obligation to pay any additional tax assessed, but avoids the added burden of penalties — a difference that in practice is worth a great deal in terms of certainty and the overall cost of an assessment.</p><h2 id="who-must-prepare-it-and-how">Who must prepare it and how</h2><p>The obligation to prepare the Masterfile now concerns all associated enterprises resident in Italy, including simple subsidiaries — no longer just holding or sub-holding companies as in the past. The documentation must be signed by the legal representative (or a delegate) with an electronic signature and time stamp by the date of filing of the income tax return: an obligation with a precise deadline, to be planned in good time together with the benchmark analysis on market comparables, which in turn needs technical time that cannot be squeezed in at the last minute.</p><h2 id="how-we-can-help">How we can help</h2><p>We help you prepare the Masterfile and National Documentation in line with the rules in force, planning the benchmark analysis and time-stamped signature in good time, so as to guarantee you access to penalty protection in case of an audit on transfer prices.</p>

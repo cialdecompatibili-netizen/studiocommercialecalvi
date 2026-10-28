@@ -1,0 +1,17 @@
+---
+layout: single
+title: "Extraordinary M&A transactions: what to consider"
+date: 2026-07-18
+permalink: /en/services/corporate-advisory/operazioni-straordinarie-ma/
+excerpt: "What to consider in an M&A transaction for your business."
+seo_description: "What to consider in an M&A transaction for your business."
+categories:
+  - "Corporate Advisory"
+ref: art-operazioni-straordinarie-ma
+lang: en
+locale: en
+---
+
+![Extraordinary M&A transactions: what to consider]({{ '/assets/images/blog/operazioni-straordinarie-ma.jpg' | relative_url }})
+
+<p>Mergers and acquisitions are no longer a field reserved for large industrial groups or investment funds. They increasingly concern family businesses, service companies and manufacturers going through a generational handover, seeking growth through external routes or wanting to bring in new partners.</p><h2 id="buying-or-selling-value-is-transferred-but-so-are-risks">Buying or selling: value is transferred, but so are risks</h2><p>Inside a business there are not only customers, contracts, property, employees, brands and cash flows: there are also pending disputes, undisclosed debts, guarantees given, unfavourable clauses and tax exposures that can emerge after closing. That is why due diligence on the target company is the decisive step, not a formality: it checks the accuracy of the information provided, identifies hidden risks and liabilities (legal, tax, operational) and confirms the strategic assumptions behind the transaction.</p><h2 id="structures-are-not-all-the-same">Structures are not all the same</h2><p>A frequent mistake is treating all extraordinary transactions as if they had the same effect. They do not:</p><ul><li><strong>Sale of shares</strong>: the shareholder changes, but the company remains the same, with all its legal relationships, contracts, debts and past history — whoever buys the shares indirectly inherits the risks already present in the company</li><li><strong>Sale of a business or business unit</strong>: the object is the organised complex of assets used for the activity (or a functionally autonomous part), with tax and accounting effects different from a sale of shares</li><li><strong>Merger</strong>: two or more companies merge into a single entity, with operational, accounting and financial-statement integration to be handled under the corporate and tax formalities required by law</li></ul><h2 id="why-so-many-deals-fail">Why so many deals fail</h2><p>Only one deal in four turns out to be successful in the long run, according to industry analyses. The central factor is almost always underestimated by Italian SMEs: the ability to manage integration after closing, not just to close the deal. Thorough due diligence and a well-structured post-merger integration plan significantly reduce the chances of failure.</p><h2 id="the-role-of-the-accountant">The role of the accountant</h2><p>Through business valuation, tax due diligence and handling of accounting aspects, the accountant makes a decisive contribution to the success of the transaction: handling of capital gains, realignment of accounting and tax values, correct representation of extraordinary transactions in the financial statements.</p><h2 id="how-we-help">How we help</h2><p>We support you from the preliminary valuation of the target company (or of yours, if you are considering a sale) through to tax due diligence, choosing the most suitable structure (sale of shares, sale of business, merger) and handling all post-transaction tax and accounting obligations.</p>
