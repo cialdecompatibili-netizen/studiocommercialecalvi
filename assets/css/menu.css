@@ -1,4 +1,4 @@
-/* GUIDA-SVILUPPO: stile del menu (masthead.html + assets/js/menu.js). Classi nv__* e attributi data-nv-* sono usati da tutti e tre: non rinominare. Colori SOLO da variabili --t-nav-*, --t-accent (tema.json). Il masthead e' in cache e identico su ogni pagina: lo stato per-pagina (voce attiva, lingua) lo calcola menu.js. */
+﻿/* GUIDA-SVILUPPO: stile del menu (masthead.html + assets/js/menu.js). Classi nv__* e attributi data-nv-* sono usati da tutti e tre: non rinominare. Colori SOLO da variabili --t-nav-*, --t-accent (tema.json). Il masthead e' in cache e identico su ogni pagina: lo stato per-pagina (voce attiva, lingua) lo calcola menu.js. */
 /* =====================================================================
    MENU DEL SITO (assets/css/menu.css)  -  pari pari a al-folio
    Si abbina a _includes/masthead.html e assets/js/menu.js.
@@ -106,7 +106,7 @@ a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover {
 .nv__logo{width:44px;height:44px;border-radius:0;display:block;flex:none}
 
 /* Brand luxury */
-.nv__brand{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-weight:600;font-size:1.15rem;letter-spacing:.12em;text-transform:uppercase}
+.nv__brand{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-weight:600;font-size:1.02rem;letter-spacing:.015em;text-transform:uppercase}
 .nv__logo{border-radius:0;box-shadow:none}
 /* Selettore lingua */
 .lang-switch{display:flex;gap:1rem;justify-content:center;padding:1rem 0;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
