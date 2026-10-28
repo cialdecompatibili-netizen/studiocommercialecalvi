@@ -40,6 +40,7 @@ MAI bordi laterali colorati su box, citazioni, avvisi, CTA. Box puliti con sfond
 - Risposte brevissime, modifiche in una sola chiamata.
 
 ## Cose che funzionano
+- Aggiornare la versione inglese a mano (senza admin): articoli in en/_posts/ (stesso ref, permalink /en/blog/<categoria-EN>/<slug>/, lang: en, locale: en, tr: tradotto), prodotti shop = pagina en/negozio/<id>.md + campo tr.en dentro _data/catalogo.json (nome, descrizione, descrizione_completa). Poi calcolare tr_hash solo dei file nuovi con traduzioni_sync.lg_hash (NON lanciare allinea_hash.py su tutto: segnerebbe come tradotte anche le pagine ancora da aggiornare). Verifica finale: python automation/traduzioni_sync.py deve stampare 0.
 - Test senza build locale: simulare la logica JS dell'admin con node + `vm` (stub di `lgText`/`lgCommit` e albero finto) e lanciare `node --check` sul file. Esempio: `claudetemp\test_lingue.js` (clone en -> de rinominato).
 - Rilevare le lingue dalle CARTELLE (non dal config) e normalizzare tutto il resto da li': evita config e cartelle fuori sync.
 - Liquid senza plugin: costruire un array con `split` + `concat` + `uniq` dentro un include che fa solo `assign` (le variabili restano visibili a chi lo include).- Patch su file grandi con CRLF (admin/index.html): script node con `readFileSync`/`replace`/`writeFileSync` su stringhe esatte, mai edit multiriga a mano; poi `node --check` sui .js. Mock del wrapper fetch: `claudetemp\test_lingua_admin.js`.
