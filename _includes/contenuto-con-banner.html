@@ -2,8 +2,8 @@
 GUIDA-SVILUPPO: INSERISCE IL BANNER CONTATTO A META' DEL TESTO (automatico). Chiamato da _layouts/single.html al posto di stampare direttamente il contenuto.
 Uso: include contenuto-con-banner.html html=content
 Dove va il banner (nessuna modifica ai file degli articoli):
-  - almeno 3 titoli H2 nel testo -> prima dell'H2 che sta a meta';
-  - altrimenti, almeno 4 paragrafi -> dopo il paragrafo a meta';
+  - almeno 3 titoli H2 nel testo -> prima dell'H2 al 40% circa, mai prima del 2o H2 (il lettore deve aver ricevuto valore; HubSpot/IMPACT e NN/g: CTA in testa = banner blindness, l'attenzione cala scorrendo; il CTA grande in fondo resta);
+  - altrimenti, almeno 4 paragrafi -> dopo il paragrafo al 40% circa (minimo il 3o);
   - testo troppo corto -> nessun banner.
 Solo per articoli (collection posts) e servizi (collection servizi); le altre pagine (home, shop, contatti...) non cambiano.
 Per spegnerlo in UNA pagina: front matter  banner_contatto: false
@@ -17,12 +17,12 @@ Testi in _data/banner_contatto.yml, markup in _includes/banner-contatto.html, st
   {%- assign cb_parts = include.html | split: "<h2" -%}
   {%- if cb_parts.size >= 4 -%}
     {%- assign cb_mode = "h2" -%}
-    {%- assign cb_at = cb_parts.size | divided_by: 2 -%}
+    {%- assign cb_at = cb_parts.size | times: 2 | divided_by: 5 | at_least: 2 -%}
   {%- else -%}
     {%- assign cb_parts = include.html | split: "</p>" -%}
     {%- if cb_parts.size >= 5 -%}
       {%- assign cb_mode = "p" -%}
-      {%- assign cb_at = cb_parts.size | divided_by: 2 | minus: 1 -%}
+      {%- assign cb_at = cb_parts.size | times: 2 | divided_by: 5 | at_least: 2 -%}
     {%- endif -%}
   {%- endif -%}
 {%- endif -%}
