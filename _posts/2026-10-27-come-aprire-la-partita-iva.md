@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "Come aprire la partita IVA: guida passo passo"
+header:
+  teaser: "/assets/images/posts/come-aprire-la-partita-iva.jpg"
 date: 2026-10-27
 permalink: /blog/guide/come-aprire-la-partita-iva/
 excerpt: "Dalla scelta dell'attività al codice ATECO, dal regime forfettario all'invio della pratica: tutti i passi per aprire la partita IVA senza errori e cosa fare subito dopo."

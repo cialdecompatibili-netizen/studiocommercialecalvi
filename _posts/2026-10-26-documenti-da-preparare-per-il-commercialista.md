@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "Quali documenti preparare prima di andare dal commercialista"
+header:
+  teaser: "/assets/images/posts/documenti-da-preparare-per-il-commercialista.jpg"
 date: 2026-10-26
 permalink: /blog/documenti-da-preparare-per-il-commercialista/
 excerpt: "Una checklist pratica dei documenti da portare allo studio: arrivare preparati fa risparmiare tempo e riduce gli errori nelle dichiarazioni."
