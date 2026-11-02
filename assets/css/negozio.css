@@ -146,7 +146,7 @@
 #negozio .nz-pp-acq .nz-add:active { transform: translateY(1px); }
 #negozio .nz-pp-acq .nz-ok { flex: 1 0 100%; align-self: auto; }
 .nz-pp-nota { color: var(--nz-muto); font-size: .9rem; margin: 0; }
-.nz-pp-desc, .nz-pp-det { max-width: 760px; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--nz-bordo); }
+.nz-pp-desc, .nz-pp-det { max-width: none; width: 100%; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--nz-bordo); }
 .nz-pp-desc h2, .nz-pp-det h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .nz-pp-det dl { display: grid; grid-template-columns: 9rem 1fr; gap: .5rem 1rem; margin: 0; }
 .nz-pp-det dt { font-weight: 500; color: var(--nz-muto); }
