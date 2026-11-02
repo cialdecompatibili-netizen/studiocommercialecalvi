@@ -34,6 +34,7 @@ related_posts: 3
 per_page: 20
 email: "info@studiocommercialista.it"
 description: "Studio commerciale con oltre 15 anni di esperienza: consulenza fiscale, contabile e societaria per imprese e professionisti, startup e P.IVA."
+og_image: "/assets/images/og-default.jpg"
 
 # --- TEMA (Minimal Mistakes, caricato da remoto) ----------------------------------------
 # I COLORI veri del sito NON stanno qui ma in _data/tema.json (accento, menu, testo).

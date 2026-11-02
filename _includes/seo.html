@@ -6,7 +6,7 @@ Per trovare hreflang e sitemap: cerca 'hreflang' in _includes e il file sitemap.
 {%- endcomment -%}
 {%- include site-name.html -%}
 {% comment %}
-  SEO PLUGIN — CMSPush
+  SEO PLUGIN â€” CMSPush
   Incluso automaticamente da _includes/head/custom.html
 
   Campi supportati nel front matter di ogni post/pagina:
@@ -23,7 +23,7 @@ Per trovare hreflang e sitemap: cerca 'hreflang' in _includes e il file sitemap.
 {% assign seo_lang = page.lang | default: site.default_lang %}
 {% assign seo_url   = page.canonical | default: page.url | absolute_url %}
 
-{% comment %} Description: seo_description → inizio del post (excerpt) → descrizione sito {% endcomment %}
+{% comment %} Description: seo_description â†’ inizio del post (excerpt) â†’ descrizione sito {% endcomment %}
 {% if page.seo_description %}
   {% assign seo_description = page.seo_description %}
 {% elsif page.description %}
@@ -40,7 +40,7 @@ Per trovare hreflang e sitemap: cerca 'hreflang' in _includes e il file sitemap.
 {% endif %}
 
 {% if seo_title %}
-  {% assign seo_title_full = seo_title | append: ' - ' | append: site_name %}
+  {% if seo_title.size > 45 %}{% assign seo_title_full = seo_title %}{% else %}{% assign seo_title_full = seo_title | append: ' - ' | append: site_name %}{% endif %}
 {% else %}
   {% assign seo_title_full = site_name %}
 {% endif %}
@@ -98,4 +98,18 @@ Per trovare hreflang e sitemap: cerca 'hreflang' in _includes e il file sitemap.
   {% for tag in page.tags %}
     <meta property="article:tag" content="{{ tag | escape }}">
   {% endfor %}
+{% endif %}
+
+{% comment %} JSON-LD SEO: home = studio (AccountingService + WebSite), articoli = Article. Nessun dato inventato: solo nome, url, descrizione. {% endcomment %}
+{% if page.ref == 'home' %}
+<script type="application/ld+json">
+[
+ {"@context":"https://schema.org","@type":"AccountingService","name":"{{ site_name | escape }}","url":"{{ seo_url }}","description":"{{ site.description | escape }}","image":"{{ '/assets/images/og-default.jpg' | absolute_url }}"},
+ {"@context":"https://schema.org","@type":"WebSite","name":"{{ site_name | escape }}","url":"{{ seo_url }}","inLanguage":"{{ seo_lang }}"}
+]
+</script>
+{% elsif page.collection == 'posts' %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"{{ seo_title | escape | truncate: 110 }}","description":"{{ seo_description | escape }}","datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.last_modified_at | default: page.date | date_to_xmlschema }}","mainEntityOfPage":"{{ seo_url }}","inLanguage":"{{ seo_lang }}"{% if seo_image %},"image":"{{ seo_image | absolute_url }}"{% endif %},"author":{"@type":"Organization","name":"{{ site_name | escape }}"},"publisher":{"@type":"Organization","name":"{{ site_name | escape }}","logo":{"@type":"ImageObject","url":"{{ '/assets/images/favicon-512.png' | absolute_url }}"}}}
+</script>
 {% endif %}

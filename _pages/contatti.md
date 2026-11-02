@@ -3,6 +3,7 @@ ref: contatti
 layout: single
 title: "Contatti"
 permalink: /contatti/
+description: "Contatta lo studio per una consulenza gratuita fiscale, contabile e societaria: scrivici su WhatsApp, via email o compila il modulo."
 ---
 
 {%- comment -%}

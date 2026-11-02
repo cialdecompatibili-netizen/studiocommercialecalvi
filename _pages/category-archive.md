@@ -4,6 +4,7 @@ layout: single
 permalink: /categorie/
 author_profile: false
 classes: wide
+noindex: true
 ---
 
 <style>
