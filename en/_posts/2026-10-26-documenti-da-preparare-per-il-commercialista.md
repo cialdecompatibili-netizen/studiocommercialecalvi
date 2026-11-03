@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "Which documents to prepare before meeting your accountant"
+header:
+  teaser: "/assets/images/posts/documenti-da-preparare-per-il-commercialista.jpg"
 date: 2026-10-26
 permalink: /en/blog/documents-to-prepare-for-your-accountant/
 excerpt: "A practical checklist of the documents to bring to the firm: arriving prepared saves time and reduces mistakes in your tax returns."
