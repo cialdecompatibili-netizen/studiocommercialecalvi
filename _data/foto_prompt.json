@@ -1,0 +1,24 @@
+{
+    "template":  "{aspetto}. Professional accounting office stock photo, bright natural light, photorealistic, clean modern desk, no people, no text, no logo, no brand name",
+    "default":  "accounting documents and laptop on a tidy desk",
+    "aspetti":  {
+                    "gestionale-forfettario-excel":  "laptop showing a clean spreadsheet dashboard with charts, tidy desk",
+                    "scadenzario-fiscale-excel":  "wall calendar with colored tax deadline markers and a laptop with spreadsheet",
+                    "prima-nota-excel":  "open ledger notebook and laptop with a simple bookkeeping spreadsheet",
+                    "preventivi-e-costi-excel":  "laptop with spreadsheet of quotes and costs, calculator and pen",
+                    "pacchetto-avvio-partita-iva":  "stack of folders, documents and a laptop forming a starter kit for freelancers",
+                    "checklist-documenti-commercialista-pdf":  "clipboard with checklist and tidy folders of documents",
+                    "checklist-apertura-partita-iva-pdf":  "clipboard with a checklist of ticked boxes next to a laptop",
+                    "modelli-sollecito-pagamento-word":  "business letter templates on a desk with a pen and envelope",
+                    "guida-scegliere-regime-fiscale-pdf":  "open guide book with simple charts, calculator and glasses",
+                    "guida-primo-anno-partita-iva-pdf":  "closed guide book on a desk with notebook, coffee and calendar",
+                    "fattura-forfettario-excel":  "printed invoice sheet and laptop with invoice spreadsheet",
+                    "calcolo-convenienza-forfettario-excel":  "calculator and laptop with tax comparison spreadsheet",
+                    "ebook-scegliere-codice-ateco-pdf":  "tablet displaying an ebook cover about business codes, tidy desk",
+                    "ebook-acconti-saldo-pdf":  "tablet displaying an ebook with payments chart, calculator nearby",
+                    "ebook-inps-forfettari-pdf":  "tablet displaying an ebook about social contributions, documents nearby",
+                    "ebook-chiusura-partita-iva-pdf":  "tablet with an ebook and a closed folder with a key, tidy desk",
+                    "contratto-prestazione-freelance-word":  "signed freelance contract on a desk with pen and laptop",
+                    "lettera-incarico-freelance-word":  "engagement letter with a pen and envelope on a desk"
+                }
+}
