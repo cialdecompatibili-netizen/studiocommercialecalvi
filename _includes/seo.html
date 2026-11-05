@@ -65,20 +65,31 @@ Per trovare hreflang e sitemap: cerca 'hreflang' in _includes e il file sitemap.
 
 <!-- Open Graph -->
 <meta property="og:type"        content="{% if page.date %}article{% else %}website{% endif %}">
-<meta property="og:title"       content="{{ seo_title | escape }}">
+{%- comment -%} ANTEPRIMA SOCIAL (WhatsApp, Facebook, LinkedIn, Telegram, X): titolo con fallback al nome sito (la home non ha title: prima usciva vuoto), locale nel formato lingua_PAESE che Facebook richiede (it_IT, en_US), dimensioni e alt dell'immagine (le piattaforme la mostrano subito senza scaricarla prima). NON togliere. {%- endcomment -%}
+{% assign og_title = seo_title | default: site_name %}
+{% assign og_loc = page.locale | default: seo_lang %}
+{% if og_loc == 'it' %}{% assign og_loc = 'it_IT' %}{% elsif og_loc == 'en' %}{% assign og_loc = 'en_US' %}{% endif %}
+<meta property="og:title"       content="{{ og_title | escape }}">
 <meta property="og:url"         content="{{ seo_url }}">
-<meta property="og:locale"      content="{{ page.locale | default: seo_lang }}">
+<meta property="og:locale"      content="{{ og_loc }}">
 <meta property="og:site_name"   content="{{ site_name | escape }}">
 {% if seo_description %}
   <meta property="og:description" content="{{ seo_description | truncate: 200 | escape }}">
 {% endif %}
 {% if seo_image %}
+  {% comment %} dimensioni: og-default = 1200x630, copertine articoli = 1200x675 (16:9). Se una pagina usa un'immagine di altro formato, scrivere nel front matter seo_image_width / seo_image_height. {% endcomment %}
+  {% if seo_image == site.og_image %}{% assign og_w = 1200 %}{% assign og_h = 630 %}{% else %}{% assign og_w = page.seo_image_width | default: 1200 %}{% assign og_h = page.seo_image_height | default: 675 %}{% endif %}
   <meta property="og:image" content="{{ seo_image | absolute_url }}">
+  <meta property="og:image:secure_url" content="{{ seo_image | absolute_url }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="{{ og_w }}">
+  <meta property="og:image:height" content="{{ og_h }}">
+  <meta property="og:image:alt" content="{{ og_title | escape }}">
 {% endif %}
 
 <!-- Twitter Card -->
 <meta name="twitter:card"  content="summary_large_image">
-<meta name="twitter:title" content="{{ seo_title | escape }}">
+<meta name="twitter:title" content="{{ og_title | escape }}">
 {% if seo_description %}
   <meta name="twitter:description" content="{{ seo_description | truncate: 200 | escape }}">
 {% endif %}

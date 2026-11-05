@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "The firm"
-description: "The firm and what we do."
+description: "Studio Calvi accounting firm: over 15 years of experience supporting businesses, professionals and startups with tax, accounting and corporate advice."
 author_profile: false
 classes: wide
 ref: azienda
