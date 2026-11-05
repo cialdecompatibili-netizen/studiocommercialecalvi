@@ -7,8 +7,8 @@ classes: wide
 ref: azienda
 lang: en
 locale: en
-tr: da_aggiornare
-tr_hash: 2if1jh
+tr: tradotto
+tr_hash: 1rth5tc
 permalink: /en/about-us/
 ---
 

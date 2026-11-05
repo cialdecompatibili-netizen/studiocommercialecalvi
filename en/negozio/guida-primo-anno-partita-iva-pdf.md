@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-prod-guida-primo-anno-partita-iva-pdf
 tr: tradotto
+tr_hash: 45h
 ---

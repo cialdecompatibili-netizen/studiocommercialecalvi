@@ -6,9 +6,9 @@ author_profile: false
 ref: servizi
 lang: en
 locale: en
-tr: da_aggiornare
+tr: tradotto
 permalink: /en/services/
-tr_hash: fufsk3
+tr_hash: 6r26d8
 ---
 
 Tax, accounting and corporate advice for businesses and professionals.

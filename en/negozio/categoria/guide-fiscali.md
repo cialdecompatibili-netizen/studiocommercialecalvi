@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-cat-guide-fiscali
 tr: tradotto
+tr_hash: 45h
 ---

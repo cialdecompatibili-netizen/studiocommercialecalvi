@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-prod-modelli-sollecito-pagamento-word
 tr: tradotto
+tr_hash: 45h
 ---

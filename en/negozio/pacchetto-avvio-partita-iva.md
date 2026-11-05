@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-prod-pacchetto-avvio-partita-iva
 tr: tradotto
+tr_hash: 45h
 ---

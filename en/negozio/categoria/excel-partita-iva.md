@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-cat-excel-partita-iva
 tr: tradotto
+tr_hash: 45h
 ---

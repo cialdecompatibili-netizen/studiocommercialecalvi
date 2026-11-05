@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-prod-gestionale-forfettario-excel
 tr: tradotto
+tr_hash: 45h
 ---

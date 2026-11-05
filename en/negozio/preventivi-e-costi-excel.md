@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-prod-preventivi-e-costi-excel
 tr: tradotto
+tr_hash: 45h
 ---

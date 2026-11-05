@@ -8,4 +8,5 @@ lang: en
 locale: en
 ref: shop-prod-checklist-documenti-commercialista-pdf
 tr: tradotto
+tr_hash: 45h
 ---
