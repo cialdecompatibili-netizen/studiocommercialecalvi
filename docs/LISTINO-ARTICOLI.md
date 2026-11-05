@@ -18,7 +18,7 @@ Gia' pubblicati: documenti-da-preparare-per-il-commercialista, come-aprire-la-pa
 | A1 | Secondo acconto 30 novembre 2026: quanto pagare e come ridurlo | secondo acconto 30 novembre 2026 | Dichiarazioni fiscali | scadenzario-fiscale-excel | FATTO 05/11/2026 |
 | A2 | Acconto con metodo previsionale: come si calcola (con esempio) | acconto metodo previsionale | Dichiarazioni fiscali | calcolo-convenienza-forfettario-excel | DA FARE |
 | A3 | Scadenze fiscali di dicembre 2026 per partite IVA e forfettari | scadenze fiscali dicembre 2026 | Guide | scadenzario-fiscale-excel | DA FARE |
-| A4 | Bollo sulle fatture elettroniche: quando si paga e come (terzo trimestre, 30 novembre) | bollo fattura elettronica scadenza | Fatturazione elettronica | fattura-forfettario-excel | DA FARE |
+| A4 | Bollo sulle fatture elettroniche: quando si paga e come (terzo trimestre, 30 novembre) | bollo fattura elettronica scadenza | Fatturazione elettronica | fattura-forfettario-excel | FATTO 05/11/2026 |
 | A5 | Concordato preventivo biennale 2026-2027: come funziona e se conviene (adesione scaduta il 2 novembre) | concordato preventivo biennale | Consulenza fiscale | - | DA FARE |
 | A6 | Calendario fiscale 2027 per partite IVA (uscita dicembre) | calendario fiscale 2027 | Guide | scadenzario-fiscale-excel | DA FARE |
 
