@@ -51,11 +51,12 @@ window.caricaLista=async function(){
   const files=(await res.json()).filter(f=>/\.(md|html)$/.test(f.name)).sort((a,b)=>b.name.localeCompare(a.name));
   if(!files.length){el.innerHTML='<em style="color:#646970;font-size:13px">Nessun articolo ancora.</em>';return;}
   lista({el:'lista-articoli',files,ph:'Cerca articoli',heads:['','Titolo','Categoria','Data'],
-    meta:raw=>{const f=fmOf(raw),t=f.match(/^[ \t]+teaser:[ \t]*"?(.*?)"?[ \t]*$/m),c=f.match(/^categories:[ \t]*\n[ \t]+-[ \t]*(.+)$/m);return {title:gv(f,'title'),teaser:t?t[1]:'',cat:c?c[1].trim():''};},
+    meta:raw=>{const f=fmOf(raw),t=f.match(/^[ \t]+teaser:[ \t]*"?(.*?)"?[ \t]*$/m),c=f.match(/^categories:[ \t]*\n[ \t]+-[ \t]*(.+)$/m);return {title:gv(f,'title'),teaser:t?t[1]:'',cat:c?c[1].trim():'',perm:gv(f,'permalink')};},
     row:(f,m)=>{
       const nome=f.name.replace(/\.(md|html)$/,''), title=(m&&m.title)||nome.slice(11).replace(/-/g,' '), th=m?thumb(m.teaser):'', p=h(f.path);
+      const cs=((m&&m.cat)||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''), vis=!m?'':(m.perm?BASE+m.perm.replace(/^\//,''):BASE+'blog/'+(cs?cs+'/':'')+nome.slice(11)+'/');
       return '<td class="wp-th"><div>'+(th?'<img loading="lazy" alt="" src="'+h(th)+'">':'')+'</div></td>'
-       +'<td><a class="wp-t" onclick="modificaArticolo(\''+p+'\')">'+h(title)+'</a><div class="wp-ra"><a onclick="modificaArticolo(\''+p+'\')">Modifica</a> | <a class="del" onclick="eliminaArticolo(\''+p+'\',\''+f.sha+'\',\''+h(f.name)+'\')">Sposta nel cestino</a></div></td>'
+       +'<td><a class="wp-t" onclick="modificaArticolo(\''+p+'\')">'+h(title)+'</a><div class="wp-ra"><a onclick="modificaArticolo(\''+p+'\')">Modifica</a> | <a class="del" onclick="eliminaArticolo(\''+p+'\',\''+f.sha+'\',\''+h(f.name)+'\')">Sposta nel cestino</a>'+(vis?' | <a href="'+h(vis)+'" target="_blank" rel="noopener">Visualizza</a>':'')+'</div></td>'
        +'<td class="wp-n">'+h(m?m.cat:'')+'</td><td class="wp-n">'+h(f.name.slice(0,10))+'</td>';}
   });
 };
