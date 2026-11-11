@@ -36,7 +36,10 @@ function editor(body,b,rerender){
   const {d,vids}=prep(b.html);
   const ifr=mk('iframe','vb-fr'), tb=mk('div','vf-tb');
   let D=null,W=null,curImg=null;
-  const fit=()=>{if(D&&D.documentElement)ifr.style.height=Math.max(160,D.documentElement.scrollHeight+4)+'px';};
+  // ANTI-LOOP: si misura body.offsetHeight (NON documentElement.scrollHeight, che e' sempre >= altezza iframe e non scende mai: con elementi in vh/100% l'iframe cresceva all'infinito).
+  // Si aggiorna solo se cambia di oltre 3px e c'e' un tetto massimo (MAXH) di sicurezza.
+  const MAXH=1600;
+  const fit=()=>{if(!D||!D.body)return;const h=Math.min(MAXH,Math.max(160,D.body.offsetHeight+4));if(Math.abs(h-(parseInt(ifr.style.height)||0))>3)ifr.style.height=h+'px';};
   const commit=()=>{b.html=unprep(D.body.innerHTML,vids);fit();};
   const cmd=(c,v)=>{W.focus();D.execCommand(c,false,v);commit();};
   const up=n=>{while(n&&n.nodeType!==1)n=n.parentNode;return n;};
@@ -66,7 +69,7 @@ function editor(body,b,rerender){
   const css=['assets/css/main.css','assets/css/gaming.css','assets/css/home.css'].map(x=>'<link rel="stylesheet" href="'+BASE+x+'">').join('')
     +'<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">';
   ifr.srcdoc='<!doctype html><html><head><meta charset="utf-8">'+css
-    +'<style>html,body{margin:0;background:#fff}section,.ent-hero,.gc-sec{min-height:0!important}.ent-vid{display:none!important}body{outline:none;cursor:text}'
+    +'<style>html,body{margin:0;background:#fff;height:auto!important;min-height:0!important}section,.ent-hero,.gc-sec,[class*=hero]{min-height:0!important;height:auto!important;max-height:none!important}.ent-vid{display:none!important}body{outline:none;cursor:text}'
     +'.vph{background:#eef1fb;border:1px dashed #99a;padding:14px;text-align:center;font:13px sans-serif;color:#556;margin:8px}a{cursor:text}img{cursor:pointer}img[data-sel]{outline:3px solid #2271b1;outline-offset:2px}</style></head>'
     +'<body contenteditable="true">'+d+'</body></html>';
   ifr.onload=()=>{
