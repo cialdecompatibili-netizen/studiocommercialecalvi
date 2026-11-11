@@ -11,14 +11,17 @@
   try { if (!forza && localStorage.getItem(KEY)) return; } catch (e) { return; }   // storage bloccato -> meglio niente effetto che ripeterlo sempre
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  // cerca il primo bottone WhatsApp VISIBILE (hero, banner contatto, barra laterale)
+  // cerca il primo bottone WhatsApp VISIBILE nello schermo (hero, banner contatto, barra laterale); se nessuno e' nello schermo
+  // (es. banner in fondo alla pagina) prende il primo presente nella pagina e la palla vola verso il suo lato (vedi clamp in frame()).
   function trovaTarget() {
-    var els = document.querySelectorAll('.gc-btn-wa, .cb-wa, a[href*="wa.me"], a .fa-whatsapp, a .fab.fa-whatsapp');
+    var els = document.querySelectorAll('.gc-btn-wa, .cb-wa, a[href*="wa.me"], a .fa-whatsapp, a .fab.fa-whatsapp'), fuori = null;
     for (var i = 0; i < els.length; i++) {
       var a = els[i].closest ? (els[i].closest('a') || els[i]) : els[i], r = a.getBoundingClientRect();
-      if (r.width > 8 && r.height > 8 && r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth && a.offsetParent !== null) return a;
+      if (!(r.width > 8 && r.height > 8 && a.offsetParent !== null)) continue;   // nascosto: scartato
+      if (r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth) return a;
+      if (!fuori) fuori = a;
     }
-    return null;
+    return fuori;
   }
 
   function parti() {
@@ -46,6 +49,7 @@
     function frame(now) {
       var t = now - t0; x.clearRect(0, 0, W, H); x.globalCompositeOperation = 'lighter';
       var r = T.getBoundingClientRect(), tx = r.left + r.width / 2, ty = r.top + r.height / 2;   // ricalcolato: il bottone puo' muoversi
+      tx = Math.min(Math.max(tx, 30), W - 30); ty = Math.min(Math.max(ty, 30), H - 30);          // fuori schermo -> la palla si ferma sul bordo, verso il bottone
       if (t < T1) {
         var k = ease(t / T1);
         for (i = 0; i < N; i++) {
