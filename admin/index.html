@@ -206,6 +206,7 @@ tr:hover td{background:#f0f6fc}
     <button class="nav-item active" onclick="showPage('articoli',this)"><span class="icon">📝</span>Articoli del blog</button>
     <button class="nav-item" onclick="showPage('pagine',this)"><span class="icon">📄</span>Pagine</button>
     <button class="nav-item" onclick="showPage('cestino',this);caricaCestino()"><span class="icon">&#128465;</span>Cestino</button>
+    <button class="nav-item" onclick="showPage('backup',this);caricaBackup()"><span class="icon">&#128190;</span>Backup</button>
     <button class="nav-item" onclick="showPage('categorie',this)"><span class="icon">🗂</span>Categorie</button>
     <div class="nav-label">Impostazioni</div>
     <button class="nav-item" onclick="showPage('menu',this)"><span class="icon">🧭</span>Menu</button>
@@ -379,6 +380,15 @@ tr:hover td{background:#f0f6fc}
         <div class="card-title" style="display:flex;justify-content:space-between">Articoli e pagine eliminati <button class="btn btn-secondary btn-sm" onclick="caricaCestino()">&#8635; Aggiorna</button></div>
         <div class="msg" id="msg-cestino"></div>
         <div id="lista-cestino"><span style="color:#bbb;font-size:13px">Clicca Aggiorna per caricare</span></div>
+      </div>
+    </div>
+    <div class="page" id="page-backup">
+      <div class="page-title">&#128190; Backup</div>
+      <div class="card">
+        <div class="card-title" style="display:flex;justify-content:space-between">Copie del sito <span><button class="btn btn-primary btn-sm" onclick="nuovoBackup()">+ Crea backup ora</button> <button class="btn btn-secondary btn-sm" onclick="caricaBackup()">&#8635; Aggiorna</button></span></div>
+        <p style="margin:0 0 12px;color:#646970;font-size:13px">Un backup e' una copia dello stato attuale del sito (un branch <code>backup-...</code> su GitHub). Ripristinare riporta tutti i file a quella copia con un nuovo commit: la cronologia non si perde e prima viene creato in automatico un backup dello stato attuale.</p>
+        <div class="msg" id="msg-backup"></div>
+        <div id="lista-backup"><span style="color:#bbb;font-size:13px">Clicca Aggiorna per caricare</span></div>
       </div>
     </div>
     <div class="page" id="page-menu">
@@ -2405,5 +2415,6 @@ window.onload=function(){
 <script src="js/lingue.js?v=20261024c"></script>
 <script src="js/lingua-admin.js?v=20261024c"></script>
 <script src="js/cestino.js?v=20261111a"></script>
+<script src="js/backup.js?v=20261111a"></script>
 </body>
 </html>
