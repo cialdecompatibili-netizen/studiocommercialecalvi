@@ -192,6 +192,6 @@ a.nv__dd-item.active, a.nv__dd-item.active:visited, a.nv__dd-item.active:hover {
    ATTENZIONE: white-space:nowrap = mai a capo; su schermi piccoli il font scala con clamp() per stare accanto al logo e all'hamburger. Il nome si cambia da _config.yml > masthead_title. */
 a.nv__brand .nv__nm{display:inline-flex;align-items:baseline;gap:.42em;white-space:nowrap;font-family:'Montserrat','Segoe UI',Arial,sans-serif;text-transform:uppercase;font-size:clamp(.66rem,2.9vw,.98rem);line-height:1;letter-spacing:.14em}
 a.nv__brand .nv__n1{font-weight:500;color:var(--t-nav-text,#15191d)}
-a.nv__brand .nv__n2{font-weight:700;color:var(--t-accent,#1e3a5f);letter-spacing:.16em;padding-left:.55em;border-left:1.5px solid var(--t-accent,#1e3a5f);}
-@media(max-width:380px){a.nv__brand .nv__nm{letter-spacing:.08em}a.nv__brand .nv__n2{padding-left:.4em}}
+a.nv__brand .nv__n2{font-weight:700;color:var(--t-accent,#1e3a5f);letter-spacing:.16em}  /* ultima parola in grassetto, SENZA barra | di separazione (tolta su richiesta: per rimetterla aggiungere border-left:1.5px solid + padding-left:.55em) */
+@media(max-width:380px){a.nv__brand .nv__nm{letter-spacing:.08em}}
 /* === FINE NOME === */
