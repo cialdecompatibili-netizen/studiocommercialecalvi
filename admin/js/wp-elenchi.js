@@ -55,7 +55,7 @@ window.caricaLista=async function(){
     row:(f,m)=>{
       const nome=f.name.replace(/\.(md|html)$/,''), title=(m&&m.title)||nome.slice(11).replace(/-/g,' '), th=m?thumb(m.teaser):'', p=h(f.path);
       return '<td class="wp-th"><div>'+(th?'<img loading="lazy" alt="" src="'+h(th)+'">':'')+'</div></td>'
-       +'<td><a class="wp-t" onclick="modificaArticolo(\''+p+'\')">'+h(title)+'</a><div class="wp-ra"><a onclick="modificaArticolo(\''+p+'\')">Modifica</a> | <a class="del" onclick="eliminaArticolo(\''+p+'\',\''+f.sha+'\',\''+h(f.name)+'\')">Elimina</a></div></td>'
+       +'<td><a class="wp-t" onclick="modificaArticolo(\''+p+'\')">'+h(title)+'</a><div class="wp-ra"><a onclick="modificaArticolo(\''+p+'\')">Modifica</a> | <a class="del" onclick="eliminaArticolo(\''+p+'\',\''+f.sha+'\',\''+h(f.name)+'\')">Sposta nel cestino</a></div></td>'
        +'<td class="wp-n">'+h(m?m.cat:'')+'</td><td class="wp-n">'+h(f.name.slice(0,10))+'</td>';}
   });
 };
@@ -71,7 +71,7 @@ window.caricaPagine=async function(){
     meta:raw=>{const f=fmOf(raw);return {title:gv(f,'title'),perm:gv(f,'permalink')};},
     row:(f,m)=>{
       const slug=f.name.replace(/\.(md|html)$/,''), title=(m&&m.title)||slug, perm=(m&&m.perm)||'/'+slug+'/', p=h(f.path);
-      return '<td><a class="wp-t" onclick="modificaPaginaBox(\''+h(slug)+'\',\''+p+'\')">'+h(title)+'</a><div class="wp-ra"><a onclick="modificaPaginaBox(\''+h(slug)+'\',\''+p+'\')">Modifica</a> | <a class="del" onclick="eliminaPagina(\''+p+'\',\''+f.sha+'\',\''+h(f.name)+'\')">Elimina</a> | <a href="'+h(BASE+perm.replace(/^\//,''))+'" target="_blank" rel="noopener">Visualizza</a></div></td><td class="wp-n">'+h(perm)+'</td>';}
+      return '<td><a class="wp-t" onclick="modificaPaginaBox(\''+h(slug)+'\',\''+p+'\')">'+h(title)+'</a><div class="wp-ra"><a onclick="modificaPaginaBox(\''+h(slug)+'\',\''+p+'\')">Modifica</a> | <a class="del" onclick="eliminaPagina(\''+p+'\',\''+f.sha+'\',\''+h(f.name)+'\')">Sposta nel cestino</a> | <a href="'+h(BASE+perm.replace(/^\//,''))+'" target="_blank" rel="noopener">Visualizza</a></div></td><td class="wp-n">'+h(perm)+'</td>';}
   });
 };
 
