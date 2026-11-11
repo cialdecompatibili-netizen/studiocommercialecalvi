@@ -79,6 +79,7 @@ remote_theme: mmistakes/minimal-mistakes
 # File/cartelle NON pubblicati nel sito (restano nella repo: l'admin li legge via API GitHub).
 # ATTENZIONE: NON aggiungere version.json ne' template-map.json: l'admin li legge anche via fetch dal sito.
 exclude:
+  - _cestino
   - vendor
   - docs
   - automation
