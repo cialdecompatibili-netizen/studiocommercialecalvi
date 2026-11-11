@@ -207,3 +207,21 @@
 .page__content .cb .cb-f:hover{background:var(--gc-acc,#1e3a5f);color:#fff}
 .page__content .cb a:focus-visible{outline:3px solid var(--gc-acc,#1e3a5f);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){.page__content .cb a{transition:none}}
+
+/* === WHATSAPP GLITTER (rimovibile: cancella da qui a "FINE WHATSAPP GLITTER") ===
+   COSA FA: i bottoni WhatsApp (hero Home .gc-btn-wa, banner contatto .cb-wa) hanno brillantini che lampeggiano (::before) e un riflesso che li attraversa ogni ~3.5s (::after).
+   COME FUNZIONA: i pallini sono radial-gradient piccoli su una tessera che si ripete (background-size diversi = disposizione "casuale"); l'animazione cambia solo opacity/posizione (leggera).
+   ATTENZIONE: overflow:hidden serve a tenere i brillantini dentro il bottone; i pseudo-elementi hanno pointer-events:none quindi il click funziona normalmente.
+   Con "riduci movimento" del sistema i brillantini restano fermi (niente animazione). */
+.gc-btn-wa,.cb-wa{position:relative;overflow:hidden;isolation:isolate}
+.gc-btn-wa::before,.cb-wa::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:radial-gradient(circle at 12% 30%,#fff 0 1.2px,transparent 2.2px),radial-gradient(circle at 48% 72%,#fff6a8 0 1.6px,transparent 2.6px),radial-gradient(circle at 80% 22%,#fff 0 1px,transparent 2px),radial-gradient(circle at 66% 85%,#fff 0 1.4px,transparent 2.3px),radial-gradient(circle at 28% 88%,#fff6a8 0 1px,transparent 2px),radial-gradient(circle at 92% 60%,#fff 0 1.2px,transparent 2.2px);
+  background-size:46px 34px,58px 40px,37px 29px,71px 47px,53px 36px,64px 31px;
+  animation:waGlitter 1.7s ease-in-out infinite alternate}
+.gc-btn-wa::after,.cb-wa::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;z-index:1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 0,rgba(255,255,255,.55) 50%,transparent 100%);
+  transform:translateX(-130%) skewX(-18deg);animation:waShine 3.6s ease-in-out infinite}
+@keyframes waGlitter{0%{opacity:.35;background-position:0 0,0 0,0 0,0 0,0 0,0 0}50%{opacity:1}100%{opacity:.55;background-position:9px 6px,-11px 4px,7px -8px,-6px -5px,10px 7px,-8px 9px}}
+@keyframes waShine{0%{transform:translateX(-130%) skewX(-18deg)}35%,100%{transform:translateX(330%) skewX(-18deg)}}
+@media(prefers-reduced-motion:reduce){.gc-btn-wa::before,.cb-wa::before,.gc-btn-wa::after,.cb-wa::after{animation:none}.gc-btn-wa::after,.cb-wa::after{display:none}.gc-btn-wa::before,.cb-wa::before{opacity:.8}}
+/* === FINE WHATSAPP GLITTER === */
