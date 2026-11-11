@@ -9,7 +9,7 @@
 const $=id=>document.getElementById(id);
 const h=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const p2=n=>(n<10?'0':'')+n;
-let BRN='main',LIST=[],INFO={};
+let BRN='main',LIST=[],INFO={},NEW=null;
 async function api(m,path,body){
   const r=await fetch('https://api.github.com/repos/'+REPO+path,{method:m,headers:{'Authorization':'token '+tok(),'Content-Type':'application/json'},body:body?JSON.stringify(body):undefined});
   let j=null; try{j=await r.json();}catch(e){}
@@ -38,6 +38,8 @@ window.caricaBackup=async function(){
     BRN=(await api('GET','')).default_branch||'main';
     const head=await headSha();
     LIST=(await api('GET','/git/matching-refs/heads/backup-?per_page=100')).map(r=>({name:r.ref.replace('refs/heads/',''),sha:r.object.sha}));
+    // matching-refs puo' essere in ritardo di qualche secondo dopo la creazione: unisco il backup appena creato se manca
+    if(NEW&&!LIST.some(b=>b.name===NEW.name))LIST.push(NEW);
     await loadInfo(LIST);
     LIST.sort((a,b)=>{const d=when(b)-when(a);return d||(a.name<b.name?1:-1);});
     let undo=-1; LIST.forEach((b,i)=>{if(undo<0&&/-pre-ripristino$/.test(b.name)&&b.sha!==head)undo=i;});
@@ -58,14 +60,14 @@ window.nuovoBackup=async function(){
   const nm=stamp(); msg('Creo il backup...');
   try{
     BRN=(await api('GET','')).default_branch||'main';
-    await api('POST','/git/refs',{ref:'refs/heads/'+nm,sha:await headSha()});
+    const sh=await headSha(); await api('POST','/git/refs',{ref:'refs/heads/'+nm,sha:sh}); NEW={name:nm,sha:sh};
     msg('Backup creato: '+nm,'ok'); window.caricaBackup();
   }catch(e){msg(e.status===422?'Esiste gia\' un backup di questo minuto ('+nm+')':'Errore: '+e.message,'err');}
 };
 async function elimina(i){
   const b=LIST[i]; if(!b||b.name.indexOf('backup-')!==0||b.name===BRN)return;
   if(!confirm('Eliminare il backup "'+b.name+'"?\n\nIl sito non cambia. Non potrai piu\' ripristinare questo backup dall\'admin.'))return;
-  try{await api('DELETE','/git/refs/heads/'+b.name);msg('Backup eliminato: '+b.name,'ok');window.caricaBackup();}
+  try{await api('DELETE','/git/refs/heads/'+b.name);if(NEW&&NEW.name===b.name)NEW=null;msg('Backup eliminato: '+b.name,'ok');window.caricaBackup();}
   catch(e){msg('Errore: '+e.message,'err');}
 }
 async function ripristina(i){
