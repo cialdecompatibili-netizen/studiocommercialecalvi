@@ -25,6 +25,8 @@ languages: [it, en]
 # --- IDENTITA' DEL SITO (da cambiare per ogni clone) -----------------------------------
 # NOME SITO (menu in alto, footer, SEO): AUTOMATICO, calcolato da _includes/site-name.html.
 #   dominio personalizzato (CNAME su GitHub Pages) > nome del repo. Qui NON si scrive.
+# ECCEZIONE: masthead_title = nome mostrato in alto a sinistra (una riga). Se lo togli torna il nome automatico (nome del repo).
+masthead_title: "Studio Commerciale Calvi"
 # description: testo SEO di default (meta description).
 # "brand" non e' piu' letto da nessuno: lasciato vuoto solo per compatibilita' con vecchi cloni/admin.
 brand: "Studio Commerciale Calvi"
