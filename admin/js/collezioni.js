@@ -137,8 +137,8 @@ window.collCarica=async function(k){
       const r=await ghGet(f.path), d=await r.json(), raw=dec(d.content).replace(/\r\n/g,'\n');
       const fm=(raw.match(/^---\n([\s\S]+?)\n---/)||[])[1]||'';
       const g=n=>{const x=fm.match(new RegExp('^'+n+':[ \\t]*"?(.*?)"?[ \\t]*$','m'));return x?x[1].replace(/\\"/g,'"'):'';};
-      return {f,nome,title:g('title')||nome,foto:g('foto'),ord:parseInt(g(C[k].ord))||99,home:g('in_home')!=='false'};
-    }catch(e){return {f,nome,title:nome,foto:'',ord:99,home:true};}
+      return {f,nome,title:g('title')||nome,foto:g('foto'),perma:g('permalink'),ord:parseInt(g(C[k].ord))||99,home:g('in_home')!=='false'};
+    }catch(e){return {f,nome,title:nome,foto:'',perma:'',ord:99,home:true};}
   }));
   rows.sort((a,b)=>a.ord-b.ord||a.title.localeCompare(b.title));
   const h=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
@@ -147,7 +147,7 @@ window.collCarica=async function(k){
   <table class="wp-list"><thead><tr><th class="wp-th"></th><th>Titolo</th><th>${k==='servizi'?'Ordine':'Importanza'}</th><th>In home</th></tr></thead><tbody>`+
   rows.map(x=>`<tr data-q="${h((x.title+' '+x.nome).toLowerCase())}"><td class="wp-th"><div>${x.foto&&L?`<img loading="lazy" alt="" src="${L.url(x.foto)}">`:''}</div></td>
     <td><a class="wp-t" onclick="collModifica('${k}','${x.f.path}')">${h(x.title)}</a>
-    <div class="wp-ra"><a onclick="collModifica('${k}','${x.f.path}')">Modifica</a> | <a class="del" onclick="collElimina('${k}','${x.f.path}','${x.f.sha}')">Elimina</a> | <a href="${base}${k}/${x.nome}/" target="_blank" rel="noopener">Visualizza</a></div></td>
+    <div class="wp-ra"><a onclick="collModifica('${k}','${x.f.path}')">Modifica</a> | <a class="del" onclick="collElimina('${k}','${x.f.path}','${x.f.sha}')">Elimina</a> | <a href="${x.perma?base.replace(/\/$/,'')+(x.perma.startsWith('/')?'':'/')+x.perma:base+k+'/'+x.nome+'/'}" target="_blank" rel="noopener">Visualizza</a></div></td>
     <td class="wp-n">${x.ord===99?'–':x.ord}</td><td class="wp-n">${x.home?'Sì':'No'}</td></tr>`).join('')+
   `</tbody></table><div class="hint" style="margin-top:8px">${rows.length} ${rows.length===1?C[k].nome.toLowerCase():C[k].plur.toLowerCase()}</div>`;
 };
